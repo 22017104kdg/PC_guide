@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { TransitionProvider } from "./TransitionContext";
+import Home from "./pages/Home";
+import GamePage from "./pages/GamePage";
+import TwoDPage from "./pages/TwoDPage";
+import ThreeDPage from "./pages/ThreeDPage";
+import AiPage from "./pages/AiPage";
+import GameSimplePage from "./pages/GameSimplePage";
+import GameAdvancedPage from "./pages/GameAdvancedPage";
 
-function App() {
-  const [count, setCount] = useState(0)
+function AnimatedRoutes() {
+  const location = useLocation();
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="text-3xl font-bold text-blue-500">
-         Hello Tailwind!
-      </p>
-    </>
-  )
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/game" element={<GamePage />} />
+        <Route path="/game/simple" element={<GameSimplePage />} />
+        <Route path="/game/advanced" element={<GameAdvancedPage />} />
+        <Route path="/2d" element={<TwoDPage />} />
+        <Route path="/3d" element={<ThreeDPage />} />
+        <Route path="/ai" element={<AiPage />} />
+      </Routes>
+    </AnimatePresence>
+  );
 }
 
-export default App
+export default function App() {
+  return (
+    <Router>
+      <TransitionProvider>
+        <AnimatedRoutes />
+      </TransitionProvider>
+    </Router>
+  );
+}

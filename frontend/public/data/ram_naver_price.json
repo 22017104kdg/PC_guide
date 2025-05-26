@@ -1,0 +1,128 @@
+[
+  {
+    "model": "삼성 DDR4 8GB",
+    "type": "DDR4",
+    "size_gb": 8,
+    "brand": "삼성",
+    "price": "16000",
+    "url": "https://smartstore.naver.com/main/products/4618872468",
+    "title": "삼성전자 DDR4 8GB PC4 21300 2666V 데스크탑 메모리"
+  },
+  {
+    "model": "삼성 DDR4 16GB",
+    "type": "DDR4",
+    "size_gb": 16,
+    "brand": "삼성",
+    "price": "61900",
+    "url": "https://smartstore.naver.com/main/products/6300060939",
+    "title": "삼성 DDR4 25600 RAM 16GB 데스크탑 3200Mhz PC메모리"
+  },
+  {
+    "model": "삼성 DDR4 32GB",
+    "type": "DDR4",
+    "size_gb": 32,
+    "brand": "삼성",
+    "price": "126000",
+    "url": "https://smartstore.naver.com/main/products/9465309851",
+    "title": "삼성전자 삼성 메모리 서버용 DDR4 32GB PC4-21300 REG ECC 2666"
+  },
+  {
+    "model": "삼성 DDR4 64GB",
+    "type": "DDR4",
+    "size_gb": 64,
+    "brand": "삼성",
+    "price": "211900",
+    "url": "https://smartstore.naver.com/main/products/9097885528",
+    "title": "서버용 메모리 REG ECC 삼성 DDR4 64G 2933MHz 23400 서버 메모리 램"
+  },
+  {
+    "model": "삼성 DDR5 16GB",
+    "type": "DDR5",
+    "size_gb": 16,
+    "brand": "삼성",
+    "price": "71700",
+    "url": "https://search.shopping.naver.com/catalog/52204540637",
+    "title": "삼성전자 삼성 DDR5 PC5-44800 16GB, 1개"
+  },
+  {
+    "model": "삼성 DDR5 32GB",
+    "type": "DDR5",
+    "size_gb": 32,
+    "brand": "삼성",
+    "price": "141000",
+    "url": "https://smartstore.naver.com/main/products/8862084741",
+    "title": "데스크탑 메모리 삼성정품 DDR5 5600 램 32GB, 1개"
+  },
+  {
+    "model": "삼성 DDR5 64GB",
+    "type": "DDR5",
+    "size_gb": 64,
+    "brand": "삼성",
+    "price": "453590",
+    "url": "https://search.shopping.naver.com/catalog/53208463131",
+    "title": "삼성전자 삼성 DDR5 PC5-44800 ECC/REG 64GB, 1개"
+  },
+  {
+    "model": "DDR4 8GB",
+    "type": "DDR4",
+    "size_gb": 8,
+    "brand": "최저가",
+    "price": "16000",
+    "url": "https://smartstore.naver.com/main/products/4618872468",
+    "title": "삼성전자 DDR4 8GB PC4 21300 2666V 데스크탑 메모리"
+  },
+  {
+    "model": "DDR4 16GB",
+    "type": "DDR4",
+    "size_gb": 16,
+    "brand": "최저가",
+    "price": "27400",
+    "url": "https://smartstore.naver.com/main/products/9307843690",
+    "title": "[신품]삼성 칩 데스크탑 메모리 DDR4 16GB 21300 (PC4 - 2666V) 골든메모리 AS평생 보장"
+  },
+  {
+    "model": "DDR4 32GB",
+    "type": "DDR4",
+    "size_gb": 32,
+    "brand": "최저가",
+    "price": "66000",
+    "url": "https://smartstore.naver.com/main/products/11649230174",
+    "title": "삼성 칩 데스크탑 DDR4 32GB PC4 21300 2666V 메모리"
+  },
+  {
+    "model": "DDR4 64GB",
+    "type": "DDR4",
+    "size_gb": 64,
+    "brand": "최저가",
+    "price": "267720",
+    "url": "https://search.shopping.naver.com/catalog/52266086619",
+    "title": "서린씨앤아이 팀그룹 T-Force DDR4 64G PC4-25600 CL16 Delta RGB 화이트 32GB, 2개"
+  },
+  {
+    "model": "DDR5 16GB",
+    "type": "DDR5",
+    "size_gb": 16,
+    "brand": "최저가",
+    "price": "71700",
+    "url": "https://search.shopping.naver.com/catalog/52204540637",
+    "title": "삼성전자 삼성 DDR5 PC5-44800 16GB, 1개"
+  },
+  {
+    "model": "DDR5 32GB",
+    "type": "DDR5",
+    "size_gb": 32,
+    "brand": "최저가",
+    "price": "141000",
+    "url": "https://smartstore.naver.com/main/products/8862084741",
+    "title": "데스크탑 메모리 삼성정품 DDR5 5600 램 32GB, 1개"
+  },
+  {
+    "model": "DDR5 64GB",
+    "type": "DDR5",
+    "size_gb": 64,
+    "brand": "최저가",
+    "price": "295000",
+    "url": "https://smartstore.naver.com/main/products/11515620980",
+    "title": "예약판매 마이크론 크루셜 DDR5-5600 CL46 64GB CT64G56C46U5 대원씨티에스"
+  }
+]

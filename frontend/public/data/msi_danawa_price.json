@@ -1,0 +1,202 @@
+[
+  {
+    "model": "MSI MAG B760 TOMAHAWK WIFI DDR4",
+    "series": "MAG",
+    "chipset": "Intel B760",
+    "socket": "LGA1700",
+    "memory": "DDR4",
+    "price": "235000",
+    "url": "https://prod.danawa.com/info/?pcode=18652865&keyword=MSI+MAG+B760+TOMAHAWK+WIFI+DDR4&cate=112751",
+    "title": "MSI MAG B760 토마호크 WIFI"
+  },
+  {
+    "model": "MSI PRO B760M-A WIFI DDR4",
+    "series": "PRO",
+    "chipset": "Intel B760",
+    "socket": "LGA1700",
+    "memory": "DDR4",
+    "price": "175000",
+    "url": "https://prod.danawa.com/info/?pcode=19241759&keyword=MSI+PRO+B760M-A+WIFI+DDR4&cate=112751",
+    "title": "MSI PRO B760M-A WIFI"
+  },
+  {
+    "model": "MSI MPG Z790 EDGE WIFI DDR5",
+    "series": "MPG",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR5",
+    "price": "800000",
+    "url": "https://prod.danawa.com/info/?pcode=29687339&keyword=MSI+MPG+Z790+EDGE+WIFI+DDR5&cate=112751",
+    "title": "MSI MPG Z790 엣지 TI 맥스 WIFI"
+  },
+  {
+    "model": "MSI MEG Z790 ACE",
+    "series": "MEG",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR5",
+    "price": "773590",
+    "url": "https://prod.danawa.com/info/?pcode=18342989&keyword=MSI+MEG+Z790+ACE&cate=112751",
+    "title": "MSI MEG Z790 에이스 (해외구매)"
+  },
+  {
+    "model": "MSI PRO Z790-A WIFI DDR4",
+    "series": "PRO",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR4",
+    "price": "329000",
+    "url": "https://prod.danawa.com/info/?pcode=29681957&keyword=MSI+PRO+Z790-A+WIFI+DDR4&cate=112751",
+    "title": "MSI PRO Z790-A 맥스 WIFI"
+  },
+  {
+    "model": "MSI MPG B650 CARBON WIFI",
+    "series": "MPG",
+    "chipset": "AMD B650",
+    "socket": "AM5",
+    "memory": "DDR5",
+    "price": "915000",
+    "url": "https://prod.danawa.com/info/?pcode=17971178&keyword=MSI+MPG+B650+CARBON+WIFI&cate=112751",
+    "title": "MSI MPG B650 카본 WIFI"
+  },
+  {
+    "model": "MSI MAG B650 TOMAHAWK WIFI",
+    "series": "MAG",
+    "chipset": "AMD B650",
+    "socket": "AM5",
+    "memory": "DDR5",
+    "price": "279000",
+    "url": "https://prod.danawa.com/info/?pcode=17971181&keyword=MSI+MAG+B650+TOMAHAWK+WIFI&cate=112751",
+    "title": "MSI MAG B650 토마호크 WIFI"
+  },
+  {
+    "model": "MSI PRO B650M-A WIFI",
+    "series": "PRO",
+    "chipset": "AMD B650",
+    "socket": "AM5",
+    "memory": "DDR5",
+    "price": "184900",
+    "url": "https://prod.danawa.com/info/?pcode=17971184&keyword=MSI+PRO+B650M-A+WIFI&cate=112751",
+    "title": "MSI PRO B650M-A WIFI"
+  },
+  {
+    "model": "MSI MEG X670E ACE",
+    "series": "MEG",
+    "chipset": "AMD X670E",
+    "socket": "AM5",
+    "memory": "DDR5",
+    "price": "896880",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=EE715&link_prod_c=E855038520&keyword=MSI+MEG+X670E+ACE&r=17482245728394",
+    "title": "MSI MEG X670E ACE 게이밍 마더보드 (AMD Ryzen 9000/8000/7000 시리즈 프로세서 AM5 DDR5 PCIe 5.0 SA"
+  },
+  {
+    "model": "MSI MPG X670E CARBON WIFI",
+    "series": "MPG",
+    "chipset": "AMD X670E",
+    "socket": "AM5",
+    "memory": "DDR5",
+    "price": "648990",
+    "url": "https://prod.danawa.com/info/?pcode=17925728&keyword=MSI+MPG+X670E+CARBON+WIFI&cate=112751",
+    "title": "MSI MPG X670E 카본 WiFi"
+  },
+  {
+    "model": "MSI MAG B550 TOMAHAWK",
+    "series": "MAG",
+    "chipset": "AMD B550",
+    "socket": "AM4",
+    "memory": "DDR4",
+    "price": "190540",
+    "url": "https://prod.danawa.com/info/?pcode=13631252&keyword=MSI+MAG+B550+TOMAHAWK&cate=112751",
+    "title": "MSI MAG B550 토마호크 (해외구매)"
+  },
+  {
+    "model": "MSI B550M PRO-VDH WIFI",
+    "series": "PRO",
+    "chipset": "AMD B550",
+    "socket": "AM4",
+    "memory": "DDR4",
+    "price": "107010",
+    "url": "https://prod.danawa.com/info/?pcode=18036965&keyword=MSI+B550M+PRO-VDH+WIFI&cate=112751",
+    "title": "MSI B550M PRO-VDH WIFI (해외구매)"
+  },
+  {
+    "model": "MSI MPG B550 GAMING PLUS",
+    "series": "MPG",
+    "chipset": "AMD B550",
+    "socket": "AM4",
+    "memory": "DDR4",
+    "price": "118780",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=7655962584&keyword=MSI+MPG+B550+GAMING+PLUS&r=17482245971762",
+    "title": "상세페이지 참조 MSI 메인보드 MPG B550 GAMING PLUS/A ATX AMD B550 칩셋 탑재 Ryzen 5000 시리즈 프로세서 MB5873"
+  },
+  {
+    "model": "MSI MEG X570 UNIFY",
+    "series": "MEG",
+    "chipset": "AMD X570",
+    "socket": "AM4",
+    "memory": "DDR4",
+    "price": "검색불가",
+    "url": "",
+    "title": ""
+  },
+  {
+    "model": "MSI MAG X570S TOMAHAWK MAX WIFI",
+    "series": "MAG",
+    "chipset": "AMD X570S",
+    "socket": "AM4",
+    "memory": "DDR4",
+    "price": "373420",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=57906&cate_c2=59499&cate_c3=59569&cate_c4=0&cmpny_c=TP40F&link_prod_c=I24948212762&keyword=MSI+MAG+X570S+TOMAHAWK+MAX+WIFI&r=17482246091233&cate=14239775",
+    "title": "[해외] MAG X570S TOMAHAWK MAX 와이파이 MSI AM4 DDR4 128G PCI-E 4.0 M.2 x 2 SATA3 USB3.2 데스크탑 마더보드하게 작동  1개"
+  },
+  {
+    "model": "MSI PRO H610M-G DDR4",
+    "series": "PRO",
+    "chipset": "Intel H610",
+    "socket": "LGA1700",
+    "memory": "DDR4",
+    "price": "105000",
+    "url": "https://prod.danawa.com/info/?pcode=16314863&keyword=MSI+PRO+H610M-G+DDR4&cate=112751",
+    "title": "MSI PRO H610M-G DDR4"
+  },
+  {
+    "model": "MSI PRO Z690-A DDR4",
+    "series": "PRO",
+    "chipset": "Intel Z690",
+    "socket": "LGA1700",
+    "memory": "DDR4",
+    "price": "168780",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=EE715&link_prod_c=E972211778&keyword=MSI+PRO+Z690-A+DDR4&r=17482246226599",
+    "title": "MSI PRO Z690-A DDR4 마더보드 LGA 1700 지지대 12100F i5-13500 CPU 128GB ATX"
+  },
+  {
+    "model": "MSI MPG Z690 EDGE WIFI DDR5",
+    "series": "MPG",
+    "chipset": "Intel Z690",
+    "socket": "LGA1700",
+    "memory": "DDR5",
+    "price": "621965",
+    "url": "https://prod.danawa.com/info/?pcode=17543330&keyword=MSI+MPG+Z690+EDGE+WIFI+DDR5&cate=112751",
+    "title": "MSI MPG Z690 엣지 WIFI (해외구매)"
+  },
+  {
+    "model": "MSI B450M MORTAR MAX",
+    "series": "MAG",
+    "chipset": "AMD B450",
+    "socket": "AM4",
+    "memory": "DDR4",
+    "price": "171220",
+    "url": "https://prod.danawa.com/info/?pcode=13628870&keyword=MSI+B450M+MORTAR+MAX&cate=112751",
+    "title": "MSI MAG B450M 박격포 맥스 (해외구매)"
+  },
+  {
+    "model": "MSI A520M-A PRO",
+    "series": "PRO",
+    "chipset": "AMD A520",
+    "socket": "AM4",
+    "memory": "DDR4",
+    "price": "67480",
+    "url": "https://prod.danawa.com/info/?pcode=12067598&keyword=MSI+A520M-A+PRO&cate=112751",
+    "title": "MSI A520M-A PRO"
+  }
+]

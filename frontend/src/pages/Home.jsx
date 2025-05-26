@@ -27,41 +27,40 @@ export default function Home() {
   };
 
   return (
-    <div className="flex h-screen bg-black text-white relative">
-      <div className="w-full p-6">
-        {/* FAQ 아이콘 + 제목 */}
-        <div className="flex items-center gap-3 mb-8">
-          <img
-            src={faqIcon}
-            alt="FAQ"
-            title="도움말"
-            onClick={() => setShowFaq(true)}
-            className="w-6 h-6 cursor-pointer hover:scale-110 hover:opacity-80 transform transition-transform duration-200"
-          />
-          <h1 className="text-2xl font-bold whitespace-nowrap">
-            PC 견적 추천 시스템
-            <span className="ml-2 text-sm font-normal text-gray-400 align-middle">
-              용도 선택 해주세요⭐
-            </span>
-          </h1>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center p-6">
+      {/* FAQ + 제목 라인 */}
+      <div className="flex items-center w-full max-w-xl mb-8">
+        <img
+          src={faqIcon}
+          alt="FAQ"
+          title="도움말"
+          onClick={() => setShowFaq(true)}
+          className="w-6 h-6 cursor-pointer hover:scale-110 hover:opacity-80 transition-transform mr-3"
+        />
+        <h1 className="text-2xl font-bold flex items-center truncate">
+          PC 견적 추천 시스템
+          <span className="ml-2 text-sm font-normal text-gray-400 align-middle">
+            용도 선택 해주세요⭐
+          </span>
+        </h1>
+      </div>
 
-        {/* 카드 UI */}
-        <div className="grid grid-cols-2 gap-4 mb-6">
+      {/* 전체 카드 */}
+      <div className="w-full max-w-xl bg-white/10 rounded-2xl shadow-xl p-10 border border-white/10 flex flex-col items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-4">
           {options.map((opt) => (
             <div
               key={opt.value}
               onClick={() => handleClick(opt.value)}
-              className="cursor-pointer p-6 border rounded-lg text-center
-                         bg-gray-800 text-gray-200 border-gray-600
-                         transform hover:scale-105 hover:z-10
-                         transition-all duration-200
-                         hover:bg-blue-600 hover:text-white hover:border-blue-400"
+              className="cursor-pointer p-8 bg-gray-800/80 text-gray-200 border border-gray-700
+                        rounded-2xl shadow-lg text-center flex flex-col items-center
+                        transition-all duration-200 transform hover:scale-105 hover:z-10
+                        hover:bg-blue-600 hover:text-white hover:border-blue-400"
             >
               <img
                 src={opt.img}
                 alt={opt.label}
-                className="w-12 h-12 mx-auto mb-2"
+                className="w-14 h-14 mb-3"
               />
               <span className="text-xl font-semibold">{opt.label}</span>
             </div>
@@ -70,7 +69,7 @@ export default function Home() {
 
         {/* 선택 결과 표시 */}
         {purpose && (
-          <div className="mt-4">
+          <div className="mt-4 w-full">
             <p className="text-gray-300">
               ✅ <strong>{purpose}</strong> 용도 조건 입력 UI가 여기에 표시될 예정입니다.
             </p>
@@ -78,10 +77,10 @@ export default function Home() {
         )}
       </div>
 
-      {/* ✅ FAQ 설명 모달 with 배경 흐림 효과 */}
+      {/* FAQ 설명 모달 */}
       {showFaq && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="bg-white text-black p-6 rounded-lg shadow-lg max-w-md w-full text-lg">
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50">
+          <div className="bg-white text-black p-7 rounded-2xl shadow-2xl max-w-md w-full text-lg border-2 border-blue-600">
             <h2 className="text-2xl font-semibold mb-4">무엇을 하는 사이트인가요?</h2>
             <p className="mb-6 leading-relaxed font-bold">
               💡 목적에 맞는 최적의 부품 추천,<br />
@@ -90,7 +89,7 @@ export default function Home() {
             </p>
             <button
               onClick={() => setShowFaq(false)}
-              className="px-5 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-base"
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-base font-bold shadow"
             >
               닫기
             </button>

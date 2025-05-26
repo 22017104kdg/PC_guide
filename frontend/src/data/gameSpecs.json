@@ -1,0 +1,282 @@
+{
+  "League of Legends": {
+    "minimum": {
+      "cpu": "Intel Core i3-530",
+      "cpu_score": 2200,
+      "gpu": "NVIDIA GeForce 9600GT",
+      "gpu_score": 630,
+      "ram": "2GB",
+      "storage": "16GB",
+      "os": "Windows 7"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-3300",
+      "cpu_score": 4000,
+      "gpu": "NVIDIA GeForce GTX 560",
+      "gpu_score": 1500,
+      "ram": "4GB",
+      "storage": "16GB",
+      "os": "Windows 10"
+    }
+  },
+  "Valorant": {
+    "minimum": {
+      "cpu": "Intel Core i3-370M",
+      "cpu_score": 1500,
+      "gpu": "Intel HD 3000",
+      "gpu_score": 150,
+      "ram": "4GB",
+      "storage": "20GB",
+      "os": "Windows 7"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-4460",
+      "cpu_score": 6400,
+      "gpu": "NVIDIA GeForce GTX 1050 Ti",
+      "gpu_score": 5700,
+      "ram": "4GB",
+      "storage": "20GB",
+      "os": "Windows 10"
+    }
+  },
+  "Overwatch": {
+    "minimum": {
+      "cpu": "Intel Core i3-4340",
+      "cpu_score": 4300,
+      "gpu": "NVIDIA GeForce GTX 460",
+      "gpu_score": 1600,
+      "ram": "4GB",
+      "storage": "50GB",
+      "os": "Windows 7"
+    },
+    "recommended": {
+      "cpu": "Intel Core i7-6700",
+      "cpu_score": 9000,
+      "gpu": "NVIDIA GeForce GTX 1060",
+      "gpu_score": 8800,
+      "ram": "6GB",
+      "storage": "50GB",
+      "os": "Windows 10"
+    }
+  },
+  "PUBG": {
+    "minimum": {
+      "cpu": "Intel Core i5-4430",
+      "cpu_score": 4300,
+      "gpu": "NVIDIA GeForce GTX 960",
+      "gpu_score": 5700,
+      "ram": "8GB",
+      "storage": "40GB",
+      "os": "Windows 7 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-6600K",
+      "cpu_score": 6800,
+      "gpu": "NVIDIA GeForce GTX 1060 6GB",
+      "gpu_score": 8800,
+      "ram": "16GB",
+      "storage": "50GB",
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "Lost Ark": {
+    "minimum": {
+      "cpu": "Intel Core i3-530",
+      "cpu_score": 2200,
+      "gpu": "NVIDIA GeForce GTX 460",
+      "gpu_score": 1600,
+      "ram": "4GB",
+      "storage": "50GB",
+      "os": "Windows 7"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-6500",
+      "cpu_score": 6500,
+      "gpu": "NVIDIA GeForce GTX 1050",
+      "gpu_score": 5700,
+      "ram": "8GB",
+      "storage": "50GB",
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "MapleStory": {
+    "minimum": {
+      "cpu": "Pentium 4 3.0GHz",
+      "cpu_score": 800,
+      "gpu": "NVIDIA GeForce 6600",
+      "gpu_score": 300,
+      "ram": "2GB",
+      "storage": "30GB",
+      "os": "Windows 7"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5",
+      "cpu_score": 6500,
+      "gpu": "NVIDIA GeForce 8600GT",
+      "gpu_score": 800,
+      "ram": "4GB",
+      "storage": "40GB",
+      "os": "Windows 10"
+    }
+  },
+  "Elden Ring": {
+    "minimum": {
+      "cpu": "Intel Core i5-8400",
+      "cpu_score": 9700,
+      "gpu": "NVIDIA GeForce GTX 1060",
+      "gpu_score": 8800,
+      "ram": "12GB",
+      "storage": "60GB",
+      "os": "Windows 10"
+    },
+    "recommended": {
+      "cpu": "Intel Core i7-8700K",
+      "cpu_score": 13000,
+      "gpu": "NVIDIA GeForce GTX 1070",
+      "gpu_score": 10500,
+      "ram": "16GB",
+      "storage": "60GB",
+      "os": "Windows 11"
+    }
+  },
+  "GTA V": {
+    "minimum": {
+      "cpu": "Intel Core i5-3470",
+      "cpu_score": 6200,
+      "gpu": "NVIDIA GeForce GTX 660",
+      "gpu_score": 3600,
+      "ram": "8GB",
+      "storage": "72GB",
+      "os": "Windows 7 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-3470",
+      "cpu_score": 6200,
+      "gpu": "NVIDIA GeForce GTX 660",
+      "gpu_score": 3600,
+      "ram": "8GB",
+      "storage": "72GB",
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "Minecraft (Java)": {
+    "minimum": {
+      "cpu": "Intel Core i3-3210",
+      "cpu_score": 3100,
+      "gpu": "Intel HD 4000",
+      "gpu_score": 300,
+      "ram": "4GB",
+      "storage": "1GB",
+      "os": "Windows 7"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-4690",
+      "cpu_score": 6000,
+      "gpu": "NVIDIA GeForce 700 Series",
+      "gpu_score": 1000,
+      "ram": "8GB",
+      "storage": "4GB",
+      "os": "Windows 10"
+    }
+  },
+  "Cyberpunk 2077": {
+    "minimum": {
+      "cpu": "Intel Core i5-3570K",
+      "cpu_score": 7100,
+      "gpu": "NVIDIA GeForce GTX 970",
+      "gpu_score": 9000,
+      "ram": "8GB",
+      "storage": "70GB",
+      "os": "Windows 10"
+    },
+    "recommended": {
+      "cpu": "Intel Core i7-4790",
+      "cpu_score": 8000,
+      "gpu": "NVIDIA GeForce GTX 1060 6GB",
+      "gpu_score": 8800,
+      "ram": "12GB",
+      "storage": "70GB",
+      "os": "Windows 10"
+    }
+  },
+  "Diablo 4": {
+    "minimum": {
+      "cpu": "Intel Core i5-2500K",
+      "cpu_score": 6300,
+      "gpu": "NVIDIA GeForce GTX 660",
+      "gpu_score": 3600,
+      "ram": "8GB",
+      "storage": "90GB",
+      "os": "Windows 10"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-4670K",
+      "cpu_score": 7600,
+      "gpu": "NVIDIA GeForce GTX 970",
+      "gpu_score": 9000,
+      "ram": "16GB",
+      "storage": "90GB",
+      "os": "Windows 10"
+    }
+  },
+  "Fortnite": {
+    "minimum": {
+      "cpu": "Intel Core i3-3225",
+      "cpu_score": 3400,
+      "gpu": "Intel HD 4000",
+      "gpu_score": 300,
+      "ram": "4GB",
+      "storage": "30GB",
+      "os": "Windows 7 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-7300U",
+      "cpu_score": 4700,
+      "gpu": "NVIDIA GeForce GTX 960",
+      "gpu_score": 5700,
+      "ram": "8GB",
+      "storage": "30GB",
+      "os": "Windows 10 64-bit"
+    }
+  },
+  "Apex Legends": {
+    "minimum": {
+      "cpu": "Intel Core i3-6300",
+      "cpu_score": 4400,
+      "gpu": "NVIDIA GeForce GT 640",
+      "gpu_score": 1500,
+      "ram": "6GB",
+      "storage": "22GB",
+      "os": "Windows 7 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel i5 3570K",
+      "cpu_score": 7100,
+      "gpu": "NVIDIA GeForce GTX 970",
+      "gpu_score": 9000,
+      "ram": "8GB",
+      "storage": "22GB",
+      "os": "Windows 10"
+    }
+  },
+  "FIFA Online 4": {
+    "minimum": {
+      "cpu": "Intel Core i3-2100",
+      "cpu_score": 2600,
+      "gpu": "NVIDIA GeForce GT 730",
+      "gpu_score": 1200,
+      "ram": "4GB",
+      "storage": "18GB",
+      "os": "Windows 7 64-bit"
+    },
+    "recommended": {
+      "cpu": "Intel Core i5-2550K",
+      "cpu_score": 4200,
+      "gpu": "NVIDIA GeForce GTX 460",
+      "gpu_score": 1600,
+      "ram": "8GB",
+      "storage": "18GB",
+      "os": "Windows 10 64-bit"
+    }
+  }
+}

@@ -1,0 +1,787 @@
+{
+  "League of Legends": {
+    "1920x1080_VeryLow_60": { "cpu_score": 2200, "gpu_score": 600 },
+    "1920x1080_VeryLow_144": { "cpu_score": 4000, "gpu_score": 1200 },
+    "1920x1080_VeryLow_240": { "cpu_score": 6000, "gpu_score": 2000 },
+
+    "1920x1080_Medium_60": { "cpu_score": 2600, "gpu_score": 800 },
+    "1920x1080_Medium_144": { "cpu_score": 4200, "gpu_score": 1500 },
+    "1920x1080_Medium_240": { "cpu_score": 6200, "gpu_score": 2200 },
+
+    "1920x1080_High_60": { "cpu_score": 3200, "gpu_score": 1000 },
+    "1920x1080_High_144": { "cpu_score": 4800, "gpu_score": 1800 },
+    "1920x1080_High_240": { "cpu_score": 7000, "gpu_score": 2800 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 3800, "gpu_score": 1300 },
+    "1920x1080_Ultra_144": { "cpu_score": 6000, "gpu_score": 2200 },
+    "1920x1080_Ultra_240": { "cpu_score": 8000, "gpu_score": 3400 },
+
+    "2560x1440_VeryLow_60": { "cpu_score": 2500, "gpu_score": 900 },
+    "2560x1440_VeryLow_144": { "cpu_score": 4300, "gpu_score": 1800 },
+    "2560x1440_VeryLow_240": { "cpu_score": 6500, "gpu_score": 3200 },
+
+    "2560x1440_Medium_60": { "cpu_score": 2800, "gpu_score": 1100 },
+    "2560x1440_Medium_144": { "cpu_score": 4800, "gpu_score": 2000 },
+    "2560x1440_Medium_240": { "cpu_score": 7000, "gpu_score": 3500 },
+
+    "2560x1440_High_60": { "cpu_score": 3400, "gpu_score": 1300 },
+    "2560x1440_High_144": { "cpu_score": 5200, "gpu_score": 2500 },
+    "2560x1440_High_240": { "cpu_score": 8200, "gpu_score": 4000 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 4200, "gpu_score": 1700 },
+    "2560x1440_Ultra_144": { "cpu_score": 6500, "gpu_score": 3200 },
+    "2560x1440_Ultra_240": { "cpu_score": 9000, "gpu_score": 4800 },
+
+    "3840x2160_VeryLow_60": { "cpu_score": 3000, "gpu_score": 1400 },
+    "3840x2160_VeryLow_144": { "cpu_score": 5000, "gpu_score": 2700 },
+    "3840x2160_VeryLow_240": { "cpu_score": 8000, "gpu_score": 4800 },
+
+    "3840x2160_Medium_60": { "cpu_score": 3500, "gpu_score": 1800 },
+    "3840x2160_Medium_144": { "cpu_score": 5600, "gpu_score": 3400 },
+    "3840x2160_Medium_240": { "cpu_score": 9000, "gpu_score": 5600 },
+
+    "3840x2160_High_60": { "cpu_score": 4000, "gpu_score": 2300 },
+    "3840x2160_High_144": { "cpu_score": 6500, "gpu_score": 4200 },
+    "3840x2160_High_240": { "cpu_score": 10500, "gpu_score": 8000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 5000, "gpu_score": 3000 },
+    "3840x2160_Ultra_144": { "cpu_score": 8000, "gpu_score": 5200 },
+    "3840x2160_Ultra_240": { "cpu_score": 13000, "gpu_score": 9000 }
+  },
+  "Valorant": {
+    "1920x1080_VeryLow_60": { "cpu_score": 1600, "gpu_score": 350 },
+    "1920x1080_VeryLow_144": { "cpu_score": 4000, "gpu_score": 1100 },
+    "1920x1080_VeryLow_240": { "cpu_score": 8500, "gpu_score": 2300 },
+
+    "1920x1080_Medium_60": { "cpu_score": 2100, "gpu_score": 500 },
+    "1920x1080_Medium_144": { "cpu_score": 5200, "gpu_score": 1400 },
+    "1920x1080_Medium_240": { "cpu_score": 9500, "gpu_score": 2600 },
+
+    "1920x1080_High_60": { "cpu_score": 2700, "gpu_score": 900 },
+    "1920x1080_High_144": { "cpu_score": 6200, "gpu_score": 1900 },
+    "1920x1080_High_240": { "cpu_score": 11000, "gpu_score": 3200 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 3300, "gpu_score": 1200 },
+    "1920x1080_Ultra_144": { "cpu_score": 7000, "gpu_score": 2600 },
+    "1920x1080_Ultra_240": { "cpu_score": 12500, "gpu_score": 4300 },
+
+    "2560x1440_VeryLow_60": { "cpu_score": 2000, "gpu_score": 700 },
+    "2560x1440_VeryLow_144": { "cpu_score": 4300, "gpu_score": 1500 },
+    "2560x1440_VeryLow_240": { "cpu_score": 9000, "gpu_score": 3000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 2600, "gpu_score": 900 },
+    "2560x1440_Medium_144": { "cpu_score": 5700, "gpu_score": 1800 },
+    "2560x1440_Medium_240": { "cpu_score": 11000, "gpu_score": 3700 },
+
+    "2560x1440_High_60": { "cpu_score": 3200, "gpu_score": 1200 },
+    "2560x1440_High_144": { "cpu_score": 7000, "gpu_score": 2400 },
+    "2560x1440_High_240": { "cpu_score": 12500, "gpu_score": 4400 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 3700, "gpu_score": 1500 },
+    "2560x1440_Ultra_144": { "cpu_score": 8200, "gpu_score": 3300 },
+    "2560x1440_Ultra_240": { "cpu_score": 15000, "gpu_score": 5700 },
+
+    "3840x2160_VeryLow_60": { "cpu_score": 3500, "gpu_score": 1800 },
+    "3840x2160_VeryLow_144": { "cpu_score": 9500, "gpu_score": 4200 },
+    "3840x2160_VeryLow_240": { "cpu_score": 15000, "gpu_score": 6500 },
+
+    "3840x2160_Medium_60": { "cpu_score": 4700, "gpu_score": 2300 },
+    "3840x2160_Medium_144": { "cpu_score": 11000, "gpu_score": 5000 },
+    "3840x2160_Medium_240": { "cpu_score": 17000, "gpu_score": 8200 },
+
+    "3840x2160_High_60": { "cpu_score": 6500, "gpu_score": 3000 },
+    "3840x2160_High_144": { "cpu_score": 13500, "gpu_score": 6200 },
+    "3840x2160_High_240": { "cpu_score": 19000, "gpu_score": 10000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 8000, "gpu_score": 3700 },
+    "3840x2160_Ultra_144": { "cpu_score": 17000, "gpu_score": 7000 },
+    "3840x2160_Ultra_240": { "cpu_score": 24000, "gpu_score": 12000 }
+  },
+  "Overwatch": {
+    "1920x1080_VeryLow_60": { "cpu_score": 3500, "gpu_score": 1200 },
+    "1920x1080_VeryLow_144": { "cpu_score": 7000, "gpu_score": 2400 },
+    "1920x1080_VeryLow_240": { "cpu_score": 11500, "gpu_score": 4300 },
+
+    "1920x1080_Medium_60": { "cpu_score": 4300, "gpu_score": 1500 },
+    "1920x1080_Medium_144": { "cpu_score": 8500, "gpu_score": 3000 },
+    "1920x1080_Medium_240": { "cpu_score": 14000, "gpu_score": 5400 },
+
+    "1920x1080_High_60": { "cpu_score": 6000, "gpu_score": 2100 },
+    "1920x1080_High_144": { "cpu_score": 10000, "gpu_score": 4200 },
+    "1920x1080_High_240": { "cpu_score": 17000, "gpu_score": 7600 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 9000, "gpu_score": 3000 },
+    "1920x1080_Ultra_144": { "cpu_score": 15000, "gpu_score": 6000 },
+    "1920x1080_Ultra_240": { "cpu_score": 22000, "gpu_score": 11000 },
+
+    "2560x1440_VeryLow_60": { "cpu_score": 4200, "gpu_score": 1700 },
+    "2560x1440_VeryLow_144": { "cpu_score": 8500, "gpu_score": 3200 },
+    "2560x1440_VeryLow_240": { "cpu_score": 15000, "gpu_score": 6000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 5000, "gpu_score": 2000 },
+    "2560x1440_Medium_144": { "cpu_score": 10000, "gpu_score": 4000 },
+    "2560x1440_Medium_240": { "cpu_score": 17000, "gpu_score": 8000 },
+
+    "2560x1440_High_60": { "cpu_score": 7000, "gpu_score": 2800 },
+    "2560x1440_High_144": { "cpu_score": 14000, "gpu_score": 6000 },
+    "2560x1440_High_240": { "cpu_score": 22000, "gpu_score": 12000 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 12000, "gpu_score": 4800 },
+    "2560x1440_Ultra_144": { "cpu_score": 18000, "gpu_score": 9000 },
+    "2560x1440_Ultra_240": { "cpu_score": 27000, "gpu_score": 17000 },
+
+    "3840x2160_VeryLow_60": { "cpu_score": 6000, "gpu_score": 2800 },
+    "3840x2160_VeryLow_144": { "cpu_score": 12000, "gpu_score": 6000 },
+    "3840x2160_VeryLow_240": { "cpu_score": 22000, "gpu_score": 13000 },
+
+    "3840x2160_Medium_60": { "cpu_score": 8000, "gpu_score": 3500 },
+    "3840x2160_Medium_144": { "cpu_score": 15000, "gpu_score": 7000 },
+    "3840x2160_Medium_240": { "cpu_score": 24000, "gpu_score": 15000 },
+
+    "3840x2160_High_60": { "cpu_score": 12000, "gpu_score": 5500 },
+    "3840x2160_High_144": { "cpu_score": 20000, "gpu_score": 11000 },
+    "3840x2160_High_240": { "cpu_score": 32000, "gpu_score": 24000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 18000, "gpu_score": 8500 },
+    "3840x2160_Ultra_144": { "cpu_score": 28000, "gpu_score": 17000 },
+    "3840x2160_Ultra_240": { "cpu_score": 40000, "gpu_score": 32000 }
+  },
+  "PUBG": {
+    "1920x1080_VeryLow_60": { "cpu_score": 4300, "gpu_score": 5700 },
+    "1920x1080_VeryLow_144": { "cpu_score": 7000, "gpu_score": 8300 },
+    "1920x1080_VeryLow_240": { "cpu_score": 11000, "gpu_score": 13000 },
+
+    "1920x1080_Medium_60": { "cpu_score": 6000, "gpu_score": 7000 },
+    "1920x1080_Medium_144": { "cpu_score": 9000, "gpu_score": 10500 },
+    "1920x1080_Medium_240": { "cpu_score": 14000, "gpu_score": 17000 },
+
+    "1920x1080_High_60": { "cpu_score": 7000, "gpu_score": 9000 },
+    "1920x1080_High_144": { "cpu_score": 12000, "gpu_score": 13000 },
+    "1920x1080_High_240": { "cpu_score": 18000, "gpu_score": 22000 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 9000, "gpu_score": 12000 },
+    "1920x1080_Ultra_144": { "cpu_score": 14000, "gpu_score": 17000 },
+    "1920x1080_Ultra_240": { "cpu_score": 22000, "gpu_score": 28000 },
+
+    "2560x1440_VeryLow_60": { "cpu_score": 5300, "gpu_score": 7000 },
+    "2560x1440_VeryLow_144": { "cpu_score": 9000, "gpu_score": 11000 },
+    "2560x1440_VeryLow_240": { "cpu_score": 15000, "gpu_score": 18000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 7000, "gpu_score": 9000 },
+    "2560x1440_Medium_144": { "cpu_score": 11000, "gpu_score": 14000 },
+    "2560x1440_Medium_240": { "cpu_score": 17000, "gpu_score": 23000 },
+
+    "2560x1440_High_60": { "cpu_score": 9000, "gpu_score": 12000 },
+    "2560x1440_High_144": { "cpu_score": 14000, "gpu_score": 18000 },
+    "2560x1440_High_240": { "cpu_score": 20000, "gpu_score": 30000 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 11000, "gpu_score": 15000 },
+    "2560x1440_Ultra_144": { "cpu_score": 18000, "gpu_score": 25000 },
+    "2560x1440_Ultra_240": { "cpu_score": 27000, "gpu_score": 37000 },
+
+    "3840x2160_VeryLow_60": { "cpu_score": 7000, "gpu_score": 11000 },
+    "3840x2160_VeryLow_144": { "cpu_score": 14000, "gpu_score": 21000 },
+    "3840x2160_VeryLow_240": { "cpu_score": 25000, "gpu_score": 37000 },
+
+    "3840x2160_Medium_60": { "cpu_score": 9000, "gpu_score": 14000 },
+    "3840x2160_Medium_144": { "cpu_score": 17000, "gpu_score": 25000 },
+    "3840x2160_Medium_240": { "cpu_score": 30000, "gpu_score": 42000 },
+
+    "3840x2160_High_60": { "cpu_score": 12000, "gpu_score": 20000 },
+    "3840x2160_High_144": { "cpu_score": 20000, "gpu_score": 33000 },
+    "3840x2160_High_240": { "cpu_score": 35000, "gpu_score": 52000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 15000, "gpu_score": 25000 },
+    "3840x2160_Ultra_144": { "cpu_score": 27000, "gpu_score": 42000 },
+    "3840x2160_Ultra_240": { "cpu_score": 40000, "gpu_score": 65000 }
+  },
+  "Lost Ark": {
+    "1920x1080_VeryLow_60": { "cpu_score": 2200, "gpu_score": 1600 },
+    "1920x1080_VeryLow_144": { "cpu_score": 4000, "gpu_score": 3200 },
+    "1920x1080_VeryLow_240": { "cpu_score": 6000, "gpu_score": 4800 },
+
+    "1920x1080_Medium_60": { "cpu_score": 3000, "gpu_score": 2000 },
+    "1920x1080_Medium_144": { "cpu_score": 5000, "gpu_score": 3500 },
+    "1920x1080_Medium_240": { "cpu_score": 7000, "gpu_score": 5000 },
+
+    "1920x1080_High_60": { "cpu_score": 4000, "gpu_score": 2700 },
+    "1920x1080_High_144": { "cpu_score": 6500, "gpu_score": 4300 },
+    "1920x1080_High_240": { "cpu_score": 9000, "gpu_score": 6000 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 5000, "gpu_score": 3500 },
+    "1920x1080_Ultra_144": { "cpu_score": 8000, "gpu_score": 5200 },
+    "1920x1080_Ultra_240": { "cpu_score": 11000, "gpu_score": 7500 },
+
+    "2560x1440_VeryLow_60": { "cpu_score": 2600, "gpu_score": 2200 },
+    "2560x1440_VeryLow_144": { "cpu_score": 4800, "gpu_score": 4200 },
+    "2560x1440_VeryLow_240": { "cpu_score": 7000, "gpu_score": 6000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 3500, "gpu_score": 3000 },
+    "2560x1440_Medium_144": { "cpu_score": 6000, "gpu_score": 4700 },
+    "2560x1440_Medium_240": { "cpu_score": 9000, "gpu_score": 6800 },
+
+    "2560x1440_High_60": { "cpu_score": 4500, "gpu_score": 3800 },
+    "2560x1440_High_144": { "cpu_score": 7500, "gpu_score": 5800 },
+    "2560x1440_High_240": { "cpu_score": 11000, "gpu_score": 9000 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 5500, "gpu_score": 4700 },
+    "2560x1440_Ultra_144": { "cpu_score": 9000, "gpu_score": 7000 },
+    "2560x1440_Ultra_240": { "cpu_score": 14000, "gpu_score": 11000 },
+
+    "3840x2160_VeryLow_60": { "cpu_score": 3500, "gpu_score": 3500 },
+    "3840x2160_VeryLow_144": { "cpu_score": 6500, "gpu_score": 7000 },
+    "3840x2160_VeryLow_240": { "cpu_score": 10000, "gpu_score": 11000 },
+
+    "3840x2160_Medium_60": { "cpu_score": 4500, "gpu_score": 4800 },
+    "3840x2160_Medium_144": { "cpu_score": 8000, "gpu_score": 9000 },
+    "3840x2160_Medium_240": { "cpu_score": 12000, "gpu_score": 14000 },
+
+    "3840x2160_High_60": { "cpu_score": 6000, "gpu_score": 6500 },
+    "3840x2160_High_144": { "cpu_score": 11000, "gpu_score": 12000 },
+    "3840x2160_High_240": { "cpu_score": 18000, "gpu_score": 20000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 8000, "gpu_score": 8000 },
+    "3840x2160_Ultra_144": { "cpu_score": 15000, "gpu_score": 16000 },
+    "3840x2160_Ultra_240": { "cpu_score": 22000, "gpu_score": 24000 }
+  },
+  "MapleStory": {
+    "1920x1080_VeryLow_60": { "cpu_score": 900, "gpu_score": 350 },
+    "1920x1080_VeryLow_144": { "cpu_score": 1700, "gpu_score": 600 },
+    "1920x1080_VeryLow_240": { "cpu_score": 3500, "gpu_score": 1200 },
+
+    "1920x1080_Medium_60": { "cpu_score": 1200, "gpu_score": 400 },
+    "1920x1080_Medium_144": { "cpu_score": 1900, "gpu_score": 700 },
+    "1920x1080_Medium_240": { "cpu_score": 4000, "gpu_score": 1400 },
+
+    "1920x1080_High_60": { "cpu_score": 1600, "gpu_score": 600 },
+    "1920x1080_High_144": { "cpu_score": 2700, "gpu_score": 1000 },
+    "1920x1080_High_240": { "cpu_score": 4500, "gpu_score": 1800 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 2000, "gpu_score": 800 },
+    "1920x1080_Ultra_144": { "cpu_score": 3500, "gpu_score": 1300 },
+    "1920x1080_Ultra_240": { "cpu_score": 6000, "gpu_score": 2000 },
+
+    "2560x1440_VeryLow_60": { "cpu_score": 1300, "gpu_score": 600 },
+    "2560x1440_VeryLow_144": { "cpu_score": 2200, "gpu_score": 900 },
+    "2560x1440_VeryLow_240": { "cpu_score": 4200, "gpu_score": 1500 },
+
+    "2560x1440_Medium_60": { "cpu_score": 1500, "gpu_score": 700 },
+    "2560x1440_Medium_144": { "cpu_score": 2500, "gpu_score": 1200 },
+    "2560x1440_Medium_240": { "cpu_score": 4700, "gpu_score": 1800 },
+
+    "2560x1440_High_60": { "cpu_score": 2000, "gpu_score": 1000 },
+    "2560x1440_High_144": { "cpu_score": 3500, "gpu_score": 1700 },
+    "2560x1440_High_240": { "cpu_score": 6000, "gpu_score": 2500 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 2600, "gpu_score": 1300 },
+    "2560x1440_Ultra_144": { "cpu_score": 4200, "gpu_score": 2000 },
+    "2560x1440_Ultra_240": { "cpu_score": 7500, "gpu_score": 3000 },
+
+    "3840x2160_VeryLow_60": { "cpu_score": 1700, "gpu_score": 900 },
+    "3840x2160_VeryLow_144": { "cpu_score": 3500, "gpu_score": 1600 },
+    "3840x2160_VeryLow_240": { "cpu_score": 6000, "gpu_score": 2800 },
+
+    "3840x2160_Medium_60": { "cpu_score": 2100, "gpu_score": 1200 },
+    "3840x2160_Medium_144": { "cpu_score": 4000, "gpu_score": 2000 },
+    "3840x2160_Medium_240": { "cpu_score": 7500, "gpu_score": 3500 },
+
+    "3840x2160_High_60": { "cpu_score": 2800, "gpu_score": 1700 },
+    "3840x2160_High_144": { "cpu_score": 5200, "gpu_score": 2600 },
+    "3840x2160_High_240": { "cpu_score": 9000, "gpu_score": 4500 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 3500, "gpu_score": 2200 },
+    "3840x2160_Ultra_144": { "cpu_score": 6500, "gpu_score": 3500 },
+    "3840x2160_Ultra_240": { "cpu_score": 12000, "gpu_score": 6000 }
+  },
+  "Elden Ring": {
+    "1920x1080_VeryLow_60": { "cpu_score": 9700, "gpu_score": 8800 },
+    "1920x1080_VeryLow_144": { "cpu_score": 14000, "gpu_score": 13000 },
+    "1920x1080_VeryLow_240": { "cpu_score": 21000, "gpu_score": 18000 },
+
+    "1920x1080_Medium_60": { "cpu_score": 11000, "gpu_score": 10000 },
+    "1920x1080_Medium_144": { "cpu_score": 15500, "gpu_score": 14500 },
+    "1920x1080_Medium_240": { "cpu_score": 23000, "gpu_score": 20000 },
+
+    "1920x1080_High_60": { "cpu_score": 13000, "gpu_score": 10500 },
+    "1920x1080_High_144": { "cpu_score": 18000, "gpu_score": 16000 },
+    "1920x1080_High_240": { "cpu_score": 26000, "gpu_score": 21000 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 14500, "gpu_score": 12000 },
+    "1920x1080_Ultra_144": { "cpu_score": 20000, "gpu_score": 18000 },
+    "1920x1080_Ultra_240": { "cpu_score": 29000, "gpu_score": 25000 },
+
+    "2560x1440_VeryLow_60": { "cpu_score": 11000, "gpu_score": 11000 },
+    "2560x1440_VeryLow_144": { "cpu_score": 15500, "gpu_score": 16000 },
+    "2560x1440_VeryLow_240": { "cpu_score": 23000, "gpu_score": 23000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 12500, "gpu_score": 12000 },
+    "2560x1440_Medium_144": { "cpu_score": 18000, "gpu_score": 18000 },
+    "2560x1440_Medium_240": { "cpu_score": 27000, "gpu_score": 25000 },
+
+    "2560x1440_High_60": { "cpu_score": 14000, "gpu_score": 14000 },
+    "2560x1440_High_144": { "cpu_score": 20000, "gpu_score": 21000 },
+    "2560x1440_High_240": { "cpu_score": 29000, "gpu_score": 29000 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 16000, "gpu_score": 16000 },
+    "2560x1440_Ultra_144": { "cpu_score": 23000, "gpu_score": 24000 },
+    "2560x1440_Ultra_240": { "cpu_score": 33000, "gpu_score": 33000 },
+
+    "3840x2160_VeryLow_60": { "cpu_score": 13000, "gpu_score": 17000 },
+    "3840x2160_VeryLow_144": { "cpu_score": 19000, "gpu_score": 26000 },
+    "3840x2160_VeryLow_240": { "cpu_score": 27000, "gpu_score": 38000 },
+
+    "3840x2160_Medium_60": { "cpu_score": 15000, "gpu_score": 20000 },
+    "3840x2160_Medium_144": { "cpu_score": 22000, "gpu_score": 30000 },
+    "3840x2160_Medium_240": { "cpu_score": 32000, "gpu_score": 42000 },
+
+    "3840x2160_High_60": { "cpu_score": 17000, "gpu_score": 22000 },
+    "3840x2160_High_144": { "cpu_score": 25000, "gpu_score": 34000 },
+    "3840x2160_High_240": { "cpu_score": 37000, "gpu_score": 47000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 20000, "gpu_score": 26000 },
+    "3840x2160_Ultra_144": { "cpu_score": 29000, "gpu_score": 38000 },
+    "3840x2160_Ultra_240": { "cpu_score": 42000, "gpu_score": 52000 }
+  },
+  "GTA V": {
+    "1920x1080_VeryLow_60": { "cpu_score": 6200, "gpu_score": 3600 },
+    "1920x1080_VeryLow_144": { "cpu_score": 9000, "gpu_score": 5800 },
+    "1920x1080_VeryLow_240": { "cpu_score": 12000, "gpu_score": 8200 },
+
+    "1920x1080_Medium_60": { "cpu_score": 7200, "gpu_score": 4600 },
+    "1920x1080_Medium_144": { "cpu_score": 10500, "gpu_score": 7000 },
+    "1920x1080_Medium_240": { "cpu_score": 14000, "gpu_score": 9500 },
+
+    "1920x1080_High_60": { "cpu_score": 8200, "gpu_score": 5600 },
+    "1920x1080_High_144": { "cpu_score": 12000, "gpu_score": 8200 },
+    "1920x1080_High_240": { "cpu_score": 16000, "gpu_score": 11000 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 9500, "gpu_score": 6700 },
+    "1920x1080_Ultra_144": { "cpu_score": 14000, "gpu_score": 10000 },
+    "1920x1080_Ultra_240": { "cpu_score": 18500, "gpu_score": 13500 },
+
+    "2560x1440_VeryLow_60": { "cpu_score": 7500, "gpu_score": 5200 },
+    "2560x1440_VeryLow_144": { "cpu_score": 11000, "gpu_score": 8500 },
+    "2560x1440_VeryLow_240": { "cpu_score": 14500, "gpu_score": 12000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 8500, "gpu_score": 6200 },
+    "2560x1440_Medium_144": { "cpu_score": 12500, "gpu_score": 9500 },
+    "2560x1440_Medium_240": { "cpu_score": 17000, "gpu_score": 14000 },
+
+    "2560x1440_High_60": { "cpu_score": 10000, "gpu_score": 7400 },
+    "2560x1440_High_144": { "cpu_score": 14000, "gpu_score": 11000 },
+    "2560x1440_High_240": { "cpu_score": 18500, "gpu_score": 15500 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 11500, "gpu_score": 8800 },
+    "2560x1440_Ultra_144": { "cpu_score": 16000, "gpu_score": 13000 },
+    "2560x1440_Ultra_240": { "cpu_score": 21000, "gpu_score": 18000 },
+
+    "3840x2160_VeryLow_60": { "cpu_score": 9500, "gpu_score": 8200 },
+    "3840x2160_VeryLow_144": { "cpu_score": 14000, "gpu_score": 14000 },
+    "3840x2160_VeryLow_240": { "cpu_score": 20000, "gpu_score": 21000 },
+
+    "3840x2160_Medium_60": { "cpu_score": 11000, "gpu_score": 10500 },
+    "3840x2160_Medium_144": { "cpu_score": 15500, "gpu_score": 17000 },
+    "3840x2160_Medium_240": { "cpu_score": 22000, "gpu_score": 25000 },
+
+    "3840x2160_High_60": { "cpu_score": 13000, "gpu_score": 13000 },
+    "3840x2160_High_144": { "cpu_score": 18500, "gpu_score": 20000 },
+    "3840x2160_High_240": { "cpu_score": 25000, "gpu_score": 29000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 15500, "gpu_score": 16500 },
+    "3840x2160_Ultra_144": { "cpu_score": 21000, "gpu_score": 25000 },
+    "3840x2160_Ultra_240": { "cpu_score": 29000, "gpu_score": 35000 }
+  },
+  "Minecraft (Java)": {
+    "1920x1080_VeryLow_60": { "cpu_score": 3100, "gpu_score": 300 },
+    "1920x1080_VeryLow_144": { "cpu_score": 5000, "gpu_score": 900 },
+    "1920x1080_VeryLow_240": { "cpu_score": 7000, "gpu_score": 1600 },
+
+    "1920x1080_Medium_60": { "cpu_score": 4000, "gpu_score": 600 },
+    "1920x1080_Medium_144": { "cpu_score": 6000, "gpu_score": 1200 },
+    "1920x1080_Medium_240": { "cpu_score": 8500, "gpu_score": 2000 },
+
+    "1920x1080_High_60": { "cpu_score": 5000, "gpu_score": 900 },
+    "1920x1080_High_144": { "cpu_score": 8000, "gpu_score": 1600 },
+    "1920x1080_High_240": { "cpu_score": 11000, "gpu_score": 2600 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 6500, "gpu_score": 1400 },
+    "1920x1080_Ultra_144": { "cpu_score": 9500, "gpu_score": 2300 },
+    "1920x1080_Ultra_240": { "cpu_score": 13500, "gpu_score": 3700 },
+
+    "2560x1440_VeryLow_60": { "cpu_score": 3500, "gpu_score": 600 },
+    "2560x1440_VeryLow_144": { "cpu_score": 5500, "gpu_score": 1200 },
+    "2560x1440_VeryLow_240": { "cpu_score": 8000, "gpu_score": 2000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 4500, "gpu_score": 900 },
+    "2560x1440_Medium_144": { "cpu_score": 7000, "gpu_score": 1700 },
+    "2560x1440_Medium_240": { "cpu_score": 10000, "gpu_score": 2800 },
+
+    "2560x1440_High_60": { "cpu_score": 5500, "gpu_score": 1400 },
+    "2560x1440_High_144": { "cpu_score": 9000, "gpu_score": 2400 },
+    "2560x1440_High_240": { "cpu_score": 12000, "gpu_score": 3700 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 7000, "gpu_score": 2100 },
+    "2560x1440_Ultra_144": { "cpu_score": 10500, "gpu_score": 3300 },
+    "2560x1440_Ultra_240": { "cpu_score": 15000, "gpu_score": 5200 },
+
+    "3840x2160_VeryLow_60": { "cpu_score": 5000, "gpu_score": 1300 },
+    "3840x2160_VeryLow_144": { "cpu_score": 9000, "gpu_score": 2200 },
+    "3840x2160_VeryLow_240": { "cpu_score": 14000, "gpu_score": 4000 },
+
+    "3840x2160_Medium_60": { "cpu_score": 7000, "gpu_score": 1800 },
+    "3840x2160_Medium_144": { "cpu_score": 12000, "gpu_score": 3000 },
+    "3840x2160_Medium_240": { "cpu_score": 18000, "gpu_score": 5300 },
+
+    "3840x2160_High_60": { "cpu_score": 9500, "gpu_score": 2500 },
+    "3840x2160_High_144": { "cpu_score": 16000, "gpu_score": 4400 },
+    "3840x2160_High_240": { "cpu_score": 23000, "gpu_score": 7800 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 12000, "gpu_score": 3300 },
+    "3840x2160_Ultra_144": { "cpu_score": 20000, "gpu_score": 5700 },
+    "3840x2160_Ultra_240": { "cpu_score": 30000, "gpu_score": 9500 }
+  },
+  "Cyberpunk 2077": {
+    "1920x1080_Low_60": { "cpu_score": 7500, "gpu_score": 9000 },
+    "1920x1080_Low_144": { "cpu_score": 13000, "gpu_score": 15000 },
+    "1920x1080_Low_240": { "cpu_score": 18000, "gpu_score": 22000 },
+
+    "1920x1080_Medium_60": { "cpu_score": 9000, "gpu_score": 11000 },
+    "1920x1080_Medium_144": { "cpu_score": 14500, "gpu_score": 18000 },
+    "1920x1080_Medium_240": { "cpu_score": 20000, "gpu_score": 26000 },
+
+    "1920x1080_High_60": { "cpu_score": 11000, "gpu_score": 13500 },
+    "1920x1080_High_144": { "cpu_score": 16000, "gpu_score": 22000 },
+    "1920x1080_High_240": { "cpu_score": 21000, "gpu_score": 32000 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 12000, "gpu_score": 17000 },
+    "1920x1080_Ultra_144": { "cpu_score": 17000, "gpu_score": 26000 },
+    "1920x1080_Ultra_240": { "cpu_score": 23000, "gpu_score": 40000 },
+
+    "2560x1440_Low_60": { "cpu_score": 9500, "gpu_score": 12000 },
+    "2560x1440_Low_144": { "cpu_score": 14500, "gpu_score": 19000 },
+    "2560x1440_Low_240": { "cpu_score": 21000, "gpu_score": 30000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 11000, "gpu_score": 15000 },
+    "2560x1440_Medium_144": { "cpu_score": 16500, "gpu_score": 25000 },
+    "2560x1440_Medium_240": { "cpu_score": 23000, "gpu_score": 40000 },
+
+    "2560x1440_High_60": { "cpu_score": 12000, "gpu_score": 18000 },
+    "2560x1440_High_144": { "cpu_score": 18000, "gpu_score": 33000 },
+    "2560x1440_High_240": { "cpu_score": 25000, "gpu_score": 50000 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 13500, "gpu_score": 24000 },
+    "2560x1440_Ultra_144": { "cpu_score": 20000, "gpu_score": 40000 },
+    "2560x1440_Ultra_240": { "cpu_score": 28000, "gpu_score": 60000 },
+
+    "3840x2160_Low_60": { "cpu_score": 11000, "gpu_score": 18000 },
+    "3840x2160_Low_144": { "cpu_score": 18000, "gpu_score": 34000 },
+    "3840x2160_Low_240": { "cpu_score": 26000, "gpu_score": 60000 },
+
+    "3840x2160_Medium_60": { "cpu_score": 12500, "gpu_score": 23000 },
+    "3840x2160_Medium_144": { "cpu_score": 20000, "gpu_score": 42000 },
+    "3840x2160_Medium_240": { "cpu_score": 29000, "gpu_score": 70000 },
+
+    "3840x2160_High_60": { "cpu_score": 14000, "gpu_score": 30000 },
+    "3840x2160_High_144": { "cpu_score": 22000, "gpu_score": 55000 },
+    "3840x2160_High_240": { "cpu_score": 32000, "gpu_score": 90000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 16000, "gpu_score": 40000 },
+    "3840x2160_Ultra_144": { "cpu_score": 25000, "gpu_score": 80000 },
+    "3840x2160_Ultra_240": { "cpu_score": 40000, "gpu_score": 120000 }
+  },
+  "FIFA Online 4": {
+    "1920x1080_Low_60": { "cpu_score": 2000, "gpu_score": 500 },
+    "1920x1080_Low_144": { "cpu_score": 3500, "gpu_score": 900 },
+    "1920x1080_Low_240": { "cpu_score": 6000, "gpu_score": 1400 },
+
+    "1920x1080_Medium_60": { "cpu_score": 2300, "gpu_score": 700 },
+    "1920x1080_Medium_144": { "cpu_score": 4000, "gpu_score": 1200 },
+    "1920x1080_Medium_240": { "cpu_score": 6500, "gpu_score": 1800 },
+
+    "1920x1080_High_60": { "cpu_score": 2600, "gpu_score": 900 },
+    "1920x1080_High_144": { "cpu_score": 4500, "gpu_score": 1500 },
+    "1920x1080_High_240": { "cpu_score": 7200, "gpu_score": 2200 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 3000, "gpu_score": 1200 },
+    "1920x1080_Ultra_144": { "cpu_score": 5000, "gpu_score": 2000 },
+    "1920x1080_Ultra_240": { "cpu_score": 8000, "gpu_score": 2800 },
+
+    "2560x1440_Low_60": { "cpu_score": 2500, "gpu_score": 900 },
+    "2560x1440_Low_144": { "cpu_score": 4000, "gpu_score": 1400 },
+    "2560x1440_Low_240": { "cpu_score": 6500, "gpu_score": 2000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 2800, "gpu_score": 1100 },
+    "2560x1440_Medium_144": { "cpu_score": 4500, "gpu_score": 1700 },
+    "2560x1440_Medium_240": { "cpu_score": 7000, "gpu_score": 2400 },
+
+    "2560x1440_High_60": { "cpu_score": 3200, "gpu_score": 1300 },
+    "2560x1440_High_144": { "cpu_score": 5200, "gpu_score": 2000 },
+    "2560x1440_High_240": { "cpu_score": 8000, "gpu_score": 3200 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 3600, "gpu_score": 1600 },
+    "2560x1440_Ultra_144": { "cpu_score": 6000, "gpu_score": 2600 },
+    "2560x1440_Ultra_240": { "cpu_score": 10000, "gpu_score": 4000 },
+
+    "3840x2160_Low_60": { "cpu_score": 3000, "gpu_score": 1600 },
+    "3840x2160_Low_144": { "cpu_score": 5000, "gpu_score": 2700 },
+    "3840x2160_Low_240": { "cpu_score": 9000, "gpu_score": 4200 },
+
+    "3840x2160_Medium_60": { "cpu_score": 3500, "gpu_score": 2000 },
+    "3840x2160_Medium_144": { "cpu_score": 7000, "gpu_score": 3400 },
+    "3840x2160_Medium_240": { "cpu_score": 12000, "gpu_score": 5200 },
+
+    "3840x2160_High_60": { "cpu_score": 4000, "gpu_score": 2400 },
+    "3840x2160_High_144": { "cpu_score": 8000, "gpu_score": 4200 },
+    "3840x2160_High_240": { "cpu_score": 15000, "gpu_score": 7000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 4800, "gpu_score": 3200 },
+    "3840x2160_Ultra_144": { "cpu_score": 10000, "gpu_score": 5600 },
+    "3840x2160_Ultra_240": { "cpu_score": 18000, "gpu_score": 9000 }
+  },
+  "CS:GO": {
+    "1920x1080_Low_60": { "cpu_score": 1800, "gpu_score": 500 },
+    "1920x1080_Low_144": { "cpu_score": 3500, "gpu_score": 1000 },
+    "1920x1080_Low_240": { "cpu_score": 6500, "gpu_score": 1700 },
+
+    "1920x1080_Medium_60": { "cpu_score": 2100, "gpu_score": 700 },
+    "1920x1080_Medium_144": { "cpu_score": 4000, "gpu_score": 1300 },
+    "1920x1080_Medium_240": { "cpu_score": 7500, "gpu_score": 2000 },
+
+    "1920x1080_High_60": { "cpu_score": 2500, "gpu_score": 1000 },
+    "1920x1080_High_144": { "cpu_score": 4800, "gpu_score": 1800 },
+    "1920x1080_High_240": { "cpu_score": 9000, "gpu_score": 3000 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 3000, "gpu_score": 1300 },
+    "1920x1080_Ultra_144": { "cpu_score": 5500, "gpu_score": 2300 },
+    "1920x1080_Ultra_240": { "cpu_score": 10500, "gpu_score": 4000 },
+
+    "2560x1440_Low_60": { "cpu_score": 2200, "gpu_score": 700 },
+    "2560x1440_Low_144": { "cpu_score": 4000, "gpu_score": 1300 },
+    "2560x1440_Low_240": { "cpu_score": 8000, "gpu_score": 2200 },
+
+    "2560x1440_Medium_60": { "cpu_score": 2500, "gpu_score": 900 },
+    "2560x1440_Medium_144": { "cpu_score": 5000, "gpu_score": 1700 },
+    "2560x1440_Medium_240": { "cpu_score": 9500, "gpu_score": 3000 },
+
+    "2560x1440_High_60": { "cpu_score": 3000, "gpu_score": 1200 },
+    "2560x1440_High_144": { "cpu_score": 6500, "gpu_score": 2200 },
+    "2560x1440_High_240": { "cpu_score": 12000, "gpu_score": 4000 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 3500, "gpu_score": 1600 },
+    "2560x1440_Ultra_144": { "cpu_score": 8500, "gpu_score": 3200 },
+    "2560x1440_Ultra_240": { "cpu_score": 15000, "gpu_score": 5000 },
+
+    "3840x2160_Low_60": { "cpu_score": 3200, "gpu_score": 1200 },
+    "3840x2160_Low_144": { "cpu_score": 7500, "gpu_score": 2500 },
+    "3840x2160_Low_240": { "cpu_score": 14000, "gpu_score": 4500 },
+
+    "3840x2160_Medium_60": { "cpu_score": 3800, "gpu_score": 1800 },
+    "3840x2160_Medium_144": { "cpu_score": 9000, "gpu_score": 3500 },
+    "3840x2160_Medium_240": { "cpu_score": 16000, "gpu_score": 6000 },
+
+    "3840x2160_High_60": { "cpu_score": 4500, "gpu_score": 2400 },
+    "3840x2160_High_144": { "cpu_score": 12000, "gpu_score": 4500 },
+    "3840x2160_High_240": { "cpu_score": 20000, "gpu_score": 7000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 5500, "gpu_score": 3300 },
+    "3840x2160_Ultra_144": { "cpu_score": 14000, "gpu_score": 6000 },
+    "3840x2160_Ultra_240": { "cpu_score": 25000, "gpu_score": 9000 }
+  },
+  "Apex Legends": {
+    "1920x1080_Low_60": { "cpu_score": 4500, "gpu_score": 1200 },
+    "1920x1080_Low_144": { "cpu_score": 8000, "gpu_score": 2500 },
+    "1920x1080_Low_240": { "cpu_score": 13000, "gpu_score": 4200 },
+
+    "1920x1080_Medium_60": { "cpu_score": 6000, "gpu_score": 1700 },
+    "1920x1080_Medium_144": { "cpu_score": 10000, "gpu_score": 3000 },
+    "1920x1080_Medium_240": { "cpu_score": 15000, "gpu_score": 5000 },
+
+    "1920x1080_High_60": { "cpu_score": 7500, "gpu_score": 2200 },
+    "1920x1080_High_144": { "cpu_score": 12000, "gpu_score": 4000 },
+    "1920x1080_High_240": { "cpu_score": 18000, "gpu_score": 6500 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 9000, "gpu_score": 3000 },
+    "1920x1080_Ultra_144": { "cpu_score": 14000, "gpu_score": 5000 },
+    "1920x1080_Ultra_240": { "cpu_score": 21000, "gpu_score": 8000 },
+
+    "2560x1440_Low_60": { "cpu_score": 5500, "gpu_score": 1800 },
+    "2560x1440_Low_144": { "cpu_score": 9500, "gpu_score": 3200 },
+    "2560x1440_Low_240": { "cpu_score": 15000, "gpu_score": 6000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 7000, "gpu_score": 2500 },
+    "2560x1440_Medium_144": { "cpu_score": 12000, "gpu_score": 4000 },
+    "2560x1440_Medium_240": { "cpu_score": 18000, "gpu_score": 7000 },
+
+    "2560x1440_High_60": { "cpu_score": 9000, "gpu_score": 3200 },
+    "2560x1440_High_144": { "cpu_score": 14000, "gpu_score": 5000 },
+    "2560x1440_High_240": { "cpu_score": 21000, "gpu_score": 9000 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 11000, "gpu_score": 4000 },
+    "2560x1440_Ultra_144": { "cpu_score": 16000, "gpu_score": 7000 },
+    "2560x1440_Ultra_240": { "cpu_score": 24000, "gpu_score": 11000 },
+
+    "3840x2160_Low_60": { "cpu_score": 7000, "gpu_score": 3500 },
+    "3840x2160_Low_144": { "cpu_score": 14000, "gpu_score": 8000 },
+    "3840x2160_Low_240": { "cpu_score": 24000, "gpu_score": 15000 },
+
+    "3840x2160_Medium_60": { "cpu_score": 9000, "gpu_score": 5000 },
+    "3840x2160_Medium_144": { "cpu_score": 17000, "gpu_score": 10000 },
+    "3840x2160_Medium_240": { "cpu_score": 27000, "gpu_score": 18000 },
+
+    "3840x2160_High_60": { "cpu_score": 12000, "gpu_score": 7000 },
+    "3840x2160_High_144": { "cpu_score": 21000, "gpu_score": 14000 },
+    "3840x2160_High_240": { "cpu_score": 32000, "gpu_score": 22000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 16000, "gpu_score": 9000 },
+    "3840x2160_Ultra_144": { "cpu_score": 25000, "gpu_score": 17000 },
+    "3840x2160_Ultra_240": { "cpu_score": 40000, "gpu_score": 25000 }
+  },
+  "The Witcher 3: Wild Hunt": {
+    "1920x1080_Low_60": { "cpu_score": 4000, "gpu_score": 3500 },
+    "1920x1080_Low_144": { "cpu_score": 7000, "gpu_score": 7500 },
+    "1920x1080_Low_240": { "cpu_score": 12000, "gpu_score": 12000 },
+
+    "1920x1080_Medium_60": { "cpu_score": 5000, "gpu_score": 5500 },
+    "1920x1080_Medium_144": { "cpu_score": 9000, "gpu_score": 9000 },
+    "1920x1080_Medium_240": { "cpu_score": 13000, "gpu_score": 14000 },
+
+    "1920x1080_High_60": { "cpu_score": 6000, "gpu_score": 7500 },
+    "1920x1080_High_144": { "cpu_score": 10000, "gpu_score": 12000 },
+    "1920x1080_High_240": { "cpu_score": 16000, "gpu_score": 18000 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 8000, "gpu_score": 10000 },
+    "1920x1080_Ultra_144": { "cpu_score": 16000, "gpu_score": 18000 },
+    "1920x1080_Ultra_240": { "cpu_score": 25000, "gpu_score": 26000 },
+
+    "2560x1440_Low_60": { "cpu_score": 6000, "gpu_score": 6000 },
+    "2560x1440_Low_144": { "cpu_score": 9000, "gpu_score": 11000 },
+    "2560x1440_Low_240": { "cpu_score": 16000, "gpu_score": 16000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 7000, "gpu_score": 8000 },
+    "2560x1440_Medium_144": { "cpu_score": 11000, "gpu_score": 14000 },
+    "2560x1440_Medium_240": { "cpu_score": 17000, "gpu_score": 20000 },
+
+    "2560x1440_High_60": { "cpu_score": 9000, "gpu_score": 11000 },
+    "2560x1440_High_144": { "cpu_score": 14000, "gpu_score": 18000 },
+    "2560x1440_High_240": { "cpu_score": 22000, "gpu_score": 27000 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 12000, "gpu_score": 15000 },
+    "2560x1440_Ultra_144": { "cpu_score": 18000, "gpu_score": 23000 },
+    "2560x1440_Ultra_240": { "cpu_score": 27000, "gpu_score": 35000 },
+
+    "3840x2160_Low_60": { "cpu_score": 9000, "gpu_score": 12000 },
+    "3840x2160_Low_144": { "cpu_score": 17000, "gpu_score": 25000 },
+    "3840x2160_Low_240": { "cpu_score": 28000, "gpu_score": 42000 },
+
+    "3840x2160_Medium_60": { "cpu_score": 11000, "gpu_score": 18000 },
+    "3840x2160_Medium_144": { "cpu_score": 20000, "gpu_score": 32000 },
+    "3840x2160_Medium_240": { "cpu_score": 32000, "gpu_score": 50000 },
+
+    "3840x2160_High_60": { "cpu_score": 14000, "gpu_score": 25000 },
+    "3840x2160_High_144": { "cpu_score": 25000, "gpu_score": 42000 },
+    "3840x2160_High_240": { "cpu_score": 38000, "gpu_score": 65000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 18000, "gpu_score": 35000 },
+    "3840x2160_Ultra_144": { "cpu_score": 30000, "gpu_score": 60000 },
+    "3840x2160_Ultra_240": { "cpu_score": 50000, "gpu_score": 90000 }
+  },
+  "Red Dead Redemption 2": {
+    "1920x1080_Low_60": { "cpu_score": 7500, "gpu_score": 7000 },
+    "1920x1080_Low_144": { "cpu_score": 13000, "gpu_score": 14000 },
+    "1920x1080_Low_240": { "cpu_score": 20000, "gpu_score": 22000 },
+
+    "1920x1080_Medium_60": { "cpu_score": 9000, "gpu_score": 10500 },
+    "1920x1080_Medium_144": { "cpu_score": 16000, "gpu_score": 19000 },
+    "1920x1080_Medium_240": { "cpu_score": 25000, "gpu_score": 32000 },
+
+    "1920x1080_High_60": { "cpu_score": 11000, "gpu_score": 15000 },
+    "1920x1080_High_144": { "cpu_score": 19000, "gpu_score": 27000 },
+    "1920x1080_High_240": { "cpu_score": 30000, "gpu_score": 40000 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 14000, "gpu_score": 21000 },
+    "1920x1080_Ultra_144": { "cpu_score": 25000, "gpu_score": 36000 },
+    "1920x1080_Ultra_240": { "cpu_score": 40000, "gpu_score": 55000 },
+
+    "2560x1440_Low_60": { "cpu_score": 9000, "gpu_score": 10500 },
+    "2560x1440_Low_144": { "cpu_score": 16000, "gpu_score": 18000 },
+    "2560x1440_Low_240": { "cpu_score": 24000, "gpu_score": 30000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 11000, "gpu_score": 15000 },
+    "2560x1440_Medium_144": { "cpu_score": 20000, "gpu_score": 27000 },
+    "2560x1440_Medium_240": { "cpu_score": 32000, "gpu_score": 42000 },
+
+    "2560x1440_High_60": { "cpu_score": 14000, "gpu_score": 21000 },
+    "2560x1440_High_144": { "cpu_score": 25000, "gpu_score": 36000 },
+    "2560x1440_High_240": { "cpu_score": 40000, "gpu_score": 58000 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 18000, "gpu_score": 29000 },
+    "2560x1440_Ultra_144": { "cpu_score": 32000, "gpu_score": 50000 },
+    "2560x1440_Ultra_240": { "cpu_score": 50000, "gpu_score": 80000 },
+
+    "3840x2160_Low_60": { "cpu_score": 14000, "gpu_score": 21000 },
+    "3840x2160_Low_144": { "cpu_score": 25000, "gpu_score": 36000 },
+    "3840x2160_Low_240": { "cpu_score": 40000, "gpu_score": 60000 },
+
+    "3840x2160_Medium_60": { "cpu_score": 18000, "gpu_score": 29000 },
+    "3840x2160_Medium_144": { "cpu_score": 32000, "gpu_score": 50000 },
+    "3840x2160_Medium_240": { "cpu_score": 50000, "gpu_score": 90000 },
+
+    "3840x2160_High_60": { "cpu_score": 22000, "gpu_score": 37000 },
+    "3840x2160_High_144": { "cpu_score": 40000, "gpu_score": 70000 },
+    "3840x2160_High_240": { "cpu_score": 65000, "gpu_score": 120000 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 30000, "gpu_score": 53000 },
+    "3840x2160_Ultra_144": { "cpu_score": 50000, "gpu_score": 90000 },
+    "3840x2160_Ultra_240": { "cpu_score": 80000, "gpu_score": 150000 }
+  },
+
+  "Monster Hunter: World": {
+    "1920x1080_VeryLow_60": { "cpu_score": 6000, "gpu_score": 5000 },
+    "1920x1080_VeryLow_144": { "cpu_score": 7500, "gpu_score": 7000 },
+    "1920x1080_VeryLow_240": { "cpu_score": 9000, "gpu_score": 9000 },
+
+    "1920x1080_Medium_60": { "cpu_score": 7000, "gpu_score": 6000 },
+    "1920x1080_Medium_144": { "cpu_score": 8500, "gpu_score": 8500 },
+    "1920x1080_Medium_240": { "cpu_score": 10000, "gpu_score": 11000 },
+
+    "1920x1080_High_60": { "cpu_score": 8500, "gpu_score": 7500 },
+    "1920x1080_High_144": { "cpu_score": 10500, "gpu_score": 9500 },
+    "1920x1080_High_240": { "cpu_score": 12000, "gpu_score": 12000 },
+
+    "1920x1080_Ultra_60": { "cpu_score": 9500, "gpu_score": 9000 },
+    "1920x1080_Ultra_144": { "cpu_score": 12000, "gpu_score": 11000 },
+    "1920x1080_Ultra_240": { "cpu_score": 13500, "gpu_score": 14000 },
+
+    "2560x1440_VeryLow_60": { "cpu_score": 7000, "gpu_score": 6500 },
+    "2560x1440_VeryLow_144": { "cpu_score": 9000, "gpu_score": 9000 },
+    "2560x1440_VeryLow_240": { "cpu_score": 11000, "gpu_score": 12000 },
+
+    "2560x1440_Medium_60": { "cpu_score": 8500, "gpu_score": 8000 },
+    "2560x1440_Medium_144": { "cpu_score": 10500, "gpu_score": 11000 },
+    "2560x1440_Medium_240": { "cpu_score": 12500, "gpu_score": 14000 },
+
+    "2560x1440_High_60": { "cpu_score": 10000, "gpu_score": 9500 },
+    "2560x1440_High_144": { "cpu_score": 12500, "gpu_score": 12500 },
+    "2560x1440_High_240": { "cpu_score": 14500, "gpu_score": 16000 },
+
+    "2560x1440_Ultra_60": { "cpu_score": 11500, "gpu_score": 11500 },
+    "2560x1440_Ultra_144": { "cpu_score": 14000, "gpu_score": 14000 },
+    "2560x1440_Ultra_240": { "cpu_score": 16000, "gpu_score": 18000 },
+
+    "3840x2160_VeryLow_60": { "cpu_score": 8500, "gpu_score": 10000 },
+    "3840x2160_VeryLow_144": { "cpu_score": 11000, "gpu_score": 13500 },
+    "3840x2160_VeryLow_240": { "cpu_score": 13500, "gpu_score": 17000 },
+
+    "3840x2160_Medium_60": { "cpu_score": 10500, "gpu_score": 11500 },
+    "3840x2160_Medium_144": { "cpu_score": 13500, "gpu_score": 15000 },
+    "3840x2160_Medium_240": { "cpu_score": 16000, "gpu_score": 18500 },
+
+    "3840x2160_High_60": { "cpu_score": 12500, "gpu_score": 13000 },
+    "3840x2160_High_144": { "cpu_score": 15500, "gpu_score": 16500 },
+    "3840x2160_High_240": { "cpu_score": 18500, "gpu_score": 20500 },
+
+    "3840x2160_Ultra_60": { "cpu_score": 14500, "gpu_score": 15000 },
+    "3840x2160_Ultra_144": { "cpu_score": 18000, "gpu_score": 19000 },
+    "3840x2160_Ultra_240": { "cpu_score": 21000, "gpu_score": 23000 }
+  }
+}

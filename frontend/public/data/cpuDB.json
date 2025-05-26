@@ -1,0 +1,34 @@
+{
+  "cpu": [
+    { "model": "Ryzen 9 7950X", "score": 65300, "generation": "7000", "base_clock": "4.5GHz", "core_thread": "16/32", "socket": "AM5" },
+    { "model": "Ryzen 9 7900X", "score": 54900, "generation": "7000", "base_clock": "4.7GHz", "core_thread": "12/24", "socket": "AM5" },
+    { "model": "Ryzen 7 7700X", "score": 43600, "generation": "7000", "base_clock": "4.5GHz", "core_thread": "8/16", "socket": "AM5" },
+    { "model": "Ryzen 5 7600X", "score": 33000, "generation": "7000", "base_clock": "4.7GHz", "core_thread": "6/12", "socket": "AM5" },
+
+    { "model": "Ryzen 9 5950X", "score": 46200, "generation": "5000", "base_clock": "3.4GHz", "core_thread": "16/32", "socket": "AM4" },
+    { "model": "Ryzen 9 5900X", "score": 39000, "generation": "5000", "base_clock": "3.7GHz", "core_thread": "12/24", "socket": "AM4" },
+    { "model": "Ryzen 7 5800X", "score": 28400, "generation": "5000", "base_clock": "3.8GHz", "core_thread": "8/16", "socket": "AM4" },
+    { "model": "Ryzen 5 5600X", "score": 20000, "generation": "5000", "base_clock": "3.7GHz", "core_thread": "6/12", "socket": "AM4" },
+    { "model": "Ryzen 5 5600", "score": 19200, "generation": "5000", "base_clock": "3.5GHz", "core_thread": "6/12", "socket": "AM4" },
+    { "model": "Ryzen 5 5500", "score": 15500, "generation": "5000", "base_clock": "3.6GHz", "core_thread": "6/12", "socket": "AM4" },
+
+    { "model": "Ryzen 9 3950X", "score": 39800, "generation": "3000", "base_clock": "3.5GHz", "core_thread": "16/32", "socket": "AM4" },
+    { "model": "Ryzen 9 3900X", "score": 33200, "generation": "3000", "base_clock": "3.8GHz", "core_thread": "12/24", "socket": "AM4" },
+    { "model": "Ryzen 7 3800X", "score": 24600, "generation": "3000", "base_clock": "3.9GHz", "core_thread": "8/16", "socket": "AM4" },
+    { "model": "Ryzen 7 3700X", "score": 22900, "generation": "3000", "base_clock": "3.6GHz", "core_thread": "8/16", "socket": "AM4" },
+    { "model": "Ryzen 5 3600X", "score": 18100, "generation": "3000", "base_clock": "3.8GHz", "core_thread": "6/12", "socket": "AM4" },
+    { "model": "Ryzen 5 3600", "score": 17800, "generation": "3000", "base_clock": "3.6GHz", "core_thread": "6/12", "socket": "AM4" },
+
+    { "model": "Core i9-14900K", "score": 64000, "generation": "14th", "base_clock": "3.2GHz", "core_thread": "24/32", "socket": "LGA1700" },
+    { "model": "Core i7-14700K", "score": 52000, "generation": "14th", "base_clock": "3.4GHz", "core_thread": "20/28", "socket": "LGA1700" },
+    { "model": "Core i5-14600K", "score": 41000, "generation": "14th", "base_clock": "3.5GHz", "core_thread": "14/20", "socket": "LGA1700" },
+
+    { "model": "Core i9-13900K", "score": 62500, "generation": "13th", "base_clock": "3.0GHz", "core_thread": "24/32", "socket": "LGA1700" },
+    { "model": "Core i7-13700K", "score": 49500, "generation": "13th", "base_clock": "3.4GHz", "core_thread": "16/24", "socket": "LGA1700" },
+    { "model": "Core i5-13600K", "score": 39000, "generation": "13th", "base_clock": "3.5GHz", "core_thread": "14/20", "socket": "LGA1700" },
+
+    { "model": "Core i9-12900K", "score": 56500, "generation": "12th", "base_clock": "3.2GHz", "core_thread": "16/24", "socket": "LGA1700" },
+    { "model": "Core i7-12700K", "score": 43500, "generation": "12th", "base_clock": "3.6GHz", "core_thread": "12/20", "socket": "LGA1700" },
+    { "model": "Core i5-12600K", "score": 34000, "generation": "12th", "base_clock": "3.7GHz", "core_thread": "10/16", "socket": "LGA1700" }
+  ]
+}

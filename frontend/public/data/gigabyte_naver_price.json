@@ -1,5 +1,53 @@
 [
   {
+    "model": "GIGABYTE Z890 AORUS MASTER X",
+    "price": "817340",
+    "url": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=8231722682&tid=1000000061",
+    "title": "107509 GIGABYTE Z890 AORUS Master 인텔 코어 울트라 시리즈 2 LGA 1851 마더보드, ATX, DDR5, 5X M.2, PC"
+  },
+  {
+    "model": "GIGABYTE Z890 AORUS ELITE AX",
+    "price": "391800",
+    "url": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=8767391436&ctag=8767391436&lptag=I25498579451&itemId=25498579451&vendorItemId=92490712837&spec=10305199",
+    "title": "GIGABYTE Z790M AORUS Elite AX ICE LGA 1700 인텔 Z790 M-ATX 마더보드 DDR5 트리플 M.2 PCIe 5.0 USB 3.2 Ge  Z890"
+  },
+  {
+    "model": "GIGABYTE Z890 GAMING X AX",
+    "price": "480260",
+    "url": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=8305948685&tid=1000000061",
+    "title": "GIGABYTE MB GBT 인텔 1700 B760 게이밍 X AX DDR4"
+  },
+  {
+    "model": "GIGABYTE B860 AORUS ELITE AX",
+    "price": "246980",
+    "url": "https://search.shopping.naver.com/catalog/43994846626",
+    "title": "기가바이트 B650M AORUS ELITE AX ICE 제이씨현"
+  },
+  {
+    "model": "GIGABYTE X870E AORUS MASTER",
+    "price": "699000",
+    "url": "https://search.shopping.naver.com/catalog/50734365619",
+    "title": "기가바이트 X870E AORUS MASTER 피씨디렉트"
+  },
+  {
+    "model": "GIGABYTE X870 AORUS ELITE AX",
+    "price": "388400",
+    "url": "https://smartstore.naver.com/main/products/11358100728",
+    "title": "GIGABYTE X870 AORUS Elite WIFI7 ICE AMD AM5 LGA 1718 메인보드 X670AORUS ELITE AX"
+  },
+  {
+    "model": "GIGABYTE B850M AORUS ELITE",
+    "price": "279000",
+    "url": "https://smartstore.naver.com/main/products/11359406355",
+    "title": "GIGABYTE B850M AORUS ELITE WIFI6E ICE 제이씨현"
+  },
+  {
+    "model": "GIGABYTE B850 DS3H",
+    "price": "239000",
+    "url": "https://smartstore.naver.com/main/products/11558374058",
+    "title": "GIGABYTE B850M DS3H ICE 제이씨현"
+  },
+  {
     "model": "GIGABYTE Z790 AORUS MASTER X",
     "price": "786160",
     "url": "https://smartstore.naver.com/main/products/10010096955",
@@ -19,19 +67,19 @@
   },
   {
     "model": "GIGABYTE B760 AORUS ELITE AX",
-    "price": "210890",
+    "price": "216380",
     "url": "https://search.shopping.naver.com/catalog/37124045619",
     "title": "기가바이트 B760M AORUS ELITE AX (피씨디렉트)"
   },
   {
     "model": "GIGABYTE B760M DS3H DDR4",
-    "price": "135950",
+    "price": "140880",
     "url": "https://search.shopping.naver.com/catalog/37123816622",
     "title": "기가바이트 B760M DS3H D4 (피씨디렉트)"
   },
   {
     "model": "GIGABYTE B760M AORUS ELITE AX",
-    "price": "210890",
+    "price": "216380",
     "url": "https://search.shopping.naver.com/catalog/37124045619",
     "title": "기가바이트 B760M AORUS ELITE AX (피씨디렉트)"
   },
@@ -49,7 +97,7 @@
   },
   {
     "model": "GIGABYTE H610M S2H DDR4",
-    "price": "118000",
+    "price": "116000",
     "url": "https://search.shopping.naver.com/catalog/38961188618",
     "title": "기가바이트 H610M S2H V2 D4 듀러블에디션 (제이씨현)"
   },

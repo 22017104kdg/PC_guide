@@ -1,24 +1,29 @@
+// ssd_danawa_best.js
 const fs = require('fs').promises;
 const puppeteer = require('puppeteer');
 
-// JSON 읽기 함수
-async function readBoardsJson(filename) {
-  const data = await fs.readFile(filename, 'utf-8');
-  const json = JSON.parse(data);
-  if (Array.isArray(json)) return json;
-  return [];
+// SSD 리스트 읽기 (배열/객체 모두 지원)
+async function readPartsJson(filename) {
+  try {
+    const data = await fs.readFile(filename, 'utf-8');
+    const json = JSON.parse(data);
+    if (Array.isArray(json)) return json;
+    if (json.ssd && Array.isArray(json.ssd)) return json.ssd;
+    return [];
+  } catch (err) {
+    console.error(`❗ 파일 읽기 오류: ${filename}`, err);
+    return [];
+  }
 }
 
-// 다나와 후기 많은순 검색 함수
+// 다나와 리뷰 많은순 크롤링 함수
 async function getDanawaBestReview(query) {
   const browser = await puppeteer.launch({ headless: "new" });
   const page = await browser.newPage();
-
-  // 후기 많은순: sort=review_cnt_d
   const url = `https://search.danawa.com/dsearch.php?query=${encodeURIComponent(query)}&sort=review_cnt_d`;
   await page.goto(url, { waitUntil: 'domcontentloaded' });
 
-  await new Promise(r => setTimeout(r, 3000)); // 후기 로딩 대기
+  await new Promise(r => setTimeout(r, 2500)); // 렌더링 대기
 
   const result = await page.evaluate(() => {
     const card =
@@ -27,6 +32,7 @@ async function getDanawaBestReview(query) {
       document.querySelector('.prod_main_info');
     if (!card) return null;
 
+    // 리뷰수 파싱
     let reviewCount = "0";
     const reviewElem =
       card.querySelector('.count_opinion') ||
@@ -35,10 +41,9 @@ async function getDanawaBestReview(query) {
     if (reviewElem) {
       reviewCount = reviewElem.textContent.replace(/[^\d]/g, "");
     } else {
+      // 텍스트 내 대체 파싱
       const altText = card.innerText.match(/(상품의견|리뷰)[^\d]*(\d+)/);
-      if (altText) {
-        reviewCount = altText[2];
-      }
+      if (altText) reviewCount = altText[2];
     }
 
     const titleElem = card.querySelector('.prod_name a, .info_tit a');
@@ -54,6 +59,7 @@ async function getDanawaBestReview(query) {
   });
 
   await browser.close();
+
   if (!result || !result.price) {
     return { price: "검색불가", url: "", title: "", reviewCount: "0" };
   }
@@ -61,44 +67,45 @@ async function getDanawaBestReview(query) {
 }
 
 // 크롤링 및 저장 함수
-async function crawlAndSave(boardsFilename, outputFilename) {
-  const boards = await readBoardsJson(boardsFilename);
+async function crawlAndSave(partsFilename, outputFilename) {
+  const parts = await readPartsJson(partsFilename);
 
-  if (!Array.isArray(boards)) {
-    console.error('❗ JSON 파일 내용이 배열이 아닙니다:', boards);
+  if (!Array.isArray(parts)) {
+    console.error('❗ JSON 파일 내용이 배열이 아닙니다:', parts);
     return;
   }
 
   const resultList = [];
-  for (const board of boards) {
-    const query = board.model;
+  for (const part of parts) {
+    // model 통일 (예: "NVMe SSD 1TB")
+    const modelStr = `${part.type} SSD ${part.capacity}`;
+    const query = part.model || modelStr;
     const best = await getDanawaBestReview(query);
 
     resultList.push({
-      model: board.model,
+      model: modelStr,        // model 명칭 통일 (프론트 일치)
+      type: part.type,
+      capacity: part.capacity,
       price: best.price,
       url: best.url,
-      title: best.title,
+      title: best.title || query,
       reviewCount: best.reviewCount
     });
-    console.log(`[${outputFilename}] ${board.model} => ${best.price}원 (리뷰 ${best.reviewCount}개)`);
-    await new Promise((res) => setTimeout(res, 2000));
+    console.log(`[${outputFilename}] ${query} => ${best.price}원 (리뷰 ${best.reviewCount}개)`);
+    await new Promise((res) => setTimeout(res, 1800)); // 과도한 크롤링 방지
   }
 
   try {
-    // 저장 파일에 .json 확장자 추가
-    await fs.writeFile(`./frontend/public/data/${outputFilename}.json`, JSON.stringify(resultList, null, 2));
-    console.log(`✅ ${outputFilename}.json 저장 완료!`);
+    await fs.writeFile(outputFilename, JSON.stringify(resultList, null, 2));
+    console.log(`✅ ${outputFilename} 저장 완료!`);
   } catch (err) {
-    console.error(`❗ ${outputFilename}.json 저장 중 오류 발생`, err);
+    console.error(`❗ ${outputFilename} 저장 중 오류 발생`, err);
   }
 }
 
 // 실행 함수
-async function crawlAllBoards() {
-  await crawlAndSave('./frontend/public/data/asus_mainboard.json', 'asus_danawa_best');
-  await crawlAndSave('./frontend/public/data/msi_mainboard.json', 'msi_danawa_best');
-  await crawlAndSave('./frontend/public/data/gigabyte_mainboard.json', 'gigabyte_danawa_best');
+async function crawlAll() {
+  await crawlAndSave('./frontend/public/data/ssd_type_list.json', './frontend/public/data/ssd_danawa_best.json');
 }
 
-crawlAllBoards();
+crawlAll();

@@ -3,20 +3,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import BackIcon from "../assets/iconIMG/previous.png";
 import BulbIcon from "../assets/iconIMG/bulb.png";
 
-// SSD 링크 매칭: model, type, capacity로 유연하게 탐색
+// 부품 링크 유틸
 function getLinks({ model, type, capacity }, danawaArr, bestArr, naverArr) {
-  // 모델명, 타입+용량 순서로 우선 검색
   const normalized = s => s?.replace(/\s+/g, "").toLowerCase();
-
   function findByAll(arr) {
-    // model 완전일치
-    let found = arr.find(
-      (i) => normalized(i.model) === normalized(model)
-    );
+    let found = arr.find(i => normalized(i.model) === normalized(model));
     if (found) return found;
-    // type + capacity 일치 (보조)
     return arr.find(
-      (i) =>
+      i =>
         i.type?.toLowerCase() === type?.toLowerCase() &&
         (i.capacity + "").replace(/[^0-9]/g, "") === (capacity + "").replace(/[^0-9]/g, "")
     );
@@ -32,34 +26,94 @@ function getLinks({ model, type, capacity }, danawaArr, bestArr, naverArr) {
   ].filter(Boolean);
 }
 
-export default function TwoDOptionResult() {
+// 합리적 가격 필터
+function filterValidPrices(arr, field = "price") {
+  const nums = arr.map(x => Number(x[field])).filter(x => x > 0).sort((a, b) => a - b);
+  if (nums.length === 0) return [];
+  const base = nums[0];
+  return arr.filter(x =>
+    !!x[field] &&
+    !isNaN(Number(x[field])) &&
+    Number(x[field]) <= base * 2.5
+  );
+}
+
+// SSD 추천
+function findSSD(ssdArr, capacity) {
+  let found = ssdArr.find(s => s.capacity === capacity);
+  if (found) return found;
+  const capacityNum = parseInt(capacity.replace(/[^0-9]/g, ""));
+  const candidates = ssdArr
+    .filter(s => parseInt(s.capacity) >= 500)
+    .sort((a, b) => parseInt(a.capacity) - parseInt(b.capacity));
+  return candidates[0] || null;
+}
+
+// 렌더링 방식 매핑 테이블 (DB와 100% 일치)
+const RENDER_TYPE_MAP = {
+  Blender: {
+    raytracing: "Cycles (Raytracing)",
+    realtime: "Eevee (실시간)",
+    hybrid: "Cycles (Raytracing)"
+  },
+  "Autodesk Maya": {
+    raytracing: "Arnold (Raytracing)",
+    realtime: "Viewport 2.0 (실시간)",
+    hybrid: "Arnold (Raytracing)"
+  },
+  "Autodesk 3ds Max": {
+    raytracing: "V-Ray (Raytracing)",
+    realtime: "Scanline (실시간)",
+    hybrid: "V-Ray (Raytracing)"
+  },
+  "Cinema 4D": {
+    raytracing: "Redshift (Hybrid)",
+    realtime: "Standard (실시간)",
+    hybrid: "Redshift (Hybrid)"
+  },
+  ZBrush: {
+    realtime: "스컬핑 (실시간)",
+    raytracing: "스컬핑 (실시간)",
+    hybrid: "스컬핑 (실시간)"
+  },
+  SketchUp: {
+    raytracing: "V-Ray (Raytracing)",
+    realtime: "SketchUp (실시간)",
+    hybrid: "V-Ray (Raytracing)"
+  },
+  Houdini: {
+    raytracing: "Mantra (Raytracing)",
+    realtime: "Viewport (실시간)",
+    hybrid: "Mantra (Raytracing)"
+  },
+  KeyShot: {
+    raytracing: "Raytracing",
+    realtime: "Raytracing",
+    hybrid: "Raytracing"
+  },
+  SolidWorks: {
+    realtime: "RealView (실시간)",
+    raytracing: "RealView (실시간)",
+    hybrid: "RealView (실시간)"
+  },
+  "Rhinoceros 3D": {
+    raytracing: "Raytracing",
+    realtime: "Raytracing",
+    hybrid: "Raytracing"
+  },
+  "After Effects": {
+    raytracing: "3D Ray-traced (or Cinema 4D Renderer)",
+    realtime: "3D Ray-traced (or Cinema 4D Renderer)",
+    hybrid: "3D Ray-traced (or Cinema 4D Renderer)"
+  }
+};
+
+export default function ThreeDOptionResult() {
   const { state } = useLocation();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [result, setResult] = useState(null);
-
-  // 가격이 합리적인 범위만 추출
-  function filterValidPrices(arr, field = "price") {
-    const nums = arr.map(x => Number(x[field])).filter(x => x > 0).sort((a, b) => a - b);
-    if (nums.length === 0) return [];
-    const base = nums[0];
-    return arr.filter(x =>
-      !!x[field] &&
-      !isNaN(Number(x[field])) &&
-      Number(x[field]) <= base * 2.5
-    );
-  }
-  // SSD: 256GB -> 500GB 이상 자동추천
-  function findSSD(ssdArr, capacity) {
-    let found = ssdArr.find(s => s.capacity === capacity);
-    if (found) return found;
-    const capacityNum = parseInt(capacity.replace(/[^0-9]/g, ""));
-    const candidates = ssdArr
-      .filter(s => parseInt(s.capacity) >= 500)
-      .sort((a, b) => parseInt(a.capacity) - parseInt(b.capacity));
-    return candidates[0] || null;
-  }
 
   useEffect(() => {
     if (!state) {
@@ -81,7 +135,7 @@ export default function TwoDOptionResult() {
           mbDanawa, mbBest, mbNaver,
           ssdDanawa, ssdBest, ssdNaver
         ] = await Promise.all([
-          fetch("/data/2d_recommend_db_2025.json").then(r => r.json()),
+          fetch("/data/threeD_benchmarks.json").then(r => r.json()),
           fetch("/data/cpuDB.json").then(r => r.json()),
           fetch("/data/gpuDB.json").then(r => r.json()),
           fetch("/data/ramList.json").then(r => r.json()),
@@ -133,20 +187,29 @@ export default function TwoDOptionResult() {
         const ssdArr = Array.isArray(ssdRaw) ? ssdRaw : ssdRaw.ssd || [];
 
         // 1. 벤치에서 추천 조합 선택
-        const { program, resolution, complexity } = state;
+        const { program, render_type, complexity } = state;
+        const mappedRenderType =
+          RENDER_TYPE_MAP[program]?.[render_type] || render_type;
+
+        // 디버깅용 콘솔 출력
+        console.log("넘어온 state:", state);
+        console.log("렌더링 매핑값:", mappedRenderType);
+
         const bench = benchRaw.find(
           b =>
             b.program === program &&
-            b.resolution === resolution &&
+            b.render_type === mappedRenderType &&
             b.complexity === complexity
         );
         if (!bench) {
+          console.log("benchRaw 샘플:", benchRaw.slice(0, 3));
           setResult(null);
           setLoading(false);
           return;
         }
 
-        // 2. CPU 추천
+        // 이하 부품 추천 로직 동일
+
         function findCpuModel(target, cpuArr) {
           const models = target.split("/").map(s => s.trim());
           let found = null;
@@ -159,7 +222,6 @@ export default function TwoDOptionResult() {
         }
         const cpu = findCpuModel(bench.cpu, cpuArr);
 
-        // 3. GPU 추천
         function findGpuModel(target, gpuArr) {
           if (/내장/.test(target)) {
             return { model: "내장그래픽", score: "-", generation: "-", vram: "-" };
@@ -187,7 +249,6 @@ export default function TwoDOptionResult() {
         }
         const gpu = findGpuModel(bench.gpu, gpuArr);
 
-        // 4. RAM 추천 (최대 3개, 최저가 기준)
         function findRamModels(target, ramArr, ramDanawa) {
           let size = 0;
           const match = /(\d+)(?:~(\d+))?GB/.exec(target);
@@ -202,10 +263,8 @@ export default function TwoDOptionResult() {
         }
         const ramModels = findRamModels(bench.ram, ramArr, ramDanawa);
 
-        // 5. SSD 추천
         let ssd = findSSD(ssdArr, (bench.ssd.match(/\d+GB/) || [])[0] || "500GB");
 
-        // 6. 메인보드 추천 (브랜드별 1개씩)
         let mbModels = [];
         if (cpu) {
           const allBoards = mbArr.filter(
@@ -227,14 +286,12 @@ export default function TwoDOptionResult() {
           }).filter(Boolean);
         }
 
-        // 가격/링크 정보
         const cpuLinks = cpu ? getLinks(cpu, cpuDanawa, cpuBest, cpuNaver) : [];
         const gpuLinks = gpu ? getLinks(gpu, gpuDanawa, gpuBest, gpuNaver) : [];
         const ramLinksArr = ramModels.map(r => getLinks(r, ramDanawa, ramBest, ramNaver));
         const mbLinksArr = mbModels.map(mb => getLinks(mb, mbDanawa, mbBest, mbNaver));
         const ssdLinks = ssd ? getLinks(ssd, ssdDanawa, ssdBest, ssdNaver) : [];
 
-        // 총 견적(부품 1개씩 최저가 합산)
         function getFirstValidPrice(links) {
           return links && links[0] && links[0].price ? Number(links[0].price) : 0;
         }
@@ -247,7 +304,7 @@ export default function TwoDOptionResult() {
 
         setResult({
           program,
-          resolution,
+          render_type: mappedRenderType,
           complexity,
           cpu,
           cpuLinks,
@@ -265,7 +322,7 @@ export default function TwoDOptionResult() {
       } catch (err) {
         setError(true);
         setLoading(false);
-        console.error("TwoDOptionResult fetch 에러:", err);
+        console.error("ThreeDOptionResult fetch 에러:", err);
       }
     }
     fetchAndRecommend();
@@ -302,7 +359,7 @@ export default function TwoDOptionResult() {
           <img src={BackIcon} alt="뒤로가기" className="w-6 h-6 invert" />
         </button>
         <h2 className="text-2xl font-bold flex items-center gap-2">
-          2D 그래픽 사양 추천 결과
+          3D 그래픽 사양 추천 결과
           <img src={BulbIcon} alt="bulb" className="w-7 h-7 ml-2" />
         </h2>
       </div>
@@ -331,8 +388,8 @@ export default function TwoDOptionResult() {
           <div className="w-full max-w-xl bg-gray-800/80 rounded-xl p-6 mb-6">
             <div>
               <span className="font-bold">프로그램:</span> {result.program}<br />
-              <span className="font-bold">해상도:</span> {result.resolution}<br />
-              <span className="font-bold">작업 복잡도:</span>{" "}
+              <span className="font-bold">렌더링 방식:</span> {result.render_type}<br />
+              <span className="font-bold">모델 복잡도:</span>{" "}
               {result.complexity === "low"
                 ? "간단"
                 : result.complexity === "medium"

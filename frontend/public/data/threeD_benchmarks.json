@@ -1,0 +1,147 @@
+[
+  {"program":"Blender","render_type":"Cycles (Raytracing)","complexity":"simple","cpu":"i5-12400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Blender","render_type":"Cycles (Raytracing)","complexity":"medium","cpu":"Ryzen 9 7900X","ram":"64GB","gpu":"RTX 4070 Ti 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Blender","render_type":"Cycles (Raytracing)","complexity":"complex","cpu":"Ryzen 9 7950X","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"Blender","render_type":"Eevee (실시간)","complexity":"simple","cpu":"i5-12400","ram":"16GB","gpu":"RTX 3050 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"Blender","render_type":"Eevee (실시간)","complexity":"medium","cpu":"Ryzen 7 7700X","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"Blender","render_type":"Eevee (실시간)","complexity":"complex","cpu":"Ryzen 9 7900X","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"Blender","render_type":"Cycles (Raytracing)","complexity":"simple","cpu":"i5-12400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Blender","render_type":"Cycles (Raytracing)","complexity":"medium","cpu":"Ryzen 9 7900X","ram":"64GB","gpu":"RTX 4070 Ti 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Blender","render_type":"Cycles (Raytracing)","complexity":"complex","cpu":"Ryzen 9 7950X","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"Autodesk Maya","render_type":"Arnold (Raytracing)","complexity":"simple","cpu":"i7-12700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Autodesk Maya","render_type":"Arnold (Raytracing)","complexity":"medium","cpu":"i9-13900K","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Autodesk Maya","render_type":"Arnold (Raytracing)","complexity":"complex","cpu":"i9-14900K","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"Autodesk Maya","render_type":"Viewport 2.0 (실시간)","complexity":"simple","cpu":"i7-12700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Autodesk Maya","render_type":"Viewport 2.0 (실시간)","complexity":"medium","cpu":"i9-13900K","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Autodesk Maya","render_type":"Viewport 2.0 (실시간)","complexity":"complex","cpu":"i9-14900K","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"Autodesk Maya","render_type":"Arnold (Raytracing)","complexity":"simple","cpu":"i7-12700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Autodesk Maya","render_type":"Arnold (Raytracing)","complexity":"medium","cpu":"i9-13900K","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Autodesk Maya","render_type":"Arnold (Raytracing)","complexity":"complex","cpu":"i9-14900K","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+{"program":"Autodesk 3ds Max","render_type":"V-Ray (Raytracing)","complexity":"simple","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Autodesk 3ds Max","render_type":"V-Ray (Raytracing)","complexity":"medium","cpu":"Ryzen 9 7900X","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Autodesk 3ds Max","render_type":"V-Ray (Raytracing)","complexity":"complex","cpu":"Ryzen 9 7950X","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"Autodesk 3ds Max","render_type":"Scanline (실시간)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"Autodesk 3ds Max","render_type":"Scanline (실시간)","complexity":"medium","cpu":"Ryzen 7 7700X","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"Autodesk 3ds Max","render_type":"Scanline (실시간)","complexity":"complex","cpu":"Ryzen 9 7900X","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"Autodesk 3ds Max","render_type":"V-Ray (Raytracing)","complexity":"simple","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Autodesk 3ds Max","render_type":"V-Ray (Raytracing)","complexity":"medium","cpu":"Ryzen 9 7900X","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Autodesk 3ds Max","render_type":"V-Ray (Raytracing)","complexity":"complex","cpu":"Ryzen 9 7950X","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"Cinema 4D","render_type":"Redshift (Hybrid)","complexity":"simple","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Cinema 4D","render_type":"Redshift (Hybrid)","complexity":"medium","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4070 Ti 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Cinema 4D","render_type":"Redshift (Hybrid)","complexity":"complex","cpu":"i9-13900K","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"Cinema 4D","render_type":"Standard (실시간)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"Cinema 4D","render_type":"Standard (실시간)","complexity":"medium","cpu":"i7-13700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"Cinema 4D","render_type":"Standard (실시간)","complexity":"complex","cpu":"i9-13900K","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"Cinema 4D","render_type":"Redshift (Hybrid)","complexity":"simple","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Cinema 4D","render_type":"Redshift (Hybrid)","complexity":"medium","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4070 Ti 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Cinema 4D","render_type":"Redshift (Hybrid)","complexity":"complex","cpu":"i9-13900K","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"Cinema 4D","render_type":"Redshift (Hybrid)","complexity":"simple","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Cinema 4D","render_type":"Redshift (Hybrid)","complexity":"medium","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4070 Ti 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Cinema 4D","render_type":"Redshift (Hybrid)","complexity":"complex","cpu":"i9-13900K","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"Cinema 4D","render_type":"Standard (실시간)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"Cinema 4D","render_type":"Standard (실시간)","complexity":"medium","cpu":"i7-13700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"Cinema 4D","render_type":"Standard (실시간)","complexity":"complex","cpu":"i9-13900K","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"Cinema 4D","render_type":"Redshift (Hybrid)","complexity":"simple","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Cinema 4D","render_type":"Redshift (Hybrid)","complexity":"medium","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4070 Ti 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Cinema 4D","render_type":"Redshift (Hybrid)","complexity":"complex","cpu":"i9-13900K","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"ZBrush","render_type":"스컬핑 (실시간)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"ZBrush","render_type":"스컬핑 (실시간)","complexity":"medium","cpu":"i7-12700K","ram":"32GB","gpu":"GTX 1660 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"ZBrush","render_type":"스컬핑 (실시간)","complexity":"complex","cpu":"i9-13900K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"ZBrush","render_type":"BPR (Raytracing)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"ZBrush","render_type":"BPR (Raytracing)","complexity":"medium","cpu":"i7-12700K","ram":"32GB","gpu":"GTX 1660 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"ZBrush","render_type":"BPR (Raytracing)","complexity":"complex","cpu":"i9-13900K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"ZBrush","render_type":"스컬핑 (실시간)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"ZBrush","render_type":"스컬핑 (실시간)","complexity":"medium","cpu":"i7-12700K","ram":"32GB","gpu":"GTX 1660 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"ZBrush","render_type":"스컬핑 (실시간)","complexity":"complex","cpu":"i9-13900K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"SketchUp","render_type":"V-Ray (Raytracing)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"SketchUp","render_type":"V-Ray (Raytracing)","complexity":"medium","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"SketchUp","render_type":"V-Ray (Raytracing)","complexity":"complex","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"SketchUp","render_type":"SketchUp Viewer (실시간)","complexity":"simple","cpu":"i5-13400","ram":"8GB","gpu":"내장그래픽 또는 GT 1030 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"SketchUp","render_type":"SketchUp Viewer (실시간)","complexity":"medium","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"SketchUp","render_type":"SketchUp Viewer (실시간)","complexity":"complex","cpu":"i7-13700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"SketchUp","render_type":"Enscape (Hybrid)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"SketchUp","render_type":"Enscape (Hybrid)","complexity":"medium","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"SketchUp","render_type":"Enscape (Hybrid)","complexity":"complex","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"Houdini","render_type":"Mantra (Raytracing)","complexity":"simple","cpu":"Ryzen 7 7700X","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Houdini","render_type":"Mantra (Raytracing)","complexity":"medium","cpu":"Ryzen 9 7950X","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Houdini","render_type":"Mantra (Raytracing)","complexity":"complex","cpu":"Ryzen 9 7950X","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"Houdini","render_type":"Karma (Hybrid)","complexity":"simple","cpu":"Ryzen 7 7700X","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Houdini","render_type":"Karma (Hybrid)","complexity":"medium","cpu":"Ryzen 9 7950X","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"Houdini","render_type":"Karma (Hybrid)","complexity":"complex","cpu":"Ryzen 9 7950X","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"Houdini","render_type":"OpenGL (실시간)","complexity":"simple","cpu":"Ryzen 7 7700X","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"Houdini","render_type":"OpenGL (실시간)","complexity":"medium","cpu":"Ryzen 9 7900X","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"Houdini","render_type":"OpenGL (실시간)","complexity":"complex","cpu":"Ryzen 9 7950X","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"KeyShot","render_type":"CPU Raytracing","complexity":"simple","cpu":"i7-12700K","ram":"32GB","gpu":"GTX 1660 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"KeyShot","render_type":"CPU Raytracing","complexity":"medium","cpu":"i9-13900K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"KeyShot","render_type":"CPU Raytracing","complexity":"complex","cpu":"i9-14900K","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"KeyShot","render_type":"GPU Raytracing","complexity":"simple","cpu":"i7-12700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"KeyShot","render_type":"GPU Raytracing","complexity":"medium","cpu":"i9-13900K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"KeyShot","render_type":"GPU Raytracing","complexity":"complex","cpu":"i9-14900K","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"KeyShot","render_type":"Hybrid","complexity":"simple","cpu":"i7-12700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"KeyShot","render_type":"Hybrid","complexity":"medium","cpu":"i9-13900K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"KeyShot","render_type":"Hybrid","complexity":"complex","cpu":"i9-14900K","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"SolidWorks","render_type":"RealView (실시간)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"Quadro T600 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"SolidWorks","render_type":"RealView (실시간)","complexity":"medium","cpu":"i7-12700K","ram":"32GB","gpu":"Quadro RTX A2000 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"SolidWorks","render_type":"RealView (실시간)","complexity":"complex","cpu":"i9-13900K","ram":"64GB","gpu":"Quadro RTX A6000","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"SolidWorks","render_type":"PhotoView 360 (Raytracing)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"Quadro T600 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"SolidWorks","render_type":"PhotoView 360 (Raytracing)","complexity":"medium","cpu":"i7-12700K","ram":"32GB","gpu":"Quadro RTX A2000 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"SolidWorks","render_type":"PhotoView 360 (Raytracing)","complexity":"complex","cpu":"i9-13900K","ram":"64GB","gpu":"Quadro RTX A6000","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"SolidWorks","render_type":"Visualize (Hybrid)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"SolidWorks","render_type":"Visualize (Hybrid)","complexity":"medium","cpu":"i7-12700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"SolidWorks","render_type":"Visualize (Hybrid)","complexity":"complex","cpu":"i9-13900K","ram":"64GB","gpu":"RTX 4090","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"Rhinoceros 3D","render_type":"Raytracing","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"Rhinoceros 3D","render_type":"Raytracing","complexity":"medium","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"Rhinoceros 3D","render_type":"Raytracing","complexity":"complex","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"Rhinoceros 3D","render_type":"Rendered (실시간)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"Rhinoceros 3D","render_type":"Rendered (실시간)","complexity":"medium","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"Rhinoceros 3D","render_type":"Rendered (실시간)","complexity":"complex","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"Rhinoceros 3D","render_type":"V-Ray (Hybrid)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"Rhinoceros 3D","render_type":"V-Ray (Hybrid)","complexity":"medium","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"Rhinoceros 3D","render_type":"V-Ray (Hybrid)","complexity":"complex","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"전문가용"},
+
+{"program":"After Effects","render_type":"3D Ray-traced Renderer","complexity":"simple","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"After Effects","render_type":"3D Ray-traced Renderer","complexity":"medium","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"After Effects","render_type":"3D Ray-traced Renderer","complexity":"complex","cpu":"i9-14900K","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"After Effects","render_type":"Cinema 4D Renderer (Hybrid)","complexity":"simple","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"입문자용"},
+{"program":"After Effects","render_type":"Cinema 4D Renderer (Hybrid)","complexity":"medium","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"중급자용"},
+{"program":"After Effects","render_type":"Cinema 4D Renderer (Hybrid)","complexity":"complex","cpu":"i9-14900K","ram":"128GB","gpu":"RTX 4090","ssd":"4TB SSD","source":"전문가용"},
+
+{"program":"After Effects","render_type":"Classic 3D (실시간)","complexity":"simple","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"입문자용"},
+{"program":"After Effects","render_type":"Classic 3D (실시간)","complexity":"medium","cpu":"i7-13700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"중급자용"},
+{"program":"After Effects","render_type":"Classic 3D (실시간)","complexity":"complex","cpu":"i9-14900K","ram":"64GB","gpu":"RTX 4080 이상","ssd":"2TB SSD","source":"전문가용"}
+
+
+
+]

@@ -61,25 +61,25 @@ export default function SimpleGamePage() {
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: "-100%", opacity: 0 }}
       transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-      className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center p-6"
+      className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center justify-center p-6"
     >
-      {/* 상단: 뒤로가기 + 제목 row */}
-      <div className="flex items-center w-full max-w-xl mb-8">
-        <button
-          onClick={() => navigate("/game")}
-          className="mr-4 p-2 hover:opacity-80 transition z-10"
-          style={{ minWidth: "2.5rem" }}
-        >
-          <img src={BackIcon} alt="뒤로가기" className="w-6 h-6 invert" />
-        </button>
-        <h2 className="text-2xl font-bold flex items-center truncate">
-          <img src={StickIcon} alt="초보자 아이콘" className="w-6 h-6 mr-2" />
-          게임 간편 추천
-        </h2>
-      </div>
-
-      {/* 전체 입력 카드 */}
+      {/* 전체 입력/상단 카드 */}
       <div className="w-full max-w-xl bg-white/10 rounded-2xl shadow-xl p-8 border border-white/10 flex flex-col gap-8">
+        {/* 상단: 뒤로가기 + 제목 row */}
+        <div className="flex items-center mb-4">
+          <button
+            onClick={() => navigate("/game")}
+            className="mr-4 p-2 hover:opacity-80 transition z-10"
+            style={{ minWidth: "2.5rem" }}
+          >
+            <img src={BackIcon} alt="뒤로가기" className="w-6 h-6 invert" />
+          </button>
+          <h2 className="text-2xl font-bold flex items-center truncate">
+            <img src={StickIcon} alt="초보자 아이콘" className="w-6 h-6 mr-2" />
+            게임 간편 추천
+          </h2>
+        </div>
+
         {/* 게임명 입력 */}
         <div className="relative">
           <label className="block mb-2 font-medium text-base">게임명</label>

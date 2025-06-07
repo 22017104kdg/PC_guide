@@ -1,0 +1,74 @@
+[
+  {
+    "model": "NVMe SSD 500GB",
+    "type": "NVMe",
+    "capacity": "500GB",
+    "price": "48000",
+    "url": "https://prod.danawa.com/info/?pcode=21691043&keyword=NVMe+SSD+500GB&cate=112760",
+    "title": "Western Digital WD Blue SN580 M.2 NVMe"
+  },
+  {
+    "model": "NVMe SSD 1TB",
+    "type": "NVMe",
+    "capacity": "1TB",
+    "price": "163000",
+    "url": "https://prod.danawa.com/info/?pcode=17001050&keyword=NVMe+SSD+1TB&cate=112760",
+    "title": "SK하이닉스 Platinum P41 M.2 NVMe"
+  },
+  {
+    "model": "NVMe SSD 2TB",
+    "type": "NVMe",
+    "capacity": "2TB",
+    "price": "255000",
+    "url": "https://prod.danawa.com/info/?pcode=17000984&keyword=NVMe+SSD+2TB&cate=112760",
+    "title": "SK하이닉스 Platinum P41 M.2 NVMe"
+  },
+  {
+    "model": "TLC SSD 500GB",
+    "type": "TLC",
+    "capacity": "500GB",
+    "price": "48000",
+    "url": "https://prod.danawa.com/info/?pcode=21691043&keyword=TLC+SSD+500GB&cate=112760",
+    "title": "Western Digital WD Blue SN580 M.2 NVMe"
+  },
+  {
+    "model": "TLC SSD 1TB",
+    "type": "TLC",
+    "capacity": "1TB",
+    "price": "163000",
+    "url": "https://prod.danawa.com/info/?pcode=17001050&keyword=TLC+SSD+1TB&cate=112760",
+    "title": "SK하이닉스 Platinum P41 M.2 NVMe"
+  },
+  {
+    "model": "TLC SSD 2TB",
+    "type": "TLC",
+    "capacity": "2TB",
+    "price": "255000",
+    "url": "https://prod.danawa.com/info/?pcode=17000984&keyword=TLC+SSD+2TB&cate=112760",
+    "title": "SK하이닉스 Platinum P41 M.2 NVMe"
+  },
+  {
+    "model": "SATA SSD 500GB",
+    "type": "SATA",
+    "capacity": "500GB",
+    "price": "71410",
+    "url": "https://prod.danawa.com/info/?pcode=13190519&keyword=SATA+SSD+500GB&cate=112760",
+    "title": "삼성전자 870 EVO"
+  },
+  {
+    "model": "SATA SSD 1TB",
+    "type": "SATA",
+    "capacity": "1TB",
+    "price": "124890",
+    "url": "https://prod.danawa.com/info/?pcode=13190573&keyword=SATA+SSD+1TB&cate=112760",
+    "title": "삼성전자 870 EVO"
+  },
+  {
+    "model": "SATA SSD 2TB",
+    "type": "SATA",
+    "capacity": "2TB",
+    "price": "235880",
+    "url": "https://prod.danawa.com/info/?pcode=13190630&keyword=SATA+SSD+2TB&cate=112760",
+    "title": "삼성전자 870 EVO"
+  }
+]

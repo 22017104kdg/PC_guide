@@ -10,14 +10,18 @@ import { TransitionProvider } from "./TransitionContext";
 import Home from "./pages/Home";
 import GamePage from "./pages/GamePage";
 import TwoDPage from "./pages/TwoDOptionPage";
-import TwoDOptionPage from "./pages/TwoDOptionPage";      // ← 여기에 맞춰 파일 생성
-import TwoDOptionResult from "./pages/TwoDOptionResult";  // ← 여기에 맞춰 파일 생성
+import TwoDOptionPage from "./pages/TwoDOptionPage";
+import TwoDOptionResult from "./pages/TwoDOptionResult";
 import ThreeDPage from "./pages/ThreeDPage";
-import AiPage from "./pages/AiPage";
+import ThreeDOptionResult from "./pages/ThreeDOptionResult";
+
 import GameSimplePage from "./pages/GameSimplePage";
 import GameAdvancedPage from "./pages/GameAdvancedPage";
 import GameRecommendResult from "./pages/GameRecommendResult";
 import GameOptionSelect from "./pages/GameOptionSelect";
+
+import AiPage from "./pages/AiPage";             // AI 옵션 페이지 import 추가
+import AiResultPage from "./pages/AiResultPage"; // AI 결과 페이지 import 추가
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -25,9 +29,10 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
+        {/* 홈 */}
         <Route path="/" element={<Home />} />
 
-        {/* 게임 간단/고급 추천 */}
+        {/* 게임 */}
         <Route path="/game" element={<GamePage />} />
         <Route path="/game/simple" element={<GameSimplePage />} />
         <Route path="/game/simple/result" element={<GameRecommendResult />} />
@@ -39,9 +44,13 @@ function AnimatedRoutes() {
         <Route path="/2d/options" element={<TwoDOptionPage />} />
         <Route path="/2d/options/result" element={<TwoDOptionResult />} />
 
-        {/* 그 외 */}
+        {/* 3D 그래픽 작업 */}
         <Route path="/3d" element={<ThreeDPage />} />
+        <Route path="/3d/options/result" element={<ThreeDOptionResult />} />
+
+        {/* AI 작업 관련 라우트 추가 */}
         <Route path="/ai" element={<AiPage />} />
+        <Route path="/ai/result" element={<AiResultPage />} />
       </Routes>
     </AnimatePresence>
   );

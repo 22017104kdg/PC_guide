@@ -3,20 +3,15 @@ import { useLocation, useNavigate } from "react-router-dom";
 import BackIcon from "../assets/iconIMG/previous.png";
 import BulbIcon from "../assets/iconIMG/bulb.png";
 
-// SSD 링크 매칭: model, type, capacity로 유연하게 탐색
+// 부품 링크 유틸 함수 (주신 내용 활용)
 function getLinks({ model, type, capacity }, danawaArr, bestArr, naverArr) {
-  // 모델명, 타입+용량 순서로 우선 검색
   const normalized = s => s?.replace(/\s+/g, "").toLowerCase();
 
   function findByAll(arr) {
-    // model 완전일치
-    let found = arr.find(
-      (i) => normalized(i.model) === normalized(model)
-    );
+    let found = arr.find(i => normalized(i.model) === normalized(model));
     if (found) return found;
-    // type + capacity 일치 (보조)
     return arr.find(
-      (i) =>
+      i =>
         i.type?.toLowerCase() === type?.toLowerCase() &&
         (i.capacity + "").replace(/[^0-9]/g, "") === (capacity + "").replace(/[^0-9]/g, "")
     );
@@ -32,34 +27,25 @@ function getLinks({ model, type, capacity }, danawaArr, bestArr, naverArr) {
   ].filter(Boolean);
 }
 
-export default function TwoDOptionResult() {
+// 합리적 가격 필터 (주신 코드)
+function filterValidPrices(arr, field = "price") {
+  const nums = arr.map(x => Number(x[field])).filter(x => x > 0).sort((a, b) => a - b);
+  if (nums.length === 0) return [];
+  const base = nums[0];
+  return arr.filter(x =>
+    !!x[field] &&
+    !isNaN(Number(x[field])) &&
+    Number(x[field]) <= base * 2.5
+  );
+}
+
+export default function AiResultPage() {
   const { state } = useLocation();
   const navigate = useNavigate();
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [result, setResult] = useState(null);
-
-  // 가격이 합리적인 범위만 추출
-  function filterValidPrices(arr, field = "price") {
-    const nums = arr.map(x => Number(x[field])).filter(x => x > 0).sort((a, b) => a - b);
-    if (nums.length === 0) return [];
-    const base = nums[0];
-    return arr.filter(x =>
-      !!x[field] &&
-      !isNaN(Number(x[field])) &&
-      Number(x[field]) <= base * 2.5
-    );
-  }
-  // SSD: 256GB -> 500GB 이상 자동추천
-  function findSSD(ssdArr, capacity) {
-    let found = ssdArr.find(s => s.capacity === capacity);
-    if (found) return found;
-    const capacityNum = parseInt(capacity.replace(/[^0-9]/g, ""));
-    const candidates = ssdArr
-      .filter(s => parseInt(s.capacity) >= 500)
-      .sort((a, b) => parseInt(a.capacity) - parseInt(b.capacity));
-    return candidates[0] || null;
-  }
 
   useEffect(() => {
     if (!state) {
@@ -67,13 +53,14 @@ export default function TwoDOptionResult() {
       setLoading(false);
       return;
     }
+
     setLoading(true);
     setError(false);
 
     async function fetchAndRecommend() {
       try {
+        // 여기에 실제 부품 DB JSON 경로 넣으세요
         const [
-          benchRaw,
           cpuRaw, gpuRaw, ramRaw, mbRaw, ssdRaw,
           cpuDanawa, cpuBest, cpuNaver,
           gpuDanawa, gpuBest, gpuNaver,
@@ -81,7 +68,6 @@ export default function TwoDOptionResult() {
           mbDanawa, mbBest, mbNaver,
           ssdDanawa, ssdBest, ssdNaver
         ] = await Promise.all([
-          fetch("/data/2d_recommend_db_2025.json").then(r => r.json()),
           fetch("/data/cpuDB.json").then(r => r.json()),
           fetch("/data/gpuDB.json").then(r => r.json()),
           fetch("/data/ramList.json").then(r => r.json()),
@@ -132,109 +118,35 @@ export default function TwoDOptionResult() {
         const mbArr = Array.isArray(mbRaw) ? mbRaw : mbRaw.mainboard || mbRaw.mb || [];
         const ssdArr = Array.isArray(ssdRaw) ? ssdRaw : ssdRaw.ssd || [];
 
-        // 1. 벤치에서 추천 조합 선택
-        const { program, resolution, complexity } = state;
-        const bench = benchRaw.find(
-          b =>
-            b.program === program &&
-            b.resolution === resolution &&
-            b.complexity === complexity
-        );
-        if (!bench) {
-          setResult(null);
-          setLoading(false);
-          return;
-        }
+        // 여기서는 state에 간단히 model, mode, stage 정보만 있으므로
+        // 아래는 임의 추천 로직(실사용 데이터로 변경하세요)
+        // 실제 AI 작업용 사양 DB를 연동해서 조건별 추천해야 함
 
-        // 2. CPU 추천
-        function findCpuModel(target, cpuArr) {
-          const models = target.split("/").map(s => s.trim());
-          let found = null;
-          for (const m of models) {
-            found = cpuArr.find(
-              c => c.model.toLowerCase().includes(m.toLowerCase())
-            ) || found;
-          }
-          return found;
-        }
-        const cpu = findCpuModel(bench.cpu, cpuArr);
+        // 예) CPU 추천 (가장 성능 좋은 CPU 1개)
+        const cpu = cpuArr[0] || null;
 
-        // 3. GPU 추천
-        function findGpuModel(target, gpuArr) {
-          if (/내장/.test(target)) {
-            return { model: "내장그래픽", score: "-", generation: "-", vram: "-" };
-          }
-          const base = target.replace(/ 이상|~.+/g, "");
-          let found = gpuArr
-            .filter(g => g.model.toLowerCase().includes(base.toLowerCase()))
-            .sort((a, b) => (b.score || 0) - (a.score || 0))[0];
-          if (!found && /~/.test(target)) {
-            const [start, end] = target.split("~").map(s => s.trim());
-            found = gpuArr
-              .filter(
-                g =>
-                  g.model.toLowerCase().includes(start.toLowerCase()) ||
-                  g.model.toLowerCase().includes(end.toLowerCase())
-              )
-              .sort((a, b) => (a.score || 0) - (b.score || 0))[0];
-          }
-          if (!found && /이상/.test(target)) {
-            found = gpuArr
-              .filter(g => /gtx|rtx|rx|quadro|firepro/i.test(g.model))
-              .sort((a, b) => (a.score || 0) - (b.score || 0))[0];
-          }
-          return found;
-        }
-        const gpu = findGpuModel(bench.gpu, gpuArr);
+        // GPU 추천 (가장 성능 좋은 GPU 1개)
+        const gpu = gpuArr[0] || null;
 
-        // 4. RAM 추천 (최대 3개, 최저가 기준)
-        function findRamModels(target, ramArr, ramDanawa) {
-          let size = 0;
-          const match = /(\d+)(?:~(\d+))?GB/.exec(target);
-          if (match) size = parseInt(match[1], 10);
-          let found = ramArr.filter(r => r.size_gb === size);
-          found = found.map(r => {
-            const priceObj = ramDanawa.find(p => p.model === r.model);
-            return { ...r, price: priceObj ? Number(priceObj.price) : Infinity, url: priceObj?.url };
-          });
-          const valid = filterValidPrices(found);
-          return (valid.length > 0 ? valid : found).slice(0, 3);
-        }
-        const ramModels = findRamModels(bench.ram, ramArr, ramDanawa);
+        // RAM 추천 (3개까지)
+        const ramModels = ramArr.slice(0, 3);
 
-        // 5. SSD 추천
-        let ssd = findSSD(ssdArr, (bench.ssd.match(/\d+GB/) || [])[0] || "500GB");
+        // 메인보드 추천 (CPU 소켓에 맞는 보드)
+        const mbModels = mbArr.filter(
+          mb => cpu && mb.socket && cpu.socket && mb.socket.toUpperCase() === cpu.socket.toUpperCase()
+        ).slice(0, 3);
 
-        // 6. 메인보드 추천 (브랜드별 1개씩)
-        let mbModels = [];
-        if (cpu) {
-          const allBoards = mbArr.filter(
-            m =>
-              m.socket &&
-              cpu.socket &&
-              m.socket.toUpperCase() === cpu.socket.toUpperCase()
-          );
-          const brands = ["asus", "msi", "gigabyte"];
-          mbModels = brands.map(brand => {
-            const bList = allBoards.filter(b => b.model && new RegExp(brand, "i").test(b.model));
-            if (bList.length === 0) return null;
-            const merged = bList.map(b => {
-              const priceObj = mbDanawa.find(p => p.model === b.model);
-              return { ...b, price: priceObj ? Number(priceObj.price) : Infinity, url: priceObj?.url };
-            });
-            const valid = filterValidPrices(merged);
-            return valid.length > 0 ? valid.sort((a, b) => a.price - b.price)[0] : merged[0];
-          }).filter(Boolean);
-        }
+        // SSD 추천 (가장 작은 용량 SSD 1개)
+        const ssd = ssdArr[0] || null;
 
-        // 가격/링크 정보
+        // 링크 생성
         const cpuLinks = cpu ? getLinks(cpu, cpuDanawa, cpuBest, cpuNaver) : [];
         const gpuLinks = gpu ? getLinks(gpu, gpuDanawa, gpuBest, gpuNaver) : [];
         const ramLinksArr = ramModels.map(r => getLinks(r, ramDanawa, ramBest, ramNaver));
         const mbLinksArr = mbModels.map(mb => getLinks(mb, mbDanawa, mbBest, mbNaver));
         const ssdLinks = ssd ? getLinks(ssd, ssdDanawa, ssdBest, ssdNaver) : [];
 
-        // 총 견적(부품 1개씩 최저가 합산)
+        // 총 가격 계산 (1개당 최저가 기준)
         function getFirstValidPrice(links) {
           return links && links[0] && links[0].price ? Number(links[0].price) : 0;
         }
@@ -246,9 +158,6 @@ export default function TwoDOptionResult() {
           getFirstValidPrice(ssdLinks);
 
         setResult({
-          program,
-          resolution,
-          complexity,
           cpu,
           cpuLinks,
           gpu,
@@ -259,15 +168,16 @@ export default function TwoDOptionResult() {
           mbLinksArr,
           ssd,
           ssdLinks,
-          totalPrice,
+          totalPrice
         });
         setLoading(false);
       } catch (err) {
         setError(true);
         setLoading(false);
-        console.error("TwoDOptionResult fetch 에러:", err);
+        console.error("AiResultPage fetch 에러:", err);
       }
     }
+
     fetchAndRecommend();
   }, [state]);
 
@@ -302,10 +212,11 @@ export default function TwoDOptionResult() {
           <img src={BackIcon} alt="뒤로가기" className="w-6 h-6 invert" />
         </button>
         <h2 className="text-2xl font-bold flex items-center gap-2">
-          2D 그래픽 사양 추천 결과
+          AI 작업 사양 추천 결과
           <img src={BulbIcon} alt="bulb" className="w-7 h-7 ml-2" />
         </h2>
       </div>
+
       {loading ? (
         <p className="text-gray-400">로딩 중...</p>
       ) : error ? (
@@ -327,20 +238,8 @@ export default function TwoDOptionResult() {
                 : "계산 불가"}
             </span>
           </div>
-          {/* 옵션 설명 */}
-          <div className="w-full max-w-xl bg-gray-800/80 rounded-xl p-6 mb-6">
-            <div>
-              <span className="font-bold">프로그램:</span> {result.program}<br />
-              <span className="font-bold">해상도:</span> {result.resolution}<br />
-              <span className="font-bold">작업 복잡도:</span>{" "}
-              {result.complexity === "low"
-                ? "간단"
-                : result.complexity === "medium"
-                ? "보통"
-                : "복잡"}
-            </div>
-          </div>
-          {/* 부품별 추천 */}
+
+          {/* 부품별 추천 UI */}
           <div className="flex flex-col md:flex-row gap-6 mb-8 w-full max-w-xl">
             {/* CPU */}
             <div className="flex-1 bg-gray-800/80 rounded-xl p-6">
@@ -362,7 +261,9 @@ export default function TwoDOptionResult() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
+                          className={`${l.label === "네이버 인기순"
+                            ? "text-green-500"
+                            : "text-blue-400"} underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
@@ -374,6 +275,7 @@ export default function TwoDOptionResult() {
                 <p className="text-red-400">추천 CPU 없음</p>
               )}
             </div>
+
             {/* GPU */}
             <div className="flex-1 bg-gray-800/80 rounded-xl p-6">
               <h3 className="font-semibold mb-2">그래픽카드 추천</h3>
@@ -394,7 +296,9 @@ export default function TwoDOptionResult() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
+                          className={`${l.label === "네이버 인기순"
+                            ? "text-green-500"
+                            : "text-blue-400"} underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
@@ -429,7 +333,9 @@ export default function TwoDOptionResult() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
+                          className={`${l.label === "네이버 인기순"
+                            ? "text-green-500"
+                            : "text-blue-400"} underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
@@ -462,7 +368,9 @@ export default function TwoDOptionResult() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
+                          className={`${l.label === "네이버 인기순"
+                            ? "text-green-500"
+                            : "text-blue-400"} underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
@@ -492,7 +400,9 @@ export default function TwoDOptionResult() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
+                          className={`${l.label === "네이버 인기순"
+                            ? "text-green-500"
+                            : "text-blue-400"} underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>

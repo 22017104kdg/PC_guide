@@ -1,5 +1,45 @@
 [
   {
+    "model": "RTX 5070 Ti",
+    "price": "1460890",
+    "url": "https://search.shopping.naver.com/catalog/53369857637"
+  },
+  {
+    "model": "RTX 5070",
+    "price": "939000",
+    "url": "https://search.shopping.naver.com/catalog/53489152239"
+  },
+  {
+    "model": "RTX 5060 Ti",
+    "price": "722790",
+    "url": "https://search.shopping.naver.com/catalog/54256956115"
+  },
+  {
+    "model": "RTX 5060",
+    "price": "722790",
+    "url": "https://search.shopping.naver.com/catalog/54256956115"
+  },
+  {
+    "model": "Radeon RX 9070 XT",
+    "price": "1119850",
+    "url": "https://search.shopping.naver.com/catalog/53804188202"
+  },
+  {
+    "model": "Radeon RX 9070",
+    "price": "1119850",
+    "url": "https://search.shopping.naver.com/catalog/53804188202"
+  },
+  {
+    "model": "Radeon RX 9060 XT",
+    "price": "검색불가",
+    "url": ""
+  },
+  {
+    "model": "Radeon RX 9060",
+    "price": "29490",
+    "url": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=8313060338&tid=1000000061"
+  },
+  {
     "model": "Radeon RX 7900 XTX",
     "price": "1279000",
     "url": "https://search.shopping.naver.com/catalog/36694261621"
@@ -16,7 +56,7 @@
   },
   {
     "model": "Radeon RX 7700 XT",
-    "price": "602000",
+    "price": "594240",
     "url": "https://search.shopping.naver.com/catalog/50129242619"
   },
   {
@@ -26,7 +66,7 @@
   },
   {
     "model": "Radeon RX 7600",
-    "price": "354740",
+    "price": "357800",
     "url": "https://search.shopping.naver.com/catalog/42195167618"
   },
   {
@@ -71,7 +111,7 @@
   },
   {
     "model": "Radeon RX 6600",
-    "price": "300800",
+    "price": "300610",
     "url": "https://search.shopping.naver.com/catalog/40184371618"
   },
   {
@@ -81,12 +121,12 @@
   },
   {
     "model": "Radeon RX 5700 XT",
-    "price": "209900",
+    "price": "199900",
     "url": "https://smartstore.naver.com/main/products/11721632956"
   },
   {
     "model": "Radeon RX 5700",
-    "price": "209900",
+    "price": "199900",
     "url": "https://smartstore.naver.com/main/products/11721632956"
   },
   {
@@ -96,8 +136,8 @@
   },
   {
     "model": "Radeon RX 5500 XT",
-    "price": "128840",
-    "url": "https://link.gmarket.co.kr/gate/pcs?item-no=4285673234&sub-id=1003&service-code=10000003&lcd=100000076"
+    "price": "23380",
+    "url": "https://link.auction.co.kr/gate/pcs?item-no=F203421559&sub-id=1&service-code=10000003"
   },
   {
     "model": "RTX 4090",
@@ -106,18 +146,18 @@
   },
   {
     "model": "RTX 4080 SUPER",
-    "price": "492940",
-    "url": "https://link.auction.co.kr/gate/pcs?item-no=F207613207&sub-id=1&service-code=10000003"
+    "price": "4650000",
+    "url": "https://link.gmarket.co.kr/gate/pcs?item-no=4324490327&sub-id=1003&service-code=10000003&lcd=100000055"
   },
   {
     "model": "RTX 4080",
-    "price": "492940",
-    "url": "https://link.auction.co.kr/gate/pcs?item-no=F207613207&sub-id=1&service-code=10000003"
+    "price": "4650000",
+    "url": "https://link.gmarket.co.kr/gate/pcs?item-no=4324490327&sub-id=1003&service-code=10000003&lcd=100000055"
   },
   {
     "model": "RTX 4070 Ti SUPER",
-    "price": "870000",
-    "url": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=8268633677&tid=1000000061"
+    "price": "2036800",
+    "url": "https://search.shopping.naver.com/catalog/45519287619"
   },
   {
     "model": "RTX 4070 SUPER",
@@ -131,13 +171,13 @@
   },
   {
     "model": "RTX 4060 Ti",
-    "price": "608990",
+    "price": "615380",
     "url": "https://search.shopping.naver.com/catalog/40325421620"
   },
   {
     "model": "RTX 4060",
-    "price": "520000",
-    "url": "https://search.shopping.naver.com/catalog/41385755619"
+    "price": "468000",
+    "url": "https://search.shopping.naver.com/catalog/41009504618"
   },
   {
     "model": "RTX 3090 Ti",
@@ -176,7 +216,7 @@
   },
   {
     "model": "RTX 3060",
-    "price": "408990",
+    "price": "409000",
     "url": "https://search.shopping.naver.com/catalog/27328167527"
   },
   {

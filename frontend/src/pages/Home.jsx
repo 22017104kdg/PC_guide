@@ -27,26 +27,27 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center p-6">
-      {/* FAQ + 제목 라인 */}
-      <div className="flex items-center w-full max-w-xl mb-8">
-        <img
-          src={faqIcon}
-          alt="FAQ"
-          title="도움말"
-          onClick={() => setShowFaq(true)}
-          className="w-6 h-6 cursor-pointer hover:scale-110 hover:opacity-80 transition-transform mr-3"
-        />
-        <h1 className="text-2xl font-bold flex items-center truncate">
-          PC 견적 추천 시스템
-          <span className="ml-2 text-sm font-normal text-gray-400 align-middle">
-            용도 선택 해주세요⭐
-          </span>
-        </h1>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center justify-center p-6">
+      {/* 전체 박스 */}
+      <div className="w-full max-w-xl bg-white/10 rounded-2xl shadow-xl p-10 border border-white/10 flex flex-col items-center gap-8">
+        {/* FAQ + 제목 라인 */}
+        <div className="flex items-center w-full mb-2">
+          <img
+            src={faqIcon}
+            alt="FAQ"
+            title="도움말"
+            onClick={() => setShowFaq(true)}
+            className="w-6 h-6 cursor-pointer hover:scale-110 hover:opacity-80 transition-transform mr-3"
+          />
+          <h1 className="text-2xl font-bold flex items-center truncate">
+            PC 견적 추천 시스템
+            <span className="ml-2 text-sm font-normal text-gray-400 align-middle">
+              용도 선택 해주세요⭐
+            </span>
+          </h1>
+        </div>
 
-      {/* 전체 카드 */}
-      <div className="w-full max-w-xl bg-white/10 rounded-2xl shadow-xl p-10 border border-white/10 flex flex-col items-center">
+        {/* 용도 선택 카드 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-4">
           {options.map((opt) => (
             <div

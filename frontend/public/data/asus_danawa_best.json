@@ -1,8 +1,64 @@
 [
   {
+    "model": "ASUS ROG STRIX Z890-E GAMING WIFI",
+    "price": "719000",
+    "url": "https://prod.danawa.com/info/?pcode=69696863&keyword=ASUS+ROG+STRIX+Z890-E+GAMING+WIFI&cate=112751",
+    "title": "ASUS ROG STRIX Z890-E GAMING WIFI 코잇",
+    "reviewCount": "2"
+  },
+  {
+    "model": "ASUS TUF GAMING Z890-PRO WIFI",
+    "price": "499000",
+    "url": "https://prod.danawa.com/info/?pcode=69662171&keyword=ASUS+TUF+GAMING+Z890-PRO+WIFI&cate=112751",
+    "title": "ASUS TUF Gaming Z890-PRO WIFI STCOM",
+    "reviewCount": "23"
+  },
+  {
+    "model": "ASUS PRIME Z890-A WIFI",
+    "price": "356480",
+    "url": "https://prod.danawa.com/info/?pcode=69696464&keyword=ASUS+PRIME+Z890-A+WIFI&cate=112751",
+    "title": "ASUS PRIME Z890M-PLUS WIFI-CSM 코잇",
+    "reviewCount": "8"
+  },
+  {
+    "model": "ASUS ROG MAXIMUS Z890 HERO",
+    "price": "940950",
+    "url": "https://prod.danawa.com/info/?pcode=69566996&keyword=ASUS+ROG+MAXIMUS+Z890+HERO&cate=112751",
+    "title": "ASUS ROG MAXIMUS Z890 HERO 인텍앤컴퍼니",
+    "reviewCount": "79"
+  },
+  {
+    "model": "ASUS ROG STRIX X870-E GAMING WIFI",
+    "price": "781200",
+    "url": "https://prod.danawa.com/info/?pcode=67694921&keyword=ASUS+ROG+STRIX+X870-E+GAMING+WIFI&cate=112751",
+    "title": "ASUS ROG STRIX X870E-E GAMING WIFI STCOM",
+    "reviewCount": "45"
+  },
+  {
+    "model": "ASUS TUF GAMING X870-PLUS WIFI",
+    "price": "470950",
+    "url": "https://prod.danawa.com/info/?pcode=74814188&keyword=ASUS+TUF+GAMING+X870-PLUS+WIFI&cate=112751",
+    "title": "ASUS TUF Gaming X870-PLUS WIFI 인텍앤컴퍼니",
+    "reviewCount": "6"
+  },
+  {
+    "model": "ASUS PRIME X870-PRO",
+    "price": "64490",
+    "url": "https://prod.danawa.com/info/?pcode=12069566&keyword=ASUS+PRIME&cate=112751",
+    "title": "ASUS PRIME A520M-K 대원씨티에스",
+    "reviewCount": "196"
+  },
+  {
+    "model": "ASUS PRIME B850-PLUS",
+    "price": "3530000",
+    "url": "https://prod.danawa.com/bridge/loadingBridgeRepresentPC.php?link_prod_c=3104202&serviceId=dsearch",
+    "title": "샵다나와 조립PC [AMD R7-7800X3D/RTX5080/32G]",
+    "reviewCount": "0"
+  },
+  {
     "model": "ASUS ROG STRIX Z790-A GAMING WIFI D4",
     "price": "441600",
-    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=875&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=U88685335076&keyword=ASUS+ROG+STRIX+Z790-A+GAMING+WIFI+D4&r=17482249105507&cate=112751",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=875&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=U88685335076&keyword=ASUS+ROG+STRIX+Z790-A+GAMING+WIFI+D4&r=17483276843595&cate=112751",
     "title": "[중고] ASUS ROG STRIX Z790-A GAMING WIFI D4 STCOM 에이수스 컴퓨터 PC 게이밍 메인보드 인텔 13세대 랩터레이크 12세대 엘더레이크 CPU추천",
     "reviewCount": "0"
   },
@@ -30,7 +86,7 @@
   {
     "model": "ASUS TUF GAMING B760-PLUS WIFI D4",
     "price": "191680",
-    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=875&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I21050017136&keyword=ASUS+TUF+GAMING+B760-PLUS+WIFI+D4&r=17482249507913&cate=112751",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=875&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I21050017136&keyword=ASUS+TUF+GAMING+B760-PLUS+WIFI+D4&r=17483277191850&cate=112751",
     "title": "[해외] ASUS INTEL 13.12세대 LGA1700 대응 B760M 탑재 마자 보드 TUF GAMING B760M-PLUS WIFI D4 국내 정규 대리점품",
     "reviewCount": "0"
   },
@@ -57,22 +113,22 @@
   },
   {
     "model": "ASUS PRIME H610M-A D4",
-    "price": "84910",
-    "url": "https://prod.danawa.com/info/?pcode=20344700&keyword=ASUS+PRIME+H610M-A+D4&cate=112751",
-    "title": "ASUS PRIME H610M-CS D4 코잇",
-    "reviewCount": "57"
+    "price": "87710",
+    "url": "https://prod.danawa.com/info/?pcode=16083650&keyword=ASUS+PRIME+H610M-A+D4&cate=112751",
+    "title": "ASUS PRIME H610M-K D4 인텍앤컴퍼니",
+    "reviewCount": "205"
   },
   {
     "model": "ASUS PROART B760-CREATOR D4",
-    "price": "597300",
-    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=874&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I21742330166&keyword=ASUS+PROART+B760-CREATOR+D4&r=17482249983644&cate=112752",
-    "title": "[해외] 아수스 ASUS ProArt B760-CREATOR D4 인텔 Intel A 1700(13세대  1개",
+    "price": "195000",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=880&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I23815653109&keyword=ASUS+PROART+B760-CREATOR+D4&r=17483277633529&cate=112777",
+    "title": "[해외] ASUS ProArt B760-CREATOR D4 인텔 LGA 170013세대 12세대 ATX 콘텐츠 크리에이터 마더보드 DDR4 PCIe 5.0 3xM.2 슬롯 2.5Gb 1",
     "reviewCount": "0"
   },
   {
     "model": "ASUS PRO B760M-C D4",
     "price": "318980",
-    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=875&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I25425458183&keyword=ASUS+PRO+B760M-C&r=17482250075410&cate=112751",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=875&cate_c3=0&cate_c4=0&cmpny_c=TP40F&link_prod_c=I25425458183&keyword=ASUS+PRO+B760M-C&r=17483277715939&cate=112751",
     "title": "[해외] ASUS 컴퓨터 메인보드 Pro B760M-CT-CSM 메인보드 1213세대 인텔 mATX DDR5 듀얼 M.2 USB 3.2 Gen 1 Type-C XN",
     "reviewCount": "0"
   },
@@ -99,51 +155,51 @@
   },
   {
     "model": "ASUS TUF GAMING B550M-PLUS WIFI II",
-    "price": "260080",
-    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=860&cate_c2=13735&cate_c3=14885&cate_c4=0&cmpny_c=TH201&link_prod_c=8210566407&keyword=ASUS+TUF+GAMING+B550M-PLUS+WIFI+II&r=17482250476133&cate=113976",
-    "title": "ASUS TUF GAMING B550M-PLUS(WIFI)II AMD B550(Ryzen 마이크로 ATX 게이밍 마더보드 듀얼 M.2 10 DrMOS 전",
+    "price": "234240",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=875&cate_c3=0&cate_c4=0&cmpny_c=EE715&link_prod_c=D919797198&keyword=ASUS+TUF+GAMING+B550M-PLUS+WIFI+II&r=17483278046770&cate=112751",
+    "title": "ASUS 새로운 TUF 게이밍 B550M-PLUS WiFi II AMD B550 AM4 microATX 게이밍 마더보드 PCIe 4.0 2.5G",
     "reviewCount": "0"
   },
   {
     "model": "ASUS PRIME B550-PLUS",
-    "price": "56700",
-    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=863&cate_c2=894&cate_c3=1080&cate_c4=0&cmpny_c=EE128&link_prod_c=4237477418&keyword=ASUS+PRIME+B550-PLUS&r=17482250562354&cate=1131668",
-    "title": "[해외] ZAHARA ASUS ROG Strix B550 F 게이밍 WiFi II 플러스 Prime B450M A B650 B650E B760 Z690 Z790 E",
+    "price": "1600000",
+    "url": "https://prod.danawa.com/bridge/loadingBridgeRepresentPC.php?link_prod_c=3066475&serviceId=dsearch",
+    "title": "샵다나와 조립PC [AMD R5-5600/RX 7700XT/16G]",
     "reviewCount": "0"
   },
   {
     "model": "ASUS ROG STRIX X570-E GAMING WIFI II",
     "price": "39080",
-    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=875&cate_c3=0&cate_c4=0&cmpny_c=EE715&link_prod_c=E355461200&keyword=ASUS+ROG+STRIX+X570-E+GAMING+WIFI+II&r=17482250668766&cate=112751",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=861&cate_c2=875&cate_c3=0&cate_c4=0&cmpny_c=EE715&link_prod_c=E355461200&keyword=ASUS+ROG+STRIX+X570-E+GAMING+WIFI+II&r=17483278202278&cate=112751",
     "title": "[해외]Huasheng Suda 1400802650600 ASUS 2T2R WiFi 안테나 ROG Strix X570E X570PRO 게이밍 TUF 게이밍 B550M B5",
     "reviewCount": "0"
   },
   {
     "model": "ASUS PRIME X570-PRO",
     "price": "177160",
-    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=7975593940&keyword=ASUS+PRIME+X570-PRO&r=17482250751228",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=58751&cate_c2=58760&cate_c3=0&cate_c4=0&cmpny_c=TH201&link_prod_c=7975593940&keyword=ASUS+PRIME+X570-PRO&r=17483278286667",
     "title": "ASUS PRIME X570-PRO 마더보드 AMD X570 소켓 AM4 DDR4 PCI-E 4.0 M.2 지지대 Ryzen 5 5600 2400G 3100 570",
     "reviewCount": "0"
   },
   {
     "model": "ASUS PROART B550-CREATOR",
     "price": "294400",
-    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=1393&cate_c2=1403&cate_c3=200016&cate_c4=0&cmpny_c=TP40F&link_prod_c=I25247688292&keyword=ASUS+PROART+B550-CREATOR&r=17482250854589&cate=11238049",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=1393&cate_c2=1403&cate_c3=200016&cate_c4=0&cmpny_c=TP40F&link_prod_c=I25247688292&keyword=ASUS+PROART+B550-CREATOR&r=17483278371586&cate=11238049",
     "title": "[해외] ASUS ProArt B550-CREATOR AMD B550 Ryzen AM4 ATX 마더보드 컨텐츠 제작자용 PCIe 기능®4.0 듀얼 썬더볼  01 Second-Hand  1개",
     "reviewCount": "0"
   },
   {
     "model": "ASUS TUF GAMING A520M-PLUS",
     "price": "217900",
-    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=149&cate_c2=47616&cate_c3=47618&cate_c4=0&cmpny_c=TP40F&link_prod_c=P7293774002&keyword=ASUS+TUF+GAMING+A520M-PLUS&r=17482250958467&cate=1024257",
+    "url": "https://prod.danawa.com/bridge/go_link_goods.php?cate_c1=149&cate_c2=47616&cate_c3=47618&cate_c4=0&cmpny_c=TP40F&link_prod_c=P7293774002&keyword=ASUS+TUF+GAMING+A520M-PLUS&r=17483278452611&cate=1024257",
     "title": "[해외] ASUS TUF 게이밍 A520M-PLUS 와이파이 AMD AM4 3세대 라이젠™ 마이크로ATX 마더보드M.2 지원 802.11ac Wi-Fi 디스플레이 포트 HDMI D-  1개",
     "reviewCount": "0"
   },
   {
     "model": "ASUS PRIME A520M-K",
-    "price": "64570",
+    "price": "64490",
     "url": "https://prod.danawa.com/info/?pcode=12069566&keyword=ASUS+PRIME+A520M-K&cate=112751",
     "title": "ASUS PRIME A520M-K 대원씨티에스",
-    "reviewCount": "197"
+    "reviewCount": "196"
   }
 ]

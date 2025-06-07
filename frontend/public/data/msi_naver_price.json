@@ -1,5 +1,53 @@
 [
   {
+    "model": "MSI MEG Z890 ACE MAX",
+    "price": "1334550",
+    "url": "https://smartstore.naver.com/main/products/10860148152",
+    "title": "MSI MEG Z790 ACE MAX 게이밍 마더보드 12/13/14세대 인텔 프로세서 L"
+  },
+  {
+    "model": "MSI MPG Z890 EDGE WIFI",
+    "price": "547500",
+    "url": "https://search.shopping.naver.com/catalog/51032812620",
+    "title": "MSI MPG Z890 엣지 TI WIFI"
+  },
+  {
+    "model": "MSI MAG B860 TOMAHAWK WIFI",
+    "price": "309000",
+    "url": "https://smartstore.naver.com/main/products/11377716120",
+    "title": "MSI MAG B860 토마호크 WIFI 인텔 메인보드"
+  },
+  {
+    "model": "MSI PRO B860M-A WIFI",
+    "price": "249000",
+    "url": "https://smartstore.naver.com/main/products/11377739716",
+    "title": "MSI PRO B860M-A WIFI 인텔 메인보드"
+  },
+  {
+    "model": "MSI MEG X870E ACE MAX",
+    "price": "2792020",
+    "url": "https://smartstore.naver.com/main/products/9924272367",
+    "title": "MSI MEG Z790 ACE MAX 게이밍 마더보드 121314세대 인텔 프로세서 LGA 1700 DDR5 PCIe 5.0 M.2 2.5Gbps LAN USB 3.2 Gen2"
+  },
+  {
+    "model": "MSI MPG X870 CARBON WIFI",
+    "price": "669000",
+    "url": "https://search.shopping.naver.com/catalog/50665297620",
+    "title": "MSI MPG X870E 카본 WIFI"
+  },
+  {
+    "model": "MSI MAG B850 TOMAHAWK WIFI",
+    "price": "379000",
+    "url": "https://smartstore.naver.com/main/products/11394794474",
+    "title": "MSI MAG B850 토마호크 맥스 WIFI AMD 메인보드"
+  },
+  {
+    "model": "MSI PRO B850M-A WIFI",
+    "price": "164000",
+    "url": "https://search.shopping.naver.com/catalog/37281045619",
+    "title": "MSI PRO B650M-A WIFI"
+  },
+  {
     "model": "MSI MAG B760 TOMAHAWK WIFI DDR4",
     "price": "330960",
     "url": "https://smartstore.naver.com/main/products/10009922771",
@@ -43,7 +91,7 @@
   },
   {
     "model": "MSI PRO B650M-A WIFI",
-    "price": "163990",
+    "price": "164000",
     "url": "https://search.shopping.naver.com/catalog/37281045619",
     "title": "MSI PRO B650M-A WIFI"
   },
@@ -109,13 +157,13 @@
   },
   {
     "model": "MSI B450M MORTAR MAX",
-    "price": "110000",
-    "url": "https://smartstore.naver.com/main/products/11164097276",
-    "title": "B450M MORTAR MAX AMD B450 소켓AM4 MSI 박격포 맥스 메인보드"
+    "price": "136000",
+    "url": "https://smartstore.naver.com/main/products/9813933890",
+    "title": "(해외배송) MSI B450M MORTAR MAX / B450M 박격포 맥스 AMD용 메인보드 / 정발 새상품"
   },
   {
     "model": "MSI A520M-A PRO",
-    "price": "67480",
+    "price": "68780",
     "url": "https://search.shopping.naver.com/catalog/33695168620",
     "title": "MSI A520M-A PRO"
   }

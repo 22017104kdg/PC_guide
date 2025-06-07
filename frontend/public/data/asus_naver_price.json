@@ -1,5 +1,53 @@
 [
   {
+    "model": "ASUS ROG STRIX Z890-E GAMING WIFI",
+    "price": "782900",
+    "url": "https://search.shopping.naver.com/catalog/51073232619",
+    "title": "ASUS ROG STRIX Z890-E GAMING WIFI STCOM"
+  },
+  {
+    "model": "ASUS TUF GAMING Z890-PRO WIFI",
+    "price": "489870",
+    "url": "https://search.shopping.naver.com/catalog/51073232618",
+    "title": "ASUS TUF Gaming Z890-PRO WIFI STCOM"
+  },
+  {
+    "model": "ASUS PRIME Z890-A WIFI",
+    "price": "458340",
+    "url": "https://link.gmarket.co.kr/gate/pcs?item-no=4357879733&sub-id=1003&service-code=10000003&lcd=100000102",
+    "title": "ASUS PRIME Z890 P WIFI A 1851 ATX 메인보드 인텔 코어 울트라 시리즈 2 준비 완료 고급 AI PC 14 1 전원"
+  },
+  {
+    "model": "ASUS ROG MAXIMUS Z890 HERO",
+    "price": "921960",
+    "url": "https://search.shopping.naver.com/catalog/51073163621",
+    "title": "ASUS ROG MAXIMUS Z890 HERO 코잇"
+  },
+  {
+    "model": "ASUS ROG STRIX X870-E GAMING WIFI",
+    "price": "781400",
+    "url": "https://search.shopping.naver.com/catalog/50772453619",
+    "title": "ASUS ROG STRIX X870E-E GAMING WIFI STCOM"
+  },
+  {
+    "model": "ASUS TUF GAMING X870-PLUS WIFI",
+    "price": "488960",
+    "url": "https://search.shopping.naver.com/catalog/50772415619",
+    "title": "ASUS TUF Gaming X870-PLUS WIFI STCOM"
+  },
+  {
+    "model": "ASUS PRIME X870-PRO",
+    "price": "178560",
+    "url": "https://link.gmarket.co.kr/gate/pcs?item-no=4379513461&sub-id=1003&service-code=10000003&lcd=100000055",
+    "title": "ASUS PRIME X570-PRO/CSM 대원CTS"
+  },
+  {
+    "model": "ASUS PRIME B850-PLUS",
+    "price": "548640",
+    "url": "https://smartstore.naver.com/main/products/11774670298",
+    "title": "아수스 Prime B850플러스 와이파이 게이밍 메인보드 소켓 AMD AM5 ATX DDR5 PCIe 5.0"
+  },
+  {
     "model": "ASUS ROG STRIX Z790-A GAMING WIFI D4",
     "price": "1628900",
     "url": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=8372439685&ctag=8372439685&lptag=I24193734799&itemId=24193734799&vendorItemId=91211408486&spec=10305199",
@@ -13,7 +61,7 @@
   },
   {
     "model": "ASUS ROG STRIX B760-G GAMING WIFI D4",
-    "price": "220460",
+    "price": "221020",
     "url": "https://search.shopping.naver.com/catalog/37233106626",
     "title": "ASUS ROG STRIX B760-G GAMING WIFI D4 코잇"
   },
@@ -25,7 +73,7 @@
   },
   {
     "model": "ASUS TUF GAMING B760-PLUS WIFI D4",
-    "price": "179000",
+    "price": "189000",
     "url": "https://search.shopping.naver.com/catalog/37256148622",
     "title": "ASUS TUF Gaming B760M-PLUS WIFI D4 인텍앤컴퍼니"
   },
@@ -103,7 +151,7 @@
   },
   {
     "model": "ASUS PRIME X570-PRO",
-    "price": "179580",
+    "price": "178560",
     "url": "https://link.gmarket.co.kr/gate/pcs?item-no=4379513461&sub-id=1003&service-code=10000003&lcd=100000055",
     "title": "ASUS PRIME X570-PRO/CSM 대원CTS"
   },
@@ -121,7 +169,7 @@
   },
   {
     "model": "ASUS PRIME A520M-K",
-    "price": "64590",
+    "price": "64580",
     "url": "https://search.shopping.naver.com/catalog/36825883618",
     "title": "ASUS PRIME A520M-K 대원씨티에스"
   }

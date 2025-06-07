@@ -28,27 +28,27 @@ export default function GamePage() {
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: "-100%", opacity: 0 }}
       transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-      className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center p-6"
+      className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center justify-center p-6"
     >
-      {/* 상단: 뒤로가기+제목 */}
-      <div className="flex items-center w-full max-w-xl mb-8">
-        <button
-          onClick={() => navigate("/")}
-          className="mr-4 p-2 hover:opacity-80 transition z-10"
-          style={{ minWidth: "2.5rem" }}
-        >
-          <img src={BackIcon} alt="뒤로가기" className="w-6 h-6 invert" />
-        </button>
-        <h1 className="text-2xl font-bold flex items-center truncate">
-          게임 견적 유형 선택
-          <span className="ml-2 text-sm font-normal text-gray-400 align-middle">
-            원하는 방식을 골라주세요⭐
-          </span>
-        </h1>
-      </div>
+      <div className="w-full max-w-xl bg-white/10 rounded-2xl shadow-xl p-10 border border-white/10 flex flex-col gap-8 items-center">
+        {/* 상단: 뒤로가기+제목 */}
+        <div className="flex items-center w-full mb-2">
+          <button
+            onClick={() => navigate("/")}
+            className="mr-4 p-2 hover:opacity-80 transition z-10"
+            style={{ minWidth: "2.5rem" }}
+          >
+            <img src={BackIcon} alt="뒤로가기" className="w-6 h-6 invert" />
+          </button>
+          <h1 className="text-2xl font-bold flex items-center truncate">
+            게임 견적 유형 선택
+            <span className="ml-2 text-sm font-normal text-gray-400 align-middle">
+              원하는 방식을 골라주세요⭐
+            </span>
+          </h1>
+        </div>
 
-      {/* 옵션 카드 컨테이너 */}
-      <div className="w-full max-w-xl bg-white/10 rounded-2xl shadow-xl p-10 border border-white/10 flex flex-col items-center">
+        {/* 옵션 카드 컨테이너 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {options.map((opt) => (
             <div

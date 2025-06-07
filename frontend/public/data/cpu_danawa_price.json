@@ -1,32 +1,56 @@
 [
   {
+    "model": "Ryzen 9 9950X",
+    "price": "911100",
+    "url": "https://prod.danawa.com/info/?pcode=63140417&keyword=Ryzen+9+9950X&cate=113990",
+    "title": "AMD 라이젠9-6세대 9950X (그래니트 릿지)"
+  },
+  {
+    "model": "Ryzen 9 9900X",
+    "price": "673930",
+    "url": "https://prod.danawa.com/info/?pcode=63140387&keyword=Ryzen+9+9900X&cate=113990",
+    "title": "AMD 라이젠9-6세대 9900X (그래니트 릿지)"
+  },
+  {
+    "model": "Ryzen 7 9700X",
+    "price": "446470",
+    "url": "https://prod.danawa.com/info/?pcode=62794082&keyword=Ryzen+7+9700X&cate=113990",
+    "title": "AMD 라이젠7-6세대 9700X (그래니트 릿지)"
+  },
+  {
+    "model": "Ryzen 5 9600X",
+    "price": "326160",
+    "url": "https://prod.danawa.com/info/?pcode=62794079&keyword=Ryzen+5+9600X&cate=113990",
+    "title": "AMD 라이젠5-6세대 9600X (그래니트 릿지)"
+  },
+  {
     "model": "Ryzen 9 7950X",
-    "price": "591330",
+    "price": "784050",
     "url": "https://prod.danawa.com/info/?pcode=20613197&keyword=Ryzen+9+7950X&cate=113990",
     "title": "AMD 라이젠9-5세대 7950X (라파엘)"
   },
   {
     "model": "Ryzen 9 7900X",
-    "price": "544740",
+    "price": "544540",
     "url": "https://prod.danawa.com/info/?pcode=28402418&keyword=Ryzen+9+7900X&cate=113990",
     "title": "AMD 라이젠9-5세대 7900X (라파엘)"
   },
   {
     "model": "Ryzen 7 7700X",
-    "price": "421650",
+    "price": "421630",
     "url": "https://prod.danawa.com/info/?pcode=27945140&keyword=Ryzen+7+7700X&cate=113990",
     "title": "AMD 라이젠7-5세대 7700X (라파엘)"
   },
   {
     "model": "Ryzen 5 7600X",
-    "price": "277740",
+    "price": "277540",
     "url": "https://prod.danawa.com/info/?pcode=27757619&keyword=Ryzen+5+7600X&cate=113990",
     "title": "AMD 라이젠5-5세대 7600X (라파엘)"
   },
   {
     "model": "Ryzen 9 5950X",
-    "price": "610000",
-    "url": "https://prod.danawa.com/info/?pcode=18630722&keyword=Ryzen+9+5950X&cate=113990",
+    "price": "842500",
+    "url": "https://prod.danawa.com/info/?pcode=12622319&keyword=Ryzen+9+5950X&cate=113990",
     "title": "AMD 라이젠9-4세대 5950X (버미어)"
   },
   {
@@ -37,7 +61,7 @@
   },
   {
     "model": "Ryzen 7 5800X",
-    "price": "480800",
+    "price": "899890",
     "url": "https://prod.danawa.com/info/?pcode=12836186&keyword=Ryzen+7+5800X&cate=113990",
     "title": "AMD 라이젠7-4세대 5800X (버미어)"
   },
@@ -49,7 +73,7 @@
   },
   {
     "model": "Ryzen 5 5600",
-    "price": "117020",
+    "price": "116820",
     "url": "https://prod.danawa.com/info/?pcode=16741211&keyword=Ryzen+5+5600&cate=113990",
     "title": "AMD 라이젠5-4세대 5600 (버미어)"
   },
@@ -96,57 +120,267 @@
     "title": ""
   },
   {
-    "model": "Core i9-14900K",
-    "price": "693770",
-    "url": "https://prod.danawa.com/info/?pcode=28798964&keyword=Core+i9-14900K&cate=113973",
+    "model": "Intel Core i9-14900K",
+    "price": "690990",
+    "url": "https://prod.danawa.com/info/?pcode=28798964&keyword=Intel+Core+i9-14900K&cate=113973",
     "title": "인텔 코어i9-14세대 14900K (랩터레이크 리프레시)"
   },
   {
-    "model": "Core i7-14700K",
-    "price": "490470",
-    "url": "https://prod.danawa.com/info/?pcode=28799435&keyword=Core+i7-14700K&cate=113973",
+    "model": "Intel Core i9-14900KF",
+    "price": "654680",
+    "url": "https://prod.danawa.com/info/?pcode=28799180&keyword=Intel+Core+i9-14900KF&cate=113973",
+    "title": "인텔 코어i9-14세대 14900KF (랩터레이크 리프레시)"
+  },
+  {
+    "model": "Intel Core i9-14900F",
+    "price": "817740",
+    "url": "https://prod.danawa.com/info/?pcode=32037701&keyword=Intel+Core+i9-14900F&cate=113973",
+    "title": "인텔 코어i9-14세대 14900F (랩터레이크 리프레시)"
+  },
+  {
+    "model": "Intel Core i9-14900",
+    "price": "846030",
+    "url": "https://prod.danawa.com/info/?pcode=32037824&keyword=Intel+Core+i9-14900&cate=113973",
+    "title": "인텔 코어i9-14세대 14900 (랩터레이크 리프레시)"
+  },
+  {
+    "model": "Intel Core i7-14700K",
+    "price": "487760",
+    "url": "https://prod.danawa.com/info/?pcode=28799435&keyword=Intel+Core+i7-14700K&cate=113973",
     "title": "인텔 코어i7-14세대 14700K (랩터레이크 리프레시)"
   },
   {
-    "model": "Core i5-14600K",
-    "price": "313050",
-    "url": "https://prod.danawa.com/info/?pcode=28799654&keyword=Core+i5-14600K&cate=113973",
+    "model": "Intel Core i7-14700KF",
+    "price": "460400",
+    "url": "https://prod.danawa.com/info/?pcode=28799498&keyword=Intel+Core+i7-14700KF&cate=113973",
+    "title": "인텔 코어i7-14세대 14700KF (랩터레이크 리프레시)"
+  },
+  {
+    "model": "Intel Core i7-14700F",
+    "price": "427210",
+    "url": "https://prod.danawa.com/info/?pcode=32156936&keyword=Intel+Core+i7-14700F&cate=113973",
+    "title": "인텔 코어i7-14세대 14700F (랩터레이크 리프레시)"
+  },
+  {
+    "model": "Intel Core i7-14700",
+    "price": "455480",
+    "url": "https://prod.danawa.com/info/?pcode=32038001&keyword=Intel+Core+i7-14700&cate=113973",
+    "title": "인텔 코어i7-14세대 14700 (랩터레이크 리프레시)"
+  },
+  {
+    "model": "Intel Core i5-14600K",
+    "price": "312850",
+    "url": "https://prod.danawa.com/info/?pcode=28799654&keyword=Intel+Core+i5-14600K&cate=113973",
     "title": "인텔 코어i5-14세대 14600K (랩터레이크 리프레시)"
   },
   {
-    "model": "Core i9-13900K",
+    "model": "Intel Core i5-14600KF",
+    "price": "264540",
+    "url": "https://prod.danawa.com/info/?pcode=76555685&keyword=Intel+Core+i5-14600KF&cate=113973",
+    "title": "인텔 코어i5-14세대 14600KF (랩터레이크 리프레시)"
+  },
+  {
+    "model": "Intel Core i5-14600",
+    "price": "264540",
+    "url": "https://prod.danawa.com/info/?pcode=76555685&keyword=Intel+Core+i5-14600&cate=113973",
+    "title": "인텔 코어i5-14세대 14600KF (랩터레이크 리프레시)"
+  },
+  {
+    "model": "Intel Core i5-14500",
+    "price": "358530",
+    "url": "https://prod.danawa.com/info/?pcode=32038256&keyword=Intel+Core+i5-14500&cate=113973",
+    "title": "인텔 코어i5-14세대 14500 (랩터레이크 리프레시)"
+  },
+  {
+    "model": "Intel Core i5-14400",
+    "price": "237870",
+    "url": "https://prod.danawa.com/info/?pcode=32038580&keyword=Intel+Core+i5-14400&cate=113973",
+    "title": "인텔 코어i5-14세대 14400 (랩터레이크 리프레시)"
+  },
+  {
+    "model": "Intel Core i3-14100",
+    "price": "161710",
+    "url": "https://prod.danawa.com/info/?pcode=32038820&keyword=Intel+Core+i3-14100&cate=113973",
+    "title": "인텔 코어i3-14세대 14100 (랩터레이크 리프레시)"
+  },
+  {
+    "model": "Intel Core i9-13900K",
     "price": "880770",
-    "url": "https://prod.danawa.com/info/?pcode=18039569&keyword=Core+i9-13900K&cate=113973",
+    "url": "https://prod.danawa.com/info/?pcode=18039569&keyword=Intel+Core+i9-13900K&cate=113973",
     "title": "인텔 코어i9-13세대 13900K (랩터레이크)"
   },
   {
-    "model": "Core i7-13700K",
+    "model": "Intel Core i9-13900KF",
+    "price": "846050",
+    "url": "https://prod.danawa.com/info/?pcode=18039512&keyword=Intel+Core+i9-13900KF&cate=113973",
+    "title": "인텔 코어i9-13세대 13900KF (랩터레이크)"
+  },
+  {
+    "model": "Intel Core i9-13900F",
+    "price": "720120",
+    "url": "https://prod.danawa.com/info/?pcode=18640442&keyword=Intel+Core+i9-13900F&cate=113973",
+    "title": "인텔 코어i9-13세대 13900F (랩터레이크)"
+  },
+  {
+    "model": "Intel Core i9-13900",
+    "price": "909990",
+    "url": "https://prod.danawa.com/info/?pcode=18640472&keyword=Intel+Core+i9-13900&cate=113973",
+    "title": "인텔 코어i9-13세대 13900 (랩터레이크)"
+  },
+  {
+    "model": "Intel Core i7-13700K",
     "price": "1008890",
-    "url": "https://prod.danawa.com/info/?pcode=18039374&keyword=Core+i7-13700K&cate=113973",
+    "url": "https://prod.danawa.com/info/?pcode=18039374&keyword=Intel+Core+i7-13700K&cate=113973",
     "title": "인텔 코어i7-13세대 13700K (랩터레이크)"
   },
   {
-    "model": "Core i5-13600K",
-    "price": "305940",
-    "url": "https://prod.danawa.com/info/?pcode=18169127&keyword=Core+i5-13600K&cate=113973",
+    "model": "Intel Core i7-13700KF",
+    "price": "507500",
+    "url": "https://prod.danawa.com/info/?pcode=18039356&keyword=Intel+Core+i7-13700KF&cate=113973",
+    "title": "인텔 코어i7-13세대 13700KF (랩터레이크)"
+  },
+  {
+    "model": "Intel Core i7-13700F",
+    "price": "455650",
+    "url": "https://prod.danawa.com/info/?pcode=18640379&keyword=Intel+Core+i7-13700F&cate=113973",
+    "title": "인텔 코어i7-13세대 13700F (랩터레이크)"
+  },
+  {
+    "model": "Intel Core i7-13700",
+    "price": "475180",
+    "url": "https://prod.danawa.com/info/?pcode=18640397&keyword=Intel+Core+i7-13700&cate=113973",
+    "title": "인텔 코어i7-13세대 13700 (랩터레이크)"
+  },
+  {
+    "model": "Intel Core i5-13600K",
+    "price": "305860",
+    "url": "https://prod.danawa.com/info/?pcode=18169127&keyword=Intel+Core+i5-13600K&cate=113973",
     "title": "인텔 코어i5-13세대 13600K (랩터레이크)"
   },
   {
-    "model": "Core i9-12900K",
+    "model": "Intel Core i5-13600KF",
+    "price": "658000",
+    "url": "https://prod.danawa.com/info/?pcode=18038831&keyword=Intel+Core+i5-13600KF&cate=113973",
+    "title": "인텔 코어i5-13세대 13600KF (랩터레이크)"
+  },
+  {
+    "model": "Intel Core i5-13600",
+    "price": "658000",
+    "url": "https://prod.danawa.com/info/?pcode=18038831&keyword=Intel+Core+i5-13600&cate=113973",
+    "title": "인텔 코어i5-13세대 13600KF (랩터레이크)"
+  },
+  {
+    "model": "Intel Core i5-13500",
+    "price": "343000",
+    "url": "https://prod.danawa.com/info/?pcode=18640319&keyword=Intel+Core+i5-13500&cate=113973",
+    "title": "인텔 코어i5-13세대 13500 (랩터레이크)"
+  },
+  {
+    "model": "Intel Core i5-13400",
+    "price": "236770",
+    "url": "https://prod.danawa.com/info/?pcode=18640286&keyword=Intel+Core+i5-13400&cate=113973",
+    "title": "인텔 코어i5-13세대 13400 (랩터레이크)"
+  },
+  {
+    "model": "Intel Core i3-13100",
+    "price": "165930",
+    "url": "https://prod.danawa.com/info/?pcode=18640205&keyword=Intel+Core+i3-13100&cate=113973",
+    "title": "인텔 코어i3-13세대 13100 (랩터레이크)"
+  },
+  {
+    "model": "Intel Core i9-12900K",
     "price": "689470",
-    "url": "https://prod.danawa.com/info/?pcode=15594887&keyword=Core+i9-12900K&cate=113973",
+    "url": "https://prod.danawa.com/info/?pcode=15594887&keyword=Intel+Core+i9-12900K&cate=113973",
     "title": "인텔 코어i9-12세대 12900K (엘더레이크)"
   },
   {
-    "model": "Core i7-12700K",
-    "price": "425280",
-    "url": "https://prod.danawa.com/info/?pcode=15594638&keyword=Core+i7-12700K&cate=113973",
+    "model": "Intel Core i9-12900KF",
+    "price": "796820",
+    "url": "https://prod.danawa.com/info/?pcode=15594956&keyword=Intel+Core+i9-12900KF&cate=113973",
+    "title": "인텔 코어i9-12세대 12900KF (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i9-12900F",
+    "price": "682890",
+    "url": "https://prod.danawa.com/info/?pcode=16101581&keyword=Intel+Core+i9-12900F&cate=113973",
+    "title": "인텔 코어i9-12세대 12900F (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i9-12900",
+    "price": "644000",
+    "url": "https://prod.danawa.com/info/?pcode=16101545&keyword=Intel+Core+i9-12900&cate=113973",
+    "title": "인텔 코어i9-12세대 12900 (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i7-12700K",
+    "price": "425210",
+    "url": "https://prod.danawa.com/info/?pcode=15594638&keyword=Intel+Core+i7-12700K&cate=113973",
     "title": "인텔 코어i7-12세대 12700K (엘더레이크)"
   },
   {
-    "model": "Core i5-12600K",
+    "model": "Intel Core i7-12700KF",
+    "price": "388560",
+    "url": "https://prod.danawa.com/info/?pcode=15594701&keyword=Intel+Core+i7-12700KF&cate=113973",
+    "title": "인텔 코어i7-12세대 12700KF (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i7-12700F",
+    "price": "366850",
+    "url": "https://prod.danawa.com/info/?pcode=16101464&keyword=Intel+Core+i7-12700F&cate=113973",
+    "title": "인텔 코어i7-12세대 12700F (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i7-12700",
+    "price": "405990",
+    "url": "https://prod.danawa.com/info/?pcode=16140809&keyword=Intel+Core+i7-12700&cate=113973",
+    "title": "인텔 코어i7-12세대 12700 (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i5-12600K",
     "price": "312860",
-    "url": "https://prod.danawa.com/info/?pcode=15594263&keyword=Core+i5-12600K&cate=113973",
+    "url": "https://prod.danawa.com/info/?pcode=15594263&keyword=Intel+Core+i5-12600K&cate=113973",
     "title": "인텔 코어i5-12세대 12600K (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i5-12600KF",
+    "price": "236420",
+    "url": "https://prod.danawa.com/info/?pcode=15594446&keyword=Intel+Core+i5-12600KF&cate=113973",
+    "title": "인텔 코어i5-12세대 12600KF (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i5-12600",
+    "price": "418990",
+    "url": "https://prod.danawa.com/info/?pcode=16252427&keyword=Intel+Core+i5-12600&cate=113973",
+    "title": "인텔 코어i5-12세대 12600 (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i5-12500",
+    "price": "246970",
+    "url": "https://prod.danawa.com/info/?pcode=16232900&keyword=Intel+Core+i5-12500&cate=113973",
+    "title": "인텔 코어i5-12세대 12500 (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i5-12400",
+    "price": "205860",
+    "url": "https://prod.danawa.com/info/?pcode=16101326&keyword=Intel+Core+i5-12400&cate=113973",
+    "title": "인텔 코어i5-12세대 12400 (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i5-12400F",
+    "price": "150810",
+    "url": "https://prod.danawa.com/info/?pcode=16101353&keyword=Intel+Core+i5-12400F&cate=113973",
+    "title": "인텔 코어i5-12세대 12400F (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i3-12100",
+    "price": "155530",
+    "url": "https://prod.danawa.com/info/?pcode=16101083&keyword=Intel+Core+i3-12100&cate=113973",
+    "title": "인텔 코어i3-12세대 12100 (엘더레이크)"
+  },
+  {
+    "model": "Intel Core i3-12100F",
+    "price": "111930",
+    "url": "https://prod.danawa.com/info/?pcode=16101179&keyword=Intel+Core+i3-12100F&cate=113973",
+    "title": "인텔 코어i3-12세대 12100F (엘더레이크)"
   }
 ]

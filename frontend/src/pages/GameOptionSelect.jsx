@@ -41,38 +41,48 @@ export default function GameOptionSelect() {
 
   // --- 가격/URL 상태 ---
   const [cpuDanawa, setCpuDanawa] = useState([]);
-  const [cpuBest, setCpuBest]     = useState([]);
-  const [cpuNaver, setCpuNaver]   = useState([]);
+  const [cpuBest, setCpuBest] = useState([]);
+  const [cpuNaver, setCpuNaver] = useState([]);
 
   const [gpuDanawa, setGpuDanawa] = useState([]);
-  const [gpuBest, setGpuBest]     = useState([]);
-  const [gpuNaver, setGpuNaver]   = useState([]);
+  const [gpuBest, setGpuBest] = useState([]);
+  const [gpuNaver, setGpuNaver] = useState([]);
 
   const [mbDanawa, setMbDanawa] = useState([]);
-  const [mbBest, setMbBest]     = useState([]);
-  const [mbNaver, setMbNaver]   = useState([]);
+  const [mbBest, setMbBest] = useState([]);
+  const [mbNaver, setMbNaver] = useState([]);
 
   const [ramDanawa, setRamDanawa] = useState([]);
-  const [ramBest, setRamBest]     = useState([]);
-  const [ramNaver, setRamNaver]   = useState([]);
+  const [ramBest, setRamBest] = useState([]);
+  const [ramNaver, setRamNaver] = useState([]);
 
-  const [loading, setLoading]       = useState(true);
+  const [loading, setLoading] = useState(true);
   const [fetchError, setFetchError] = useState(false);
-  const [gpuBrand, setGpuBrand]     = useState("any");
+  const [gpuBrand, setGpuBrand] = useState("any");
 
-  // 가격·URL 링크 헬퍼
+  // -------- 유틸 함수 --------
   function getLinks(model, dp, db, np) {
     const p = dp.find(i => i.model === model) || {};
     const b = db.find(i => i.model === model) || {};
     const n = np.find(i => i.model === model) || {};
     return [
-      p.url && { label: "다나와 최저가", url: p.url, price: p.price },
-      b.url && { label: "리뷰 많은순", url: b.url, price: b.price },
-      n.url && { label: "네이버 인기순", url: n.url, price: n.price },
+      p.url && { label: "다나와 최저가", url: p.url, price: Number(p.price) },
+      b.url && { label: "리뷰 많은순", url: b.url, price: Number(b.price) },
+      n.url && { label: "네이버 인기순", url: n.url, price: Number(n.price) },
     ].filter(Boolean);
   }
-
-  // GPU 필터
+  // 단종/고가 배제
+  function filterValidPrices(arr, field = "price") {
+    const nums = arr.map(x => Number(x[field])).filter(x => x > 0).sort((a, b) => a - b);
+    if (nums.length === 0) return [];
+    const base = nums[0];
+    return arr.filter(x =>
+      !!x[field] &&
+      !isNaN(Number(x[field])) &&
+      Number(x[field]) <= base * 2.5
+    );
+  }
+  // GPU 브랜드 필터
   function filterGpu(list, brand) {
     if (brand === "any") return list;
     const re = brand === "nvidia"
@@ -80,17 +90,16 @@ export default function GameOptionSelect() {
       : /(amd|radeon)/i;
     return list.filter(i => re.test(i.model));
   }
-
-  // 점수 기반 최적 파트 찾기
-  function findBestPart(db, score, brand = "any") {
+  // 점수 기준 최적 파트 찾기(최저가)
+  function findBestPart(db, score, brand = "any", dp = []) {
     let candidates = db.filter(i => Number(i.score) >= score);
     if (db === gpuDB) candidates = filterGpu(candidates, brand);
-    if (!candidates.length) return null;
-    const delta = Math.min(...candidates.map(i => i.score - score));
-    candidates = candidates.filter(i => i.score - score === delta);
-    return candidates.reduce((best, cur) =>
-      (cur.price || Infinity) < (best.price || Infinity) ? cur : best
-    );
+    candidates = candidates.map(part => {
+      const priceObj = dp.find(p => p.model === part.model);
+      return { ...part, price: priceObj ? Number(priceObj.price) : Infinity, url: priceObj?.url };
+    });
+    const valid = filterValidPrices(candidates);
+    return valid.length > 0 ? valid.sort((a, b) => a.price - b.price)[0] : candidates[0] || null;
   }
 
   // 데이터 로드
@@ -177,37 +186,56 @@ export default function GameOptionSelect() {
     loadAll();
   }, []);
 
-  // CPU / GPU 추천
-  const cpu = !loading && !fetchError ? findBestPart(cpuDB, cpu_score) : null;
-  const gpu = !loading && !fetchError
-    ? findBestPart(gpuDB, gpu_score, gpuBrand)
-    : null;
+  // ---- 추천 결과 계산 ----
+  let cpu, cpuLinks, gpu, gpuLinks, boardRecs = [], ramRecs = [], totalPrice = 0;
+  if (!loading && !fetchError) {
+    cpu = findBestPart(cpuDB, cpu_score, "any", cpuDanawa);
+    gpu = findBestPart(gpuDB, gpu_score, gpuBrand, gpuDanawa);
 
-  const cpuLinks = cpu ? getLinks(cpu.model, cpuDanawa, cpuBest, cpuNaver) : [];
-  const gpuLinks = gpu ? getLinks(gpu.model, gpuDanawa, gpuBest, gpuNaver) : [];
+    cpuLinks = cpu ? getLinks(cpu.model, cpuDanawa, cpuBest, cpuNaver) : [];
+    gpuLinks = gpu ? getLinks(gpu.model, gpuDanawa, gpuBest, gpuNaver) : [];
 
-  // 보드 브랜드별 하나씩만
-  const allBoards = cpu
-    ? mainboardDB.filter(mb => mb.socket?.toUpperCase() === cpu.socket?.toUpperCase())
-    : [];
-  const asus = allBoards.find(b => /asus/i.test(b.model));
-  const msi  = allBoards.find(b => /msi/i.test(b.model));
-  const gig  = allBoards.find(b => /gigabyte/i.test(b.model));
-  const boardRecs = [asus, msi, gig].filter(Boolean).map(b => ({
-    ...b,
-    links: getLinks(b.model, mbDanawa, mbBest, mbNaver)
-  }));
+    // 메인보드 추천 (브랜드별 1개씩)
+    const allBoards = cpu
+      ? mainboardDB.filter(mb => mb.socket?.toUpperCase() === cpu.socket?.toUpperCase())
+      : [];
+    const brands = ["asus", "msi", "gigabyte"];
+    boardRecs = brands.map(brand => {
+      const bList = allBoards.filter(b => b.model && new RegExp(brand, "i").test(b.model));
+      if (bList.length === 0) return null;
+      const merged = bList.map(b => {
+        const priceObj = mbDanawa.find(p => p.model === b.model);
+        return { ...b, price: priceObj ? Number(priceObj.price) : Infinity, url: priceObj?.url };
+      });
+      const valid = filterValidPrices(merged);
+      return valid.length > 0 ? valid.sort((a, b) => a.price - b.price)[0] : merged[0];
+    }).filter(Boolean);
 
-  // RAM 추천
-  const memType = boardRecs[0]?.memory?.toUpperCase() || "DDR4";
-  const sizeGb  = memType === "DDR5" ? 32 : 16;
-  const ramRecs = ramDB
-    .filter(r => r.type?.toUpperCase() === memType && r.size_gb === sizeGb)
-    .slice(0, 3)
-    .map(r => ({
+    // 램 추천 (첫 보드 기준 최대 3개)
+    const memType = boardRecs[0]?.memory?.toUpperCase() || "DDR4";
+    const sizeGb = memType === "DDR5" ? 32 : 16;
+    ramRecs = ramDB
+      .filter(r => r.type?.toUpperCase() === memType && r.size_gb === sizeGb)
+      .map(r => {
+        const priceObj = ramDanawa.find(p => p.model === r.model);
+        return { ...r, price: priceObj ? Number(priceObj.price) : Infinity, url: priceObj?.url };
+      });
+    const validRams = filterValidPrices(ramRecs);
+    ramRecs = (validRams.length > 0 ? validRams : ramRecs).slice(0, 3).map(r => ({
       ...r,
       links: getLinks(r.model, ramDanawa, ramBest, ramNaver)
     }));
+
+    // 총합 계산 (cpu, gpu, 메인보드 중 1개, 램 1개)
+    const prices = [
+      cpuLinks[0]?.price || cpu?.price || 0,
+      gpuLinks[0]?.price || gpu?.price || 0,
+      boardRecs[0]?.price || 0,
+      ramRecs[0]?.price || 0,
+    ].map(Number).filter(x => x !== Infinity && !isNaN(x) && x > 0);
+
+    totalPrice = prices.reduce((sum, v) => sum + v, 0);
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center p-6">
@@ -269,8 +297,17 @@ export default function GameOptionSelect() {
         <p className="text-red-400">데이터 로드 실패! 경로/형식을 확인하세요.</p>
       ) : (
         <>
+          {/* 총합 견적 */}
+          <div className="w-full max-w-xl bg-gray-900/70 rounded-xl p-6 mb-5 flex items-center justify-between border border-white/10">
+            <span className="text-lg font-bold">총합 견적</span>
+            <span className="text-2xl font-bold text-green-400">
+              {totalPrice > 0 ? totalPrice.toLocaleString() + " 원" : "계산 불가"}
+            </span>
+          </div>
+
           {/* CPU/GPU */}
           <div className="flex flex-col md:flex-row gap-6 mb-8 w-full max-w-xl">
+            {/* CPU */}
             <div className="flex-1 bg-gray-800/80 rounded-xl p-6">
               <h3 className="font-semibold mb-2">CPU 추천</h3>
               {cpu ? (
@@ -286,9 +323,9 @@ export default function GameOptionSelect() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-400 underline"
+                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
                         >
-                          {l.label}: {l.price}원
+                          {l.label}: {l.price?.toLocaleString()}원
                         </a>
                       </li>
                     ))}
@@ -298,6 +335,7 @@ export default function GameOptionSelect() {
                 <p className="text-red-400">추천 가능한 CPU가 없습니다.</p>
               )}
             </div>
+            {/* GPU */}
             <div className="flex-1 bg-gray-800/80 rounded-xl p-6">
               <h3 className="font-semibold mb-2">
                 GPU 추천 ({gpuBrand.toUpperCase()})
@@ -315,9 +353,9 @@ export default function GameOptionSelect() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-400 underline"
+                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
                         >
-                          {l.label}: {l.price}원
+                          {l.label}: {l.price?.toLocaleString()}원
                         </a>
                       </li>
                     ))}
@@ -335,30 +373,33 @@ export default function GameOptionSelect() {
             {boardRecs.length === 0 ? (
               <p className="text-red-400">호환 가능한 메인보드가 없습니다.</p>
             ) : (
-              boardRecs.map((b) => (
-                <div key={b.model} className="mb-4">
-                  <p className="font-bold">
-                    {b.model}{" "}
-                    <span className="text-xs text-gray-400">
-                      [{b.chipset} | {b.memory}]
-                    </span>
-                  </p>
-                  <ul className="mt-2 space-y-1">
-                    {b.links.map((l, j) => (
-                      <li key={`${b.model}-${l.label}-${j}`}>
-                        <a
-                          href={l.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-400 underline"
-                        >
-                          {l.label}: {l.price}원
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))
+              boardRecs.map((b) => {
+                const mbLinks = getLinks(b.model, mbDanawa, mbBest, mbNaver);
+                return (
+                  <div key={b.model} className="mb-4">
+                    <p className="font-bold">
+                      {b.model}{" "}
+                      <span className="text-xs text-gray-400">
+                        [{b.chipset} | {b.memory}]
+                      </span>
+                    </p>
+                    <ul className="mt-2 space-y-1">
+                      {mbLinks.map((l, j) => (
+                        <li key={`${b.model}-${l.label}-${j}`}>
+                          <a
+                            href={l.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
+                          >
+                            {l.label}: {l.price?.toLocaleString()}원
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })
             )}
           </div>
 
@@ -383,9 +424,9 @@ export default function GameOptionSelect() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-400 underline"
+                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
                         >
-                          {l.label}: {l.price}원
+                          {l.label}: {l.price?.toLocaleString()}원
                         </a>
                       </li>
                     ))}

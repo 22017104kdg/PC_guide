@@ -1,50 +1,63 @@
 const fs = require('fs').promises;
-// 최신 node-fetch는 ESM이므로 CommonJS에서 require로 쓸 땐 아래처럼!
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
-// 네이버 개발자센터에서 발급받은 ID/Secret 입력
 const clientId = 'kbYKrsf4oiPN7pOKGTYn';
 const clientSecret = 'otZzFOKmAZ';
 
-// 네이버 쇼핑 검색 API 함수
+// 네이버 쇼핑 API
 async function getNaverShoppingResult(query) {
-  const url = `https://openapi.naver.com/v1/search/shop.json?query=${encodeURIComponent(query)}&display=1&sort=sim`;
-  const res = await fetch(url, {
-    headers: {
-      'X-Naver-Client-Id': clientId,
-      'X-Naver-Client-Secret': clientSecret
+  try {
+    const url = `https://openapi.naver.com/v1/search/shop.json?query=${encodeURIComponent(query)}&display=1&sort=sim`;
+    const res = await fetch(url, {
+      headers: {
+        'X-Naver-Client-Id': clientId,
+        'X-Naver-Client-Secret': clientSecret
+      }
+    });
+    if (!res.ok) {
+      console.error('네이버 API 요청 실패:', res.status, res.statusText, 'query:', query);
+      return { price: "검색불가", url: "", title: "" };
     }
-  });
-  if (!res.ok) {
-    console.error('네이버 API 요청 실패:', res.status, res.statusText);
+    const data = await res.json();
+    if (data.items && data.items.length > 0) {
+      const item = data.items[0];
+      return {
+        title: item.title.replace(/<[^>]+>/g, ''),
+        price: item.lprice,
+        url: item.link
+      };
+    }
+    return { price: "검색불가", url: "", title: "" };
+  } catch (e) {
+    console.error('네이버 쇼핑 API 에러:', e, 'query:', query);
     return { price: "검색불가", url: "", title: "" };
   }
-  const data = await res.json();
-  if (data.items && data.items.length > 0) {
-    // 첫 번째 상품(정렬 옵션에 따라 다름)
-    const item = data.items[0];
-    return {
-      title: item.title.replace(/<[^>]+>/g, ''), // HTML 태그 제거
-      price: item.lprice,
-      url: item.link
-    };
-  }
-  return { price: "검색불가", url: "", title: "" };
 }
 
-// 부품 리스트 읽기
 async function readPartsJson(filename) {
-  const data = await fs.readFile(filename, 'utf-8');
-  const json = JSON.parse(data);
-  if (Array.isArray(json)) return json;
-  return [];
+  try {
+    const data = await fs.readFile(filename, 'utf-8');
+    const json = JSON.parse(data);
+    if (Array.isArray(json)) return json;
+    return [];
+  } catch (e) {
+    console.error(`파일 읽기 오류: ${filename}`, e);
+    return [];
+  }
 }
 
-// 저장 함수 (메인보드용)
 async function crawlAndSave(partsFilename, outputFilename) {
   const parts = await readPartsJson(partsFilename);
+  if (!Array.isArray(parts) || parts.length === 0) {
+    console.error(`파싱된 부품 리스트가 없습니다: ${partsFilename}`);
+    return;
+  }
   const resultList = [];
   for (const part of parts) {
+    if (!part.model) {
+      console.warn(`[${outputFilename}] model 없음:`, part);
+      continue;
+    }
     const res = await getNaverShoppingResult(part.model);
     resultList.push({
       model: part.model,
@@ -53,7 +66,6 @@ async function crawlAndSave(partsFilename, outputFilename) {
       title: res.title,
     });
     console.log(`[${outputFilename}] ${part.model} => ${res.price}원`);
-    // 네이버 API 쿼터 초과 방지
     await new Promise(r => setTimeout(r, 1000));
   }
   await fs.writeFile(outputFilename, JSON.stringify(resultList, null, 2));

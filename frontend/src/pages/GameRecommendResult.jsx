@@ -59,7 +59,7 @@ export default function GameRecommendResult() {
   const [fetchError, setFetchError] = useState(false);
   const [gpuBrand, setGpuBrand] = useState("any");
 
-  // 1) 데이터 로드
+  // ---------- 데이터 로드 ----------
   useEffect(() => {
     async function loadData() {
       try {
@@ -143,78 +143,123 @@ export default function GameRecommendResult() {
     loadData();
   }, []);
 
-  // 2) 링크 추출 헬퍼
+  // ---------- 유틸 함수 ----------
   function getProductLinks(model, dp, db, np) {
     const p = dp.find(i => i.model === model) || {};
     const b = db.find(i => i.model === model) || {};
     const n = np.find(i => i.model === model) || {};
     return [
-      p.url && { label: "다나와 최저가", url: p.url, price: p.price },
-      b.url && { label: "리뷰 많은순", url: b.url, price: b.price },
-      n.url && { label: "네이버 인기순", url: n.url, price: n.price },
+      p.url && { label: "다나와 최저가", url: p.url, price: Number(p.price) },
+      b.url && { label: "리뷰 많은순", url: b.url, price: Number(b.price) },
+      n.url && { label: "네이버 인기순", url: n.url, price: Number(n.price) },
     ].filter(Boolean);
   }
 
-  // 3) 성능 기준 추천 헬퍼
-  function findBestPart(db, score, brand = "any") {
-    let cands = db.filter(i => Number(i.score) >= score);
-    if (db === gpuDB && brand !== "any") {
-      const re = brand === "nvidia" ? /(nvidia|rtx|gtx)/i : /(amd|radeon)/i;
-      cands = cands.filter(i => re.test(i.model));
-    }
-    if (!cands.length) return null;
-    const delta = Math.min(...cands.map(i => i.score - score));
-    cands = cands.filter(i => i.score - score === delta);
-    return cands.reduce((best, cur) =>
-      (cur.price || Infinity) < (best.price || Infinity) ? cur : best
+  // 비정상적으로 비싼(단종/프리미엄) 제품 배제
+  function filterValidPrices(arr, field = "price") {
+    const nums = arr.map(x => Number(x[field])).filter(x => x > 0).sort((a, b) => a - b);
+    if (nums.length === 0) return [];
+    const base = nums[0];
+    return arr.filter(x =>
+      !!x[field] &&
+      !isNaN(Number(x[field])) &&
+      Number(x[field]) <= base * 2.5
     );
   }
 
-  // 4) CPU / GPU 추천
-  let cpu, cpuLinks, gpu, gpuLinks;
+  // ---------- 부품 추천 ----------
+
+  // CPU 추천
+  function findBestCPU(db, score) {
+    let cands = db.filter(i => Number(i.score) >= score);
+    cands = cands.map(cpu => {
+      const priceObj = cpuDanawaPrice.find(p => p.model === cpu.model);
+      return { ...cpu, price: priceObj ? Number(priceObj.price) : Infinity, url: priceObj?.url };
+    });
+    const valid = filterValidPrices(cands);
+    return valid.length > 0 ? valid.sort((a, b) => a.price - b.price)[0] : cands[0] || null;
+  }
+  // GPU 추천 (브랜드 필터 적용)
+  function findBestGPU(db, score, brand = "any") {
+    let cands = db.filter(i => Number(i.score) >= score);
+    if (brand !== "any") {
+      const re = brand === "nvidia" ? /(nvidia|rtx|gtx)/i : /(amd|radeon)/i;
+      cands = cands.filter(i => re.test(i.model));
+    }
+    cands = cands.map(gpu => {
+      const priceObj = gpuDanawaPrice.find(p => p.model === gpu.model);
+      return { ...gpu, price: priceObj ? Number(priceObj.price) : Infinity, url: priceObj?.url };
+    });
+    const valid = filterValidPrices(cands);
+    return valid.length > 0 ? valid.sort((a, b) => a.price - b.price)[0] : cands[0] || null;
+  }
+
+  // 브랜드별 메인보드 추천 (각 브랜드 최저가 1개씩)
+  function findBestMainboards(cpu) {
+    if (!cpu) return [];
+    const boards = mainboardDB.filter(
+      mb => mb.socket?.toUpperCase() === cpu.socket?.toUpperCase()
+    );
+    // 브랜드별 추천 (ASUS, MSI, GIGABYTE)
+    const brands = ["asus", "msi", "gigabyte"];
+    return brands.map(brand => {
+      const bList = boards.filter(b => b.model && new RegExp(brand, "i").test(b.model));
+      if (bList.length === 0) return null;
+      // 가격정보 병합
+      const merged = bList.map(b => {
+        const priceObj = mbDanawaPrice.find(p => p.model === b.model);
+        return { ...b, price: priceObj ? Number(priceObj.price) : Infinity, url: priceObj?.url };
+      });
+      const valid = filterValidPrices(merged);
+      return valid.length > 0 ? valid.sort((a, b) => a.price - b.price)[0] : merged[0];
+    }).filter(Boolean);
+  }
+
+  // 램 추천 (보드 메모리 타입, 16GB/32GB)
+  function findBestRams(memType, size = 16) {
+    let cands = ramDB.filter(r => r.type?.toUpperCase() === memType && r.size_gb === size);
+    cands = cands.map(r => {
+      const priceObj = ramDanawaPrice.find(p => p.model === r.model);
+      return { ...r, price: priceObj ? Number(priceObj.price) : Infinity, url: priceObj?.url };
+    });
+    const valid = filterValidPrices(cands);
+    return valid.length > 0 ? valid.slice(0, 3) : cands.slice(0, 3);
+  }
+
+  // ---------- 추천 실행 ----------
+  let cpu, gpu, cpuLinks, gpuLinks, boardRecommendations = [], ramRecommendations = [], totalPrice = 0;
+
   if (!loading && !fetchError) {
-    cpu = findBestPart(cpuDB, cpu_score);
-    gpu = findBestPart(gpuDB, gpu_score, gpuBrand);
+    cpu = findBestCPU(cpuDB, cpu_score);
+    gpu = findBestGPU(gpuDB, gpu_score, gpuBrand);
+
     cpuLinks = cpu
       ? getProductLinks(cpu.model, cpuDanawaPrice, cpuDanawaBest, cpuNaverPrice)
       : [];
     gpuLinks = gpu
       ? getProductLinks(gpu.model, gpuDanawaPrice, gpuDanawaBest, gpuNaverPrice)
       : [];
+
+    boardRecommendations = findBestMainboards(cpu);
+
+    // 메모리 타입 결정 (첫 메인보드 기준)
+    const memType = boardRecommendations[0]?.memory?.toUpperCase() || "DDR4";
+    // 게임 최소/권장에 따라 램 크기 조절 (16GB/32GB 등)
+    const ramTarget = memType === "DDR5" ? 32 : 16;
+    ramRecommendations = findBestRams(memType, ramTarget);
+
+    // 총합 계산 (cpu, gpu, 메인보드, 램 중 가장 저렴한 가격만 합산)
+    const prices = [
+      cpuLinks[0]?.price || cpu?.price || 0,
+      gpuLinks[0]?.price || gpu?.price || 0,
+      ...boardRecommendations.map(b => b.price || 0).slice(0, 1), // 브랜드별 1개만
+      ramRecommendations[0]?.price || 0,
+    ].map(Number).filter(x => x !== Infinity && !isNaN(x) && x > 0);
+
+    totalPrice = prices.reduce((sum, v) => sum + v, 0);
   }
 
-  // 5) 메인보드 브랜드별 하나씩만
-  const allBoards = cpu
-    ? mainboardDB.filter(
-        mb => mb.socket?.toUpperCase() === cpu.socket?.toUpperCase()
-      )
-    : [];
-  const asusBoard = allBoards.find(b => /asus/i.test(b.model));
-  const msiBoard = allBoards.find(b => /msi/i.test(b.model));
-  const gigBoard = allBoards.find(b => /gigabyte/i.test(b.model));
-  const boardRecommendations = [asusBoard, msiBoard, gigBoard]
-    .filter(Boolean)
-    .map(board => ({
-      ...board,
-      links: getProductLinks(
-        board.model,
-        mbDanawaPrice,
-        mbDanawaBest,
-        mbNaverPrice
-      ),
-    }));
-
-  // 6) RAM 추천 (첫 번째 보드 메모리 타입 기준, 최대 3개)
-  const memType = boardRecommendations[0]?.memory?.toUpperCase() || "DDR4";
-  const ramTarget = memType === "DDR5" ? 32 : 16;
-  const compatibleRams = ramDB
-    .filter(r => r.type?.toUpperCase() === memType && r.size_gb === ramTarget)
-    .slice(0, 3);
-  const ramRecommendations = compatibleRams.map(r => ({
-    ...r,
-    links: getProductLinks(r.model, ramDanawaPrice, ramDanawaBest, ramNaverPrice),
-  }));
-
+  // ---------- 렌더링 ----------
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center p-6">
       {/* 상단 */}
@@ -227,9 +272,7 @@ export default function GameRecommendResult() {
         </button>
         <h2 className="text-2xl font-bold flex items-center gap-2">
           {name
-            ? `${name} ${
-                level === "minimum" ? "최소" : "권장"
-              } 사양 추천 결과`
+            ? `${name} ${level === "minimum" ? "최소" : "권장"} 사양 추천 결과`
             : "추천 결과"}
           <img src={BulbIcon} alt="bulb" className="w-7 h-7 ml-2" />
         </h2>
@@ -279,6 +322,14 @@ export default function GameRecommendResult() {
         <p className="text-red-400">데이터 로드 실패! 경로/포맷 확인하세요.</p>
       ) : (
         <>
+          {/* 총합 */}
+          <div className="w-full max-w-xl bg-gray-900/70 rounded-xl p-6 mb-5 flex items-center justify-between border border-white/10">
+            <span className="text-lg font-bold">총합 견적</span>
+            <span className="text-2xl font-bold text-green-400">
+              {totalPrice > 0 ? totalPrice.toLocaleString() + " 원" : "계산 불가"}
+            </span>
+          </div>
+
           {/* CPU/GPU */}
           <div className="flex flex-col md:flex-row gap-6 mb-8 w-full max-w-xl">
             {/* CPU */}
@@ -299,9 +350,9 @@ export default function GameRecommendResult() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-400 underline"
+                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
                         >
-                          {l.label}: {l.price}원
+                          {l.label}: {l.price?.toLocaleString()}원
                         </a>
                       </li>
                     ))}
@@ -331,9 +382,9 @@ export default function GameRecommendResult() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-400 underline"
+                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
                         >
-                          {l.label}: {l.price}원
+                          {l.label}: {l.price?.toLocaleString()}원
                         </a>
                       </li>
                     ))}
@@ -351,30 +402,34 @@ export default function GameRecommendResult() {
             {boardRecommendations.length === 0 ? (
               <p className="text-red-400">호환 가능한 메인보드가 없습니다.</p>
             ) : (
-              boardRecommendations.map((b) => (
-                <div key={b.model} className="mb-4">
-                  <p className="font-bold">
-                    {b.model}{" "}
-                    <span className="text-xs text-gray-400">
-                      [{b.chipset} | {b.memory}]
-                    </span>
-                  </p>
-                  <ul className="mt-2 space-y-1">
-                    {b.links.map((l, j) => (
-                      <li key={`${b.model}-${l.label}-${j}`}>
-                        <a
-                          href={l.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-400 underline"
-                        >
-                          {l.label}: {l.price}원
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))
+              boardRecommendations.map((b) => {
+                // 이 부분에서 다나와/리뷰/네이버 url 한 번에 표시
+                const mbLinks = getProductLinks(b.model, mbDanawaPrice, mbDanawaBest, mbNaverPrice);
+                return (
+                  <div key={b.model} className="mb-4">
+                    <p className="font-bold">
+                      {b.model}{" "}
+                      <span className="text-xs text-gray-400">
+                        [{b.chipset} | {b.memory}]
+                      </span>
+                    </p>
+                    <ul className="mt-2 space-y-1">
+                      {mbLinks.map((l, j) => (
+                        <li key={`${b.model}-${l.label}-${j}`}>
+                          <a
+                            href={l.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
+                          >
+                            {l.label}: {l.price?.toLocaleString()}원
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })
             )}
           </div>
 
@@ -384,30 +439,33 @@ export default function GameRecommendResult() {
             {ramRecommendations.length === 0 ? (
               <p className="text-red-400">호환 가능한 램이 없습니다.</p>
             ) : (
-              ramRecommendations.map((r, i) => (
-                <div key={r.model} className="mb-4">
-                  <p className="font-bold">
-                    {r.model}{" "}
-                    <span className="text-xs text-gray-400">
-                      [{r.type}, {r.size_gb}GB]
-                    </span>
-                  </p>
-                  <ul className="mt-2 space-y-1">
-                    {r.links.map((l, j) => (
-                      <li key={`${r.model}-${l.label}-${j}`}>
-                        <a
-                          href={l.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-400 underline"
-                        >
-                          {l.label}: {l.price}원
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))
+              ramRecommendations.map((r, i) => {
+                const ramLinks = getProductLinks(r.model, ramDanawaPrice, ramDanawaBest, ramNaverPrice);
+                return (
+                  <div key={r.model} className="mb-4">
+                    <p className="font-bold">
+                      {r.model}{" "}
+                      <span className="text-xs text-gray-400">
+                        [{r.type}, {r.size_gb}GB]
+                      </span>
+                    </p>
+                    <ul className="mt-2 space-y-1">
+                      {ramLinks.map((l, j) => (
+                        <li key={`${r.model}-${l.label}-${j}`}>
+                          <a
+                            href={l.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
+                          >
+                            {l.label}: {l.price?.toLocaleString()}원
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })
             )}
           </div>
         </>

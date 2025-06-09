@@ -1,0 +1,79 @@
+[
+  {
+    "model": "Llama 3",
+    "variants": [
+      {"stage":"7B","type":"inference","vram":"8GB","cpu":"4C/8T 이상","ram":"16GB 이상","description":"7B 추론용, RTX 3060 이상 권장","source":"공식/커뮤니티"},
+      {"stage":"7B","type":"training","vram":"16GB","cpu":"8C/16T 이상","ram":"32GB 이상","description":"7B 학습용, RTX 3080 이상 권장","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"inference","vram":"16GB","cpu":"8C/16T 이상","ram":"32GB 이상","description":"13B 추론용, RTX 3090 이상 권장","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"training","vram":"24GB","cpu":"12C/24T 이상","ram":"64GB 이상","description":"13B 학습용, A6000 48GB급 멀티 GPU 권장","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"inference","vram":"48GB","cpu":"16C/32T 이상","ram":"128GB 이상","description":"70B 추론용, 멀티 GPU 필수","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"training","vram":"80GB","cpu":"24C/48T 이상","ram":"256GB 이상","description":"70B 학습용, 대형 서버 클러스터 필요","source":"공식/커뮤니티"}
+    ]
+  },
+  {
+    "model": "Mixtral",
+    "variants": [
+      {"stage":"7B","type":"inference","vram":"8GB","cpu":"4C/8T 이상","ram":"16GB 이상","description":"7B 모델 추론용","source":"공식/커뮤니티"},
+      {"stage":"7B","type":"training","vram":"16GB","cpu":"8C/16T 이상","ram":"32GB 이상","description":"7B 모델 학습용","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"inference","vram":"16GB","cpu":"8C/16T 이상","ram":"32GB 이상","description":"13B 모델 추론용","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"training","vram":"24GB","cpu":"12C/24T 이상","ram":"64GB 이상","description":"13B 모델 학습용","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"inference","vram":"48GB","cpu":"16C/32T 이상","ram":"128GB 이상","description":"70B 모델 추론용","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"training","vram":"80GB","cpu":"24C/48T 이상","ram":"256GB 이상","description":"70B 모델 학습용","source":"공식/커뮤니티"}
+    ]
+  },
+  {
+    "model": "Gemma",
+    "variants": [
+      {"stage":"7B","type":"inference","vram":"8GB","cpu":"4C/8T 이상","ram":"16GB 이상","description":"Gemma 7B 추론용","source":"공식/커뮤니티"},
+      {"stage":"7B","type":"training","vram":"16GB","cpu":"8C/16T 이상","ram":"32GB 이상","description":"Gemma 7B 학습용","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"inference","vram":"16GB","cpu":"8C/16T 이상","ram":"32GB 이상","description":"Gemma 13B 추론용","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"training","vram":"24GB","cpu":"12C/24T 이상","ram":"64GB 이상","description":"Gemma 13B 학습용","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"inference","vram":"48GB","cpu":"16C/32T 이상","ram":"128GB 이상","description":"Gemma 70B 추론용","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"training","vram":"80GB","cpu":"24C/48T 이상","ram":"256GB 이상","description":"Gemma 70B 학습용","source":"공식/커뮤니티"}
+    ]
+  },
+  {
+    "model": "Phi 3",
+    "variants": [
+      {"stage":"7B","type":"inference","vram":"8GB","cpu":"4C/8T 이상","ram":"16GB 이상","description":"Phi 3 7B 추론용","source":"공식/커뮤니티"},
+      {"stage":"7B","type":"training","vram":"16GB","cpu":"8C/16T 이상","ram":"32GB 이상","description":"Phi 3 7B 학습용","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"inference","vram":"16GB","cpu":"8C/16T 이상","ram":"32GB 이상","description":"Phi 3 13B 추론용","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"training","vram":"24GB","cpu":"12C/24T 이상","ram":"64GB 이상","description":"Phi 3 13B 학습용","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"inference","vram":"48GB","cpu":"16C/32T 이상","ram":"128GB 이상","description":"Phi 3 70B 추론용","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"training","vram":"80GB","cpu":"24C/48T 이상","ram":"256GB 이상","description":"Phi 3 70B 학습용","source":"공식/커뮤니티"}
+    ]
+  },
+  {
+    "model": "Qwen2",
+    "variants": [
+      {"stage":"7B","type":"inference","vram":"8GB","cpu":"4C/8T 이상","ram":"16GB 이상","description":"Qwen2 7B 추론용","source":"공식/커뮤니티"},
+      {"stage":"7B","type":"training","vram":"16GB","cpu":"8C/16T 이상","ram":"32GB 이상","description":"Qwen2 7B 학습용","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"inference","vram":"16GB","cpu":"8C/16T 이상","ram":"32GB 이상","description":"Qwen2 13B 추론용","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"training","vram":"24GB","cpu":"12C/24T 이상","ram":"64GB 이상","description":"Qwen2 13B 학습용","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"inference","vram":"48GB","cpu":"16C/32T 이상","ram":"128GB 이상","description":"Qwen2 70B 추론용","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"training","vram":"80GB","cpu":"24C/48T 이상","ram":"256GB 이상","description":"Qwen2 70B 학습용","source":"공식/커뮤니티"}
+    ]
+  },
+  {
+    "model": "Stable Diffusion",
+    "variants": [
+      {"stage":"7B","type":"inference","vram":"8GB","cpu":"4C/8T 이상","ram":"16GB 이상","description":"SD 1.5/2.1 추론용, RTX 3060 이상 권장","source":"공식/커뮤니티"},
+      {"stage":"7B","type":"training","vram":"16GB","cpu":"8C/16T 이상","ram":"32GB 이상","description":"소규모 커스텀 학습용","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"inference","vram":"16GB","cpu":"8C/16T 이상","ram":"32GB 이상","description":"최신 SD 모델, RTX 3090 이상 권장","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"training","vram":"24GB","cpu":"12C/24T 이상","ram":"64GB 이상","description":"중대형 학습, 멀티 GPU 권장","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"inference","vram":"32GB","cpu":"16C/32T 이상","ram":"128GB 이상","description":"거대 모델 추론, 멀티 GPU 권장","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"training","vram":"64GB","cpu":"24C/48T 이상","ram":"256GB 이상","description":"최대급 학습 환경, 서버급 클러스터 필요","source":"공식/커뮤니티"}
+    ]
+  },
+  {
+    "model": "Whisper",
+    "variants": [
+      {"stage":"7B","type":"inference","vram":"4GB","cpu":"4C/8T 이상","ram":"8GB 이상","description":"소형 음성 모델 추론용","source":"공식/커뮤니티"},
+      {"stage":"7B","type":"training","vram":"8GB","cpu":"8C/16T 이상","ram":"16GB 이상","description":"작은 규모 학습용","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"inference","vram":"8GB","cpu":"8C/16T 이상","ram":"16GB 이상","description":"중형 음성 모델 추론용","source":"공식/커뮤니티"},
+      {"stage":"13B","type":"training","vram":"12GB","cpu":"12C/24T 이상","ram":"32GB 이상","description":"중형 규모 학습용","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"inference","vram":"16GB","cpu":"16C/32T 이상","ram":"64GB 이상","description":"대형 음성 모델 추론용","source":"공식/커뮤니티"},
+      {"stage":"70B","type":"training","vram":"24GB","cpu":"24C/48T 이상","ram":"128GB 이상","description":"대형 규모 학습용","source":"공식/커뮤니티"}
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "gpu": [
+    { "model": "RTX 5070 Ti",   "score": 30500, "generation": "5000", "vram": "16GB" },
+    { "model": "RTX 5070",      "score": 28000, "generation": "5000", "vram": "12GB" },
+    { "model": "RTX 5060 Ti",   "score": 22000, "generation": "5000", "vram": "12GB" },
+    { "model": "RTX 5060",      "score": 20000, "generation": "5000", "vram": "8GB" },
+    { "model": "Radeon RX 9070 XT", "score": 31000, "generation": "9000", "vram": "16GB" },
+    { "model": "Radeon RX 9070",    "score": 29500, "generation": "9000", "vram": "16GB" },
+    { "model": "Radeon RX 9060 XT", "score": 23000, "generation": "9000", "vram": "16GB" },
+    { "model": "Radeon RX 9060",    "score": 21000, "generation": "9000", "vram": "8GB" },
+
+
+    { "model": "Radeon RX 7900 XTX", "score": 29461, "generation": "7000", "vram": "24GB" },
+    { "model": "Radeon RX 7900 XT",  "score": 26500, "generation": "7000", "vram": "20GB" },
+    { "model": "Radeon RX 7800 XT",  "score": 21080, "generation": "7000", "vram": "16GB" },
+    { "model": "Radeon RX 7700 XT",  "score": 18500, "generation": "7000", "vram": "12GB" },
+    { "model": "Radeon RX 7600 XT",  "score": 14800, "generation": "7000", "vram": "16GB" },
+    { "model": "Radeon RX 7600",     "score": 14000, "generation": "7000", "vram": "8GB" },
+
+    { "model": "Radeon RX 6950 XT",  "score": 23930, "generation": "6000", "vram": "16GB" },
+    { "model": "Radeon RX 6900 XT",  "score": 22500, "generation": "6000", "vram": "16GB" },
+    { "model": "Radeon RX 6800 XT",  "score": 20182, "generation": "6000", "vram": "16GB" },
+    { "model": "Radeon RX 6800",     "score": 18500, "generation": "6000", "vram": "16GB" },
+    { "model": "Radeon RX 6750 XT",  "score": 17200, "generation": "6000", "vram": "12GB" },
+    { "model": "Radeon RX 6700 XT",  "score": 16490, "generation": "6000", "vram": "12GB" },
+    { "model": "Radeon RX 6650 XT",  "score": 13700, "generation": "6000", "vram": "8GB" },
+    { "model": "Radeon RX 6600 XT",  "score": 12899, "generation": "6000", "vram": "8GB" },
+    { "model": "Radeon RX 6600",     "score": 12144, "generation": "6000", "vram": "8GB" },
+    { "model": "Radeon RX 6500 XT",  "score": 8200,  "generation": "6000", "vram": "4GB" },
+
+    { "model": "Radeon RX 5700 XT",  "score": 13300, "generation": "5000", "vram": "8GB" },
+    { "model": "Radeon RX 5700",     "score": 12009, "generation": "5000", "vram": "8GB" },
+    { "model": "Radeon RX 5600 XT",  "score": 10143, "generation": "5000", "vram": "6GB" },
+    { "model": "Radeon RX 5500 XT",  "score": 7866,  "generation": "5000", "vram": "8GB" },
+
+    { "model": "RTX 4090", "score": 37500, "generation": "4000", "vram": "24GB" },
+    { "model": "RTX 4080 SUPER", "score": 29900, "generation": "4000", "vram": "16GB" },
+    { "model": "RTX 4080", "score": 28000, "generation": "4000", "vram": "16GB" },
+    { "model": "RTX 4070 Ti SUPER", "score": 24200, "generation": "4000", "vram": "16GB" },
+    { "model": "RTX 4070 SUPER", "score": 20200, "generation": "4000", "vram": "12GB" },
+    { "model": "RTX 4070", "score": 18500, "generation": "4000", "vram": "12GB" },
+    { "model": "RTX 4060 Ti", "score": 14700, "generation": "4000", "vram": "8GB/16GB" },
+    { "model": "RTX 4060", "score": 11800, "generation": "4000", "vram": "8GB" },
+
+    { "model": "RTX 3090 Ti", "score": 25200, "generation": "3000", "vram": "24GB" },
+    { "model": "RTX 3090", "score": 24300, "generation": "3000", "vram": "24GB" },
+    { "model": "RTX 3080 Ti", "score": 21400, "generation": "3000", "vram": "12GB" },
+    { "model": "RTX 3080", "score": 19000, "generation": "3000", "vram": "10GB/12GB" },
+    { "model": "RTX 3070 Ti", "score": 16800, "generation": "3000", "vram": "8GB" },
+    { "model": "RTX 3070", "score": 15300, "generation": "3000", "vram": "8GB" },
+    { "model": "RTX 3060 Ti", "score": 13500, "generation": "3000", "vram": "8GB" },
+    { "model": "RTX 3060", "score": 10600, "generation": "3000", "vram": "8GB/12GB" },
+
+    { "model": "RTX 2080 Ti", "score": 14200, "generation": "2000", "vram": "11GB" },
+    { "model": "RTX 2080 SUPER", "score": 12500, "generation": "2000", "vram": "8GB" },
+    { "model": "RTX 2080", "score": 11900, "generation": "2000", "vram": "8GB" },
+    { "model": "RTX 2070 SUPER", "score": 11400, "generation": "2000", "vram": "8GB" },
+    { "model": "RTX 2070", "score": 10700, "generation": "2000", "vram": "8GB" },
+    { "model": "RTX 2060 SUPER", "score": 10100, "generation": "2000", "vram": "8GB" },
+    { "model": "RTX 2060", "score": 9500, "generation": "2000", "vram": "6GB" }
+  ]
+}

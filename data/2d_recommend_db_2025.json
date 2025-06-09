@@ -1,0 +1,208 @@
+[
+  {"program":"Photoshop","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽(Intel UHD)","ssd":"256GB SSD","source":"Puget/공식"},
+  {"program":"Photoshop","resolution":"FHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"Puget/공식"},
+  {"program":"Photoshop","resolution":"FHD","complexity":"high","cpu":"i7-12700/13700","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"Puget/공식"},
+
+  {"program":"Photoshop","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽","ssd":"256GB SSD","source":"Puget/공식"},
+  {"program":"Photoshop","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"Puget/공식"},
+  {"program":"Photoshop","resolution":"QHD","complexity":"high","cpu":"i7-13700K","ram":"32GB","gpu":"RTX 3060~4060","ssd":"1TB SSD","source":"Puget/공식"},
+
+  {"program":"Photoshop","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1650~1660","ssd":"512GB SSD","source":"Puget/공식"},
+  {"program":"Photoshop","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050~3060","ssd":"1TB SSD","source":"Puget/공식"},
+  {"program":"Photoshop","resolution":"4K","complexity":"high","cpu":"i7-13700K/13900K","ram":"32~64GB","gpu":"RTX 4060 이상","ssd":"2TB SSD","source":"Puget/공식"},
+
+
+  {"program":"Illustrator","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽(Intel UHD)","ssd":"256GB SSD","source":"Puget/공식"},
+  {"program":"Illustrator","resolution":"FHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"Puget/공식"},
+  {"program":"Illustrator","resolution":"FHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"Puget/공식"},
+
+  {"program":"Illustrator","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽","ssd":"256GB SSD","source":"Puget/공식"},
+  {"program":"Illustrator","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"Puget/공식"},
+  {"program":"Illustrator","resolution":"QHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"Puget/공식"},
+
+  {"program":"Illustrator","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"Puget/공식"},
+  {"program":"Illustrator","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"Puget/공식"},
+  {"program":"Illustrator","resolution":"4K","complexity":"high","cpu":"i7-13700K","ram":"32~64GB","gpu":"RTX 3060 이상","ssd":"2TB SSD","source":"Puget/공식"},
+
+
+   {"program":"Lightroom","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽","ssd":"256GB SSD","source":"Puget/공식"},
+  {"program":"Lightroom","resolution":"FHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"Puget/공식"},
+  {"program":"Lightroom","resolution":"FHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"Puget/공식"},
+
+  {"program":"Lightroom","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽","ssd":"256GB SSD","source":"Puget/공식"},
+  {"program":"Lightroom","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"Puget/공식"},
+  {"program":"Lightroom","resolution":"QHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"Puget/공식"},
+
+  {"program":"Lightroom","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"Puget/공식"},
+  {"program":"Lightroom","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"Puget/공식"},
+  {"program":"Lightroom","resolution":"4K","complexity":"high","cpu":"i7-13700K","ram":"32~64GB","gpu":"RTX 3060 이상","ssd":"2TB SSD","source":"Puget/공식"},
+
+
+   {"program":"Affinity Photo","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽(Intel UHD)","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"Affinity Photo","resolution":"FHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Affinity Photo","resolution":"FHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"Affinity Photo","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"Affinity Photo","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Affinity Photo","resolution":"QHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"Affinity Photo","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Affinity Photo","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+  {"program":"Affinity Photo","resolution":"4K","complexity":"high","cpu":"i7-13700K","ram":"32~64GB","gpu":"RTX 3060 이상","ssd":"2TB SSD","source":"공식/실사용기"},
+
+
+ {"program":"Affinity Designer","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽(Intel UHD)","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"Affinity Designer","resolution":"FHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Affinity Designer","resolution":"FHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"Affinity Designer","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"Affinity Designer","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Affinity Designer","resolution":"QHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"Affinity Designer","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Affinity Designer","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+  {"program":"Affinity Designer","resolution":"4K","complexity":"high","cpu":"i7-13700K","ram":"32~64GB","gpu":"RTX 3060 이상","ssd":"2TB SSD","source":"공식/실사용기"},
+
+
+  {"program":"CorelDRAW","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽(Intel UHD)","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"CorelDRAW","resolution":"FHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"CorelDRAW","resolution":"FHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"CorelDRAW","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"CorelDRAW","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"CorelDRAW","resolution":"QHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"CorelDRAW","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"CorelDRAW","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+  {"program":"CorelDRAW","resolution":"4K","complexity":"high","cpu":"i7-13700K","ram":"32~64GB","gpu":"RTX 3060 이상","ssd":"2TB SSD","source":"공식/실사용기"},
+
+  
+  {"program":"Clip Studio Paint","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽(Intel UHD)","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"Clip Studio Paint","resolution":"FHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Clip Studio Paint","resolution":"FHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"Clip Studio Paint","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"Clip Studio Paint","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Clip Studio Paint","resolution":"QHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"Clip Studio Paint","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Clip Studio Paint","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+  {"program":"Clip Studio Paint","resolution":"4K","complexity":"high","cpu":"i7-13700K","ram":"32~64GB","gpu":"RTX 3060 이상","ssd":"2TB SSD","source":"공식/실사용기"},
+
+
+   {"program":"PaintTool SAI","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"4GB","gpu":"내장그래픽(Intel UHD)","ssd":"128GB SSD","source":"공식/실사용기"},
+  {"program":"PaintTool SAI","resolution":"FHD","complexity":"medium","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽/GT 1030 이상","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"PaintTool SAI","resolution":"FHD","complexity":"high","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+
+  {"program":"PaintTool SAI","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽/GT 1030 이상","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"PaintTool SAI","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"8GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"PaintTool SAI","resolution":"QHD","complexity":"high","cpu":"i7-12700","ram":"16GB","gpu":"GTX 1650 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"PaintTool SAI","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"8GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"PaintTool SAI","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"16GB","gpu":"GTX 1650 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+  {"program":"PaintTool SAI","resolution":"4K","complexity":"high","cpu":"i7-13700K","ram":"32GB","gpu":"RTX 3050 이상","ssd":"2TB SSD","source":"공식/실사용기"},
+
+
+   {"program":"Krita","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽(Intel UHD)","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"Krita","resolution":"FHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Krita","resolution":"FHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"Krita","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"GT 1030 이상","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"Krita","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Krita","resolution":"QHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"Krita","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Krita","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+  {"program":"Krita","resolution":"4K","complexity":"high","cpu":"i7-13700K","ram":"32~64GB","gpu":"RTX 3060 이상","ssd":"2TB SSD","source":"공식/실사용기"},
+
+
+   {"program":"Corel Painter","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽(Intel UHD)","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"Corel Painter","resolution":"FHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Corel Painter","resolution":"FHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"Corel Painter","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"GT 1030 이상","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"Corel Painter","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Corel Painter","resolution":"QHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"Corel Painter","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Corel Painter","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+  {"program":"Corel Painter","resolution":"4K","complexity":"high","cpu":"i7-13700K","ram":"32~64GB","gpu":"RTX 3060 이상","ssd":"2TB SSD","source":"공식/실사용기"},
+
+
+{"program":"InDesign","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽(Intel UHD)","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"InDesign","resolution":"FHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"InDesign","resolution":"FHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"InDesign","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"GT 1030 이상","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"InDesign","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"InDesign","resolution":"QHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"InDesign","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"InDesign","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+  {"program":"InDesign","resolution":"4K","complexity":"high","cpu":"i7-13700K","ram":"32~64GB","gpu":"RTX 3060 이상","ssd":"2TB SSD","source":"공식/실사용기"},
+
+
+  {"program":"Capture One","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽(Intel UHD)","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"Capture One","resolution":"FHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Capture One","resolution":"FHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"Capture One","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"GT 1030 이상","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"Capture One","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Capture One","resolution":"QHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"Capture One","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Capture One","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+  {"program":"Capture One","resolution":"4K","complexity":"high","cpu":"i7-13700K","ram":"32~64GB","gpu":"RTX 3060 이상","ssd":"2TB SSD","source":"공식/실사용기"},
+
+
+   {"program":"DxO PhotoLab","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"내장그래픽(Intel UHD)","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"DxO PhotoLab","resolution":"FHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"DxO PhotoLab","resolution":"FHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"DxO PhotoLab","resolution":"QHD","complexity":"low","cpu":"i3-12100","ram":"8GB","gpu":"GT 1030 이상","ssd":"256GB SSD","source":"공식/실사용기"},
+  {"program":"DxO PhotoLab","resolution":"QHD","complexity":"medium","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"DxO PhotoLab","resolution":"QHD","complexity":"high","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+
+  {"program":"DxO PhotoLab","resolution":"4K","complexity":"low","cpu":"i5-12400","ram":"16GB","gpu":"GTX 1050 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"DxO PhotoLab","resolution":"4K","complexity":"medium","cpu":"i7-12700","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+  {"program":"DxO PhotoLab","resolution":"4K","complexity":"high","cpu":"i7-13700K","ram":"32~64GB","gpu":"RTX 3060 이상","ssd":"2TB SSD","source":"공식/실사용기"},
+
+
+  {"program":"Premiere Pro","resolution":"FHD","complexity":"low","cpu":"i3-12100","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"Puget/공식"},
+  {"program":"Premiere Pro","resolution":"FHD","complexity":"medium","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"Puget/공식"},
+  {"program":"Premiere Pro","resolution":"FHD","complexity":"high","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4060 이상","ssd":"2TB SSD","source":"Puget/공식"},
+
+  {"program":"Premiere Pro","resolution":"QHD","complexity":"low","cpu":"i5-13400","ram":"32GB","gpu":"RTX 3050 이상","ssd":"1TB SSD","source":"Puget/공식"},
+  {"program":"Premiere Pro","resolution":"QHD","complexity":"medium","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4060 이상","ssd":"2TB SSD","source":"Puget/공식"},
+  {"program":"Premiere Pro","resolution":"QHD","complexity":"high","cpu":"i7-13900K","ram":"64~128GB","gpu":"RTX 4070 이상","ssd":"2TB SSD + 2TB 저장용","source":"Puget/공식"},
+
+  {"program":"Premiere Pro","resolution":"4K","complexity":"low","cpu":"i7-13700K","ram":"64GB","gpu":"RTX 4060 이상","ssd":"2TB SSD","source":"Puget/공식"},
+  {"program":"Premiere Pro","resolution":"4K","complexity":"medium","cpu":"i7-13900K","ram":"64~128GB","gpu":"RTX 4070 이상","ssd":"2TB SSD + 2TB 저장용","source":"Puget/공식"},
+  {"program":"Premiere Pro","resolution":"4K","complexity":"high","cpu":"i9-13900K","ram":"128GB","gpu":"RTX 4080 이상","ssd":"4TB SSD + 4TB 저장용","source":"Puget/공식"},
+
+
+  {"program":"DaVinci Resolve","resolution":"FHD","complexity":"low","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"Puget/공식"},
+  {"program":"DaVinci Resolve","resolution":"FHD","complexity":"medium","cpu":"i7-13700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"Puget/공식"},
+  {"program":"DaVinci Resolve","resolution":"FHD","complexity":"high","cpu":"i7-13900K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"Puget/공식"},
+
+  {"program":"DaVinci Resolve","resolution":"QHD","complexity":"low","cpu":"i7-13700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"Puget/공식"},
+  {"program":"DaVinci Resolve","resolution":"QHD","complexity":"medium","cpu":"i7-13900K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"Puget/공식"},
+  {"program":"DaVinci Resolve","resolution":"QHD","complexity":"high","cpu":"i9-13900K","ram":"128GB","gpu":"RTX 4080 이상","ssd":"2TB SSD + 2TB 저장용","source":"Puget/공식"},
+
+  {"program":"DaVinci Resolve","resolution":"4K","complexity":"low","cpu":"i7-13900K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD + 2TB 저장용","source":"Puget/공식"},
+  {"program":"DaVinci Resolve","resolution":"4K","complexity":"medium","cpu":"i9-13900K","ram":"128GB","gpu":"RTX 4080 이상","ssd":"4TB SSD + 4TB 저장용","source":"Puget/공식"},
+  {"program":"DaVinci Resolve","resolution":"4K","complexity":"high","cpu":"i9-14900K","ram":"128~192GB","gpu":"RTX 4090","ssd":"8TB SSD + 8TB 저장용","source":"Puget/공식"},
+
+
+  {"program":"Vegas Pro","resolution":"FHD","complexity":"low","cpu":"i5-13400","ram":"16GB","gpu":"GTX 1650 이상","ssd":"512GB SSD","source":"공식/실사용기"},
+  {"program":"Vegas Pro","resolution":"FHD","complexity":"medium","cpu":"i7-13700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+  {"program":"Vegas Pro","resolution":"FHD","complexity":"high","cpu":"i7-13900K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"공식/실사용기"},
+
+  {"program":"Vegas Pro","resolution":"QHD","complexity":"low","cpu":"i7-13700K","ram":"32GB","gpu":"RTX 3060 이상","ssd":"1TB SSD","source":"공식/실사용기"},
+  {"program":"Vegas Pro","resolution":"QHD","complexity":"medium","cpu":"i7-13900K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD","source":"공식/실사용기"},
+  {"program":"Vegas Pro","resolution":"QHD","complexity":"high","cpu":"i9-13900K","ram":"128GB","gpu":"RTX 4080 이상","ssd":"2TB SSD + 2TB 저장용","source":"공식/실사용기"},
+
+  {"program":"Vegas Pro","resolution":"4K","complexity":"low","cpu":"i7-13900K","ram":"64GB","gpu":"RTX 4070 이상","ssd":"2TB SSD + 2TB 저장용","source":"공식/실사용기"},
+  {"program":"Vegas Pro","resolution":"4K","complexity":"medium","cpu":"i9-13900K","ram":"128GB","gpu":"RTX 4080 이상","ssd":"4TB SSD + 4TB 저장용","source":"공식/실사용기"},
+  {"program":"Vegas Pro","resolution":"4K","complexity":"high","cpu":"i9-14900K","ram":"128~192GB","gpu":"RTX 4090","ssd":"8TB SSD + 8TB 저장용","source":"공식/실사용기"}
+]

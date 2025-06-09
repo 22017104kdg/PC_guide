@@ -1,0 +1,443 @@
+[
+  {
+    "model": "ASUS ROG STRIX Z790-A GAMING WIFI D4",
+    "series": "ROG STRIX",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS ROG STRIX Z790-E GAMING WIFI",
+    "series": "ROG STRIX",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR5"
+  },
+  {
+    "model": "ASUS ROG STRIX B760-G GAMING WIFI D4",
+    "series": "ROG STRIX",
+    "chipset": "Intel B760",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS ROG MAXIMUS Z790 HERO",
+    "series": "ROG MAXIMUS",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR5"
+  },
+  {
+    "model": "ASUS TUF GAMING B760-PLUS WIFI D4",
+    "series": "TUF GAMING",
+    "chipset": "Intel B760",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS TUF GAMING Z790-PRO WIFI",
+    "series": "TUF GAMING",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR5"
+  },
+  {
+    "model": "ASUS PRIME Z790-A WIFI",
+    "series": "PRIME",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR5"
+  },
+  {
+    "model": "ASUS PRIME B760M-A D4",
+    "series": "PRIME",
+    "chipset": "Intel B760",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS PRIME H610M-A D4",
+    "series": "PRIME",
+    "chipset": "Intel H610",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS PROART B760-CREATOR D4",
+    "series": "PROART",
+    "chipset": "Intel B760",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS PRO B760M-C D4",
+    "series": "PRO/WS",
+    "chipset": "Intel B760",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS TUF GAMING X670E-PLUS WIFI",
+    "series": "TUF GAMING",
+    "chipset": "AMD X670E",
+    "socket": "AM5",
+    "memory": "DDR5"
+  },
+  {
+    "model": "ASUS PRIME B650-PLUS",
+    "series": "PRIME",
+    "chipset": "AMD B650",
+    "socket": "AM5",
+    "memory": "DDR5"
+  },
+  {
+    "model": "ASUS ROG STRIX B650E-E GAMING WIFI",
+    "series": "ROG STRIX",
+    "chipset": "AMD B650E",
+    "socket": "AM5",
+    "memory": "DDR5"
+  },
+  {
+    "model": "ASUS TUF GAMING B550M-PLUS WIFI II",
+    "series": "TUF GAMING",
+    "chipset": "AMD B550",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS PRIME B550-PLUS",
+    "series": "PRIME",
+    "chipset": "AMD B550",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS ROG STRIX X570-E GAMING WIFI II",
+    "series": "ROG STRIX",
+    "chipset": "AMD X570",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS PRIME X570-PRO",
+    "series": "PRIME",
+    "chipset": "AMD X570",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS PROART B550-CREATOR",
+    "series": "PROART",
+    "chipset": "AMD B550",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS TUF GAMING A520M-PLUS",
+    "series": "TUF GAMING",
+    "chipset": "AMD A520",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "ASUS PRIME A520M-K",
+    "series": "PRIME",
+    "chipset": "AMD A520",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "MSI MAG B760 TOMAHAWK WIFI DDR4",
+    "series": "MAG",
+    "chipset": "Intel B760",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "MSI PRO B760M-A WIFI DDR4",
+    "series": "PRO",
+    "chipset": "Intel B760",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "MSI MPG Z790 EDGE WIFI DDR5",
+    "series": "MPG",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR5"
+  },
+  {
+    "model": "MSI MEG Z790 ACE",
+    "series": "MEG",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR5"
+  },
+  {
+    "model": "MSI PRO Z790-A WIFI DDR4",
+    "series": "PRO",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "MSI MPG B650 CARBON WIFI",
+    "series": "MPG",
+    "chipset": "AMD B650",
+    "socket": "AM5",
+    "memory": "DDR5"
+  },
+  {
+    "model": "MSI MAG B650 TOMAHAWK WIFI",
+    "series": "MAG",
+    "chipset": "AMD B650",
+    "socket": "AM5",
+    "memory": "DDR5"
+  },
+  {
+    "model": "MSI PRO B650M-A WIFI",
+    "series": "PRO",
+    "chipset": "AMD B650",
+    "socket": "AM5",
+    "memory": "DDR5"
+  },
+  {
+    "model": "MSI MEG X670E ACE",
+    "series": "MEG",
+    "chipset": "AMD X670E",
+    "socket": "AM5",
+    "memory": "DDR5"
+  },
+  {
+    "model": "MSI MPG X670E CARBON WIFI",
+    "series": "MPG",
+    "chipset": "AMD X670E",
+    "socket": "AM5",
+    "memory": "DDR5"
+  },
+  {
+    "model": "MSI MAG B550 TOMAHAWK",
+    "series": "MAG",
+    "chipset": "AMD B550",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "MSI B550M PRO-VDH WIFI",
+    "series": "PRO",
+    "chipset": "AMD B550",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "MSI MPG B550 GAMING PLUS",
+    "series": "MPG",
+    "chipset": "AMD B550",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "MSI MEG X570 UNIFY",
+    "series": "MEG",
+    "chipset": "AMD X570",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "MSI MAG X570S TOMAHAWK MAX WIFI",
+    "series": "MAG",
+    "chipset": "AMD X570S",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "MSI PRO H610M-G DDR4",
+    "series": "PRO",
+    "chipset": "Intel H610",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "MSI PRO Z690-A DDR4",
+    "series": "PRO",
+    "chipset": "Intel Z690",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "MSI MPG Z690 EDGE WIFI DDR5",
+    "series": "MPG",
+    "chipset": "Intel Z690",
+    "socket": "LGA1700",
+    "memory": "DDR5"
+  },
+  {
+    "model": "MSI B450M MORTAR MAX",
+    "series": "MAG",
+    "chipset": "AMD B450",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "MSI A520M-A PRO",
+    "series": "PRO",
+    "chipset": "AMD A520",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE Z790 AORUS MASTER X",
+    "series": "AORUS",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR5"
+  },
+  {
+    "model": "GIGABYTE Z790 AORUS ELITE AX",
+    "series": "AORUS",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR5"
+  },
+  {
+    "model": "GIGABYTE Z790 GAMING X AX",
+    "series": "GAMING X",
+    "chipset": "Intel Z790",
+    "socket": "LGA1700",
+    "memory": "DDR5"
+  },
+  {
+    "model": "GIGABYTE B760 AORUS ELITE AX",
+    "series": "AORUS",
+    "chipset": "Intel B760",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE B760M DS3H DDR4",
+    "series": "UD",
+    "chipset": "Intel B760",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE B760M AORUS ELITE AX",
+    "series": "AORUS",
+    "chipset": "Intel B760",
+    "socket": "LGA1700",
+    "memory": "DDR5"
+  },
+  {
+    "model": "GIGABYTE Z690 AORUS ELITE DDR4",
+    "series": "AORUS",
+    "chipset": "Intel Z690",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE Z690 UD AX DDR4",
+    "series": "UD",
+    "chipset": "Intel Z690",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE H610M S2H DDR4",
+    "series": "UD",
+    "chipset": "Intel H610",
+    "socket": "LGA1700",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE X670E AORUS MASTER",
+    "series": "AORUS",
+    "chipset": "AMD X670E",
+    "socket": "AM5",
+    "memory": "DDR5"
+  },
+  {
+    "model": "GIGABYTE B650 AORUS ELITE AX",
+    "series": "AORUS",
+    "chipset": "AMD B650",
+    "socket": "AM5",
+    "memory": "DDR5"
+  },
+  {
+    "model": "GIGABYTE B650M DS3H",
+    "series": "UD",
+    "chipset": "AMD B650",
+    "socket": "AM5",
+    "memory": "DDR5"
+  },
+  {
+    "model": "GIGABYTE B550 AORUS ELITE V2",
+    "series": "AORUS",
+    "chipset": "AMD B550",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE B550M AORUS PRO-P",
+    "series": "AORUS",
+    "chipset": "AMD B550",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE B450 AORUS M",
+    "series": "AORUS",
+    "chipset": "AMD B450",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE X570S AORUS ELITE AX",
+    "series": "AORUS",
+    "chipset": "AMD X570S",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE X570 GAMING X",
+    "series": "GAMING X",
+    "chipset": "AMD X570",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE A520M DS3H",
+    "series": "UD",
+    "chipset": "AMD A520",
+    "socket": "AM4",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE Z590 VISION G",
+    "series": "VISION",
+    "chipset": "Intel Z590",
+    "socket": "LGA1200",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE B560M DS3H",
+    "series": "UD",
+    "chipset": "Intel B560",
+    "socket": "LGA1200",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE X299X DESIGNARE 10G",
+    "series": "DESIGNARE",
+    "chipset": "Intel X299X",
+    "socket": "LGA2066",
+    "memory": "DDR4"
+  },
+  {
+    "model": "GIGABYTE Z390 AORUS ULTRA",
+    "series": "AORUS",
+    "chipset": "Intel Z390",
+    "socket": "LGA1151",
+    "memory": "DDR4"
+  }
+]

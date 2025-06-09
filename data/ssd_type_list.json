@@ -1,0 +1,11 @@
+[
+  { "type": "NVMe",   "capacity": "500GB" },
+  { "type": "NVMe",   "capacity": "1TB" },
+  { "type": "NVMe",   "capacity": "2TB" },
+  { "type": "TLC",    "capacity": "500GB" },
+  { "type": "TLC",    "capacity": "1TB" },
+  { "type": "TLC",    "capacity": "2TB" },
+  { "type": "SATA",   "capacity": "500GB" },
+  { "type": "SATA",   "capacity": "1TB" },
+  { "type": "SATA",   "capacity": "2TB" }
+]

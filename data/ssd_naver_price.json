@@ -1,0 +1,74 @@
+[
+  {
+    "model": "NVMe SSD 500GB",
+    "type": "NVMe",
+    "capacity": "500GB",
+    "price": "47630",
+    "url": "https://search.shopping.naver.com/catalog/51929360822",
+    "title": "WD SN580 M.2 NVMe SSD 500GB"
+  },
+  {
+    "model": "NVMe SSD 1TB",
+    "type": "NVMe",
+    "capacity": "1TB",
+    "price": "79990",
+    "url": "https://search.shopping.naver.com/catalog/51929360823",
+    "title": "WD SN580 M.2 NVMe SSD 1TB"
+  },
+  {
+    "model": "NVMe SSD 2TB",
+    "type": "NVMe",
+    "capacity": "2TB",
+    "price": "163590",
+    "url": "https://search.shopping.naver.com/catalog/51929360824",
+    "title": "WD SN580 M.2 NVMe SSD 2TB"
+  },
+  {
+    "model": "TLC SSD 500GB",
+    "type": "TLC",
+    "capacity": "500GB",
+    "price": "47630",
+    "url": "https://search.shopping.naver.com/catalog/51929360822",
+    "title": "WD SN580 M.2 NVMe SSD 500GB"
+  },
+  {
+    "model": "TLC SSD 1TB",
+    "type": "TLC",
+    "capacity": "1TB",
+    "price": "141000",
+    "url": "https://smartstore.naver.com/main/products/5621354115",
+    "title": "SK하이닉스 GOLD P31 NVMe SSD 1TB 데스크탑 노트북SSD 고정나사포함"
+  },
+  {
+    "model": "TLC SSD 2TB",
+    "type": "TLC",
+    "capacity": "2TB",
+    "price": "163590",
+    "url": "https://search.shopping.naver.com/catalog/51929360824",
+    "title": "WD SN580 M.2 NVMe SSD 2TB"
+  },
+  {
+    "model": "SATA SSD 500GB",
+    "type": "SATA",
+    "capacity": "500GB",
+    "price": "81000",
+    "url": "https://smartstore.naver.com/main/products/8559481811",
+    "title": "삼성 전자 870 EVO 500GB 정품 SATA SSD 500G 2.5인치 노트북 데스크탑"
+  },
+  {
+    "model": "SATA SSD 1TB",
+    "type": "SATA",
+    "capacity": "1TB",
+    "price": "138000",
+    "url": "https://smartstore.naver.com/main/products/11224397443",
+    "title": "삼성전자 정품 870 EVO SATA 2.5 SSD 1TB MZ-77E1T0BW 노트북 데스크탑용 하드디스크"
+  },
+  {
+    "model": "SATA SSD 2TB",
+    "type": "SATA",
+    "capacity": "2TB",
+    "price": "244000",
+    "url": "https://smartstore.naver.com/main/products/11224366953",
+    "title": "삼성전자 정품 870 QVO SATA 2.5 SSD 2TB MZ-77Q2T0BW 노트북 데스크탑용 하드디스크"
+  }
+]

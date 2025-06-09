@@ -1,0 +1,17 @@
+[
+  { "type": "DDR4", "size_gb": 8, "brand": "삼성", "model": "삼성 DDR4 8GB" },
+  { "type": "DDR4", "size_gb": 16, "brand": "삼성", "model": "삼성 DDR4 16GB" },
+  { "type": "DDR4", "size_gb": 32, "brand": "삼성", "model": "삼성 DDR4 32GB" },
+  { "type": "DDR4", "size_gb": 64, "brand": "삼성", "model": "삼성 DDR4 64GB" },
+  { "type": "DDR5", "size_gb": 16, "brand": "삼성", "model": "삼성 DDR5 16GB" },
+  { "type": "DDR5", "size_gb": 32, "brand": "삼성", "model": "삼성 DDR5 32GB" },
+  { "type": "DDR5", "size_gb": 64, "brand": "삼성", "model": "삼성 DDR5 64GB" },
+
+  { "type": "DDR4", "size_gb": 8, "brand": "최저가", "model": "DDR4 8GB" },
+  { "type": "DDR4", "size_gb": 16, "brand": "최저가", "model": "DDR4 16GB" },
+  { "type": "DDR4", "size_gb": 32, "brand": "최저가", "model": "DDR4 32GB" },
+  { "type": "DDR4", "size_gb": 64, "brand": "최저가", "model": "DDR4 64GB" },
+  { "type": "DDR5", "size_gb": 16, "brand": "최저가", "model": "DDR5 16GB" },
+  { "type": "DDR5", "size_gb": 32, "brand": "최저가", "model": "DDR5 32GB" },
+  { "type": "DDR5", "size_gb": 64, "brand": "최저가", "model": "DDR5 64GB" }
+]

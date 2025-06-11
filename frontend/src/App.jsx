@@ -20,14 +20,14 @@ import GameAdvancedPage from "./pages/GameAdvancedPage";
 import GameRecommendResult from "./pages/GameRecommendResult";
 import GameOptionSelect from "./pages/GameOptionSelect";
 
-import AiPage from "./pages/AiPage";             // AI 옵션 페이지 import 추가
-import AiResultPage from "./pages/AiResultPage"; // AI 결과 페이지 import 추가
+import AiPage from "./pages/AiPage";
+import AiResultPage from "./pages/AiResultPage";
 
 function AnimatedRoutes() {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence mode="wait" initial={true}> {/* ✅ 변경됨 */}
       <Routes location={location} key={location.pathname}>
         {/* 홈 */}
         <Route path="/" element={<Home />} />
@@ -48,9 +48,12 @@ function AnimatedRoutes() {
         <Route path="/3d" element={<ThreeDPage />} />
         <Route path="/3d/options/result" element={<ThreeDOptionResult />} />
 
-        {/* AI 작업 관련 라우트 추가 */}
+        {/* AI 작업 */}
         <Route path="/ai" element={<AiPage />} />
         <Route path="/ai/result" element={<AiResultPage />} />
+
+        {/* fallback: 잘못된 경로 → Home */}
+        <Route path="*" element={<Home />} /> {/* ✅ 추가됨 */}
       </Routes>
     </AnimatePresence>
   );
@@ -58,7 +61,7 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/PC_guide">
       <TransitionProvider>
         <AnimatedRoutes />
       </TransitionProvider>

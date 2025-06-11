@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import BackIcon from "../assets/iconIMG/previous.png";
 import BulbIcon from "../assets/iconIMG/bulb.png";
 
-// 부품 링크 유틸 함수 (주신 내용 활용)
+// 부품 링크 유틸 함수
 function getLinks({ model, type, capacity }, danawaArr, bestArr, naverArr) {
   const normalized = s => s?.replace(/\s+/g, "").toLowerCase();
 
@@ -27,7 +27,7 @@ function getLinks({ model, type, capacity }, danawaArr, bestArr, naverArr) {
   ].filter(Boolean);
 }
 
-// 합리적 가격 필터 (주신 코드)
+// 합리적 가격 필터
 function filterValidPrices(arr, field = "price") {
   const nums = arr.map(x => Number(x[field])).filter(x => x > 0).sort((a, b) => a - b);
   if (nums.length === 0) return [];
@@ -59,7 +59,7 @@ export default function AiResultPage() {
 
     async function fetchAndRecommend() {
       try {
-        // 여기에 실제 부품 DB JSON 경로 넣으세요
+        // 부품 DB 실제 경로: /data/json/파일명.json
         const [
           cpuRaw, gpuRaw, ramRaw, mbRaw, ssdRaw,
           cpuDanawa, cpuBest, cpuNaver,
@@ -68,47 +68,47 @@ export default function AiResultPage() {
           mbDanawa, mbBest, mbNaver,
           ssdDanawa, ssdBest, ssdNaver
         ] = await Promise.all([
-          fetch("/data/cpuDB.json").then(r => r.json()),
-          fetch("/data/gpuDB.json").then(r => r.json()),
-          fetch("/data/ramList.json").then(r => r.json()),
+          fetch("/data/json/cpuDB.json").then(r => r.json()),
+          fetch("/data/json/gpuDB.json").then(r => r.json()),
+          fetch("/data/json/ramList.json").then(r => r.json()),
           Promise.all([
-            fetch("/data/asus_mainboard.json").then(r => r.json()),
-            fetch("/data/msi_mainboard.json").then(r => r.json()),
-            fetch("/data/gigabyte_mainboard.json").then(r => r.json())
+            fetch("/data/json/asus_mainboard.json").then(r => r.json()),
+            fetch("/data/json/msi_mainboard.json").then(r => r.json()),
+            fetch("/data/json/gigabyte_mainboard.json").then(r => r.json())
           ]).then(arr => arr.flat()),
-          fetch("/data/ssd_type_list.json").then(r => r.json()),
+          fetch("/data/json/ssd_type_list.json").then(r => r.json()),
 
-          fetch("/data/cpu_danawa_price.json").then(r => r.json()),
-          fetch("/data/cpu_danawa_best.json").then(r => r.json()),
-          fetch("/data/cpu_naver_price.json").then(r => r.json()),
+          fetch("/data/json/cpu_danawa_price.json").then(r => r.json()),
+          fetch("/data/json/cpu_danawa_best.json").then(r => r.json()),
+          fetch("/data/json/cpu_naver_price.json").then(r => r.json()),
 
-          fetch("/data/gpu_danawa_price.json").then(r => r.json()),
-          fetch("/data/gpu_danawa_best.json").then(r => r.json()),
-          fetch("/data/gpu_naver_price.json").then(r => r.json()),
+          fetch("/data/json/gpu_danawa_price.json").then(r => r.json()),
+          fetch("/data/json/gpu_danawa_best.json").then(r => r.json()),
+          fetch("/data/json/gpu_naver_price.json").then(r => r.json()),
 
-          fetch("/data/ram_danawa_price.json").then(r => r.json()),
-          fetch("/data/ram_danawa_best.json").then(r => r.json()),
-          fetch("/data/ram_naver_price.json").then(r => r.json()),
+          fetch("/data/json/ram_danawa_price.json").then(r => r.json()),
+          fetch("/data/json/ram_danawa_best.json").then(r => r.json()),
+          fetch("/data/json/ram_naver_price.json").then(r => r.json()),
 
           Promise.all([
-            fetch("/data/asus_danawa_price.json").then(r => r.json()),
-            fetch("/data/msi_danawa_price.json").then(r => r.json()),
-            fetch("/data/gigabyte_danawa_price.json").then(r => r.json())
-          ]).then(arr => arr.flat()),
-          Promise.all([
-            fetch("/data/asus_danawa_best.json").then(r => r.json()),
-            fetch("/data/msi_danawa_best.json").then(r => r.json()),
-            fetch("/data/gigabyte_danawa_best.json").then(r => r.json())
+            fetch("/data/json/asus_danawa_price.json").then(r => r.json()),
+            fetch("/data/json/msi_danawa_price.json").then(r => r.json()),
+            fetch("/data/json/gigabyte_danawa_price.json").then(r => r.json())
           ]).then(arr => arr.flat()),
           Promise.all([
-            fetch("/data/asus_naver_price.json").then(r => r.json()),
-            fetch("/data/msi_naver_price.json").then(r => r.json()),
-            fetch("/data/gigabyte_naver_price.json").then(r => r.json())
+            fetch("/data/json/asus_danawa_best.json").then(r => r.json()),
+            fetch("/data/json/msi_danawa_best.json").then(r => r.json()),
+            fetch("/data/json/gigabyte_danawa_best.json").then(r => r.json())
+          ]).then(arr => arr.flat()),
+          Promise.all([
+            fetch("/data/json/asus_naver_price.json").then(r => r.json()),
+            fetch("/data/json/msi_naver_price.json").then(r => r.json()),
+            fetch("/data/json/gigabyte_naver_price.json").then(r => r.json())
           ]).then(arr => arr.flat()),
 
-          fetch("/data/ssd_danawa_price.json").then(r => r.json()),
-          fetch("/data/ssd_danawa_best.json").then(r => r.json()),
-          fetch("/data/ssd_naver_price.json").then(r => r.json())
+          fetch("/data/json/ssd_danawa_price.json").then(r => r.json()),
+          fetch("/data/json/ssd_danawa_best.json").then(r => r.json()),
+          fetch("/data/json/ssd_naver_price.json").then(r => r.json())
         ]);
 
         // 배열화
@@ -118,25 +118,13 @@ export default function AiResultPage() {
         const mbArr = Array.isArray(mbRaw) ? mbRaw : mbRaw.mainboard || mbRaw.mb || [];
         const ssdArr = Array.isArray(ssdRaw) ? ssdRaw : ssdRaw.ssd || [];
 
-        // 여기서는 state에 간단히 model, mode, stage 정보만 있으므로
-        // 아래는 임의 추천 로직(실사용 데이터로 변경하세요)
-        // 실제 AI 작업용 사양 DB를 연동해서 조건별 추천해야 함
-
-        // 예) CPU 추천 (가장 성능 좋은 CPU 1개)
+        // 추천 로직 (더 정교하게 바꿀 수 있음)
         const cpu = cpuArr[0] || null;
-
-        // GPU 추천 (가장 성능 좋은 GPU 1개)
         const gpu = gpuArr[0] || null;
-
-        // RAM 추천 (3개까지)
         const ramModels = ramArr.slice(0, 3);
-
-        // 메인보드 추천 (CPU 소켓에 맞는 보드)
         const mbModels = mbArr.filter(
           mb => cpu && mb.socket && cpu.socket && mb.socket.toUpperCase() === cpu.socket.toUpperCase()
         ).slice(0, 3);
-
-        // SSD 추천 (가장 작은 용량 SSD 1개)
         const ssd = ssdArr[0] || null;
 
         // 링크 생성
@@ -146,7 +134,6 @@ export default function AiResultPage() {
         const mbLinksArr = mbModels.map(mb => getLinks(mb, mbDanawa, mbBest, mbNaver));
         const ssdLinks = ssd ? getLinks(ssd, ssdDanawa, ssdBest, ssdNaver) : [];
 
-        // 총 가격 계산 (1개당 최저가 기준)
         function getFirstValidPrice(links) {
           return links && links[0] && links[0].price ? Number(links[0].price) : 0;
         }

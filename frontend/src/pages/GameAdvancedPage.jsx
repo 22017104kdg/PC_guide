@@ -64,9 +64,9 @@ export default function GameAdvancedPage() {
     setShowDropdown(filtered.length > 0);
   }, [gameName]);
 
-  // 성능 테이블 로드
+  // 성능 테이블 로드 (여기만 수정!)
   useEffect(() => {
-    fetch("/data/game_fps_table.json")
+    fetch("/PC_guide/data/game_fps_table.json")
       .then((res) => res.json())
       .then(setGameFpsTable)
       .catch(() => setGameFpsTable({}));

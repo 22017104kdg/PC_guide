@@ -108,6 +108,7 @@ export default function GameOptionSelect() {
       try {
         setLoading(true);
         setFetchError(false);
+        const base = "/PC_guide/data";
         const [
           cpuRes, gpuRes,
           cpuDP, cpuDBest, cpuNP,
@@ -115,44 +116,44 @@ export default function GameOptionSelect() {
           mbAll, mbDP, mbDBest, mbNP,
           ramList, ramDP, ramDBest, ramNP
         ] = await Promise.all([
-          fetch("/data/cpuDB.json").then(r => r.json()),
-          fetch("/data/gpuDB.json").then(r => r.json()),
+          fetch(`${base}/cpuDB.json`).then(r => r.json()),
+          fetch(`${base}/gpuDB.json`).then(r => r.json()),
 
-          fetch("/data/cpu_danawa_price.json").then(r => r.json()),
-          fetch("/data/cpu_danawa_best.json").then(r => r.json()),
-          fetch("/data/cpu_naver_price.json").then(r => r.json()),
+          fetch(`${base}/cpu_danawa_price.json`).then(r => r.json()),
+          fetch(`${base}/cpu_danawa_best.json`).then(r => r.json()),
+          fetch(`${base}/cpu_naver_price.json`).then(r => r.json()),
 
-          fetch("/data/gpu_danawa_price.json").then(r => r.json()),
-          fetch("/data/gpu_danawa_best.json").then(r => r.json()),
-          fetch("/data/gpu_naver_price.json").then(r => r.json()),
+          fetch(`${base}/gpu_danawa_price.json`).then(r => r.json()),
+          fetch(`${base}/gpu_danawa_best.json`).then(r => r.json()),
+          fetch(`${base}/gpu_naver_price.json`).then(r => r.json()),
 
           // asus + msi + gigabyte 메인보드 합치기
           Promise.all([
-            fetch("/data/asus_mainboard.json").then(r => r.json()),
-            fetch("/data/msi_mainboard.json").then(r => r.json()),
-            fetch("/data/gigabyte_mainboard.json").then(r => r.json()),
+            fetch(`${base}/asus_mainboard.json`).then(r => r.json()),
+            fetch(`${base}/msi_mainboard.json`).then(r => r.json()),
+            fetch(`${base}/gigabyte_mainboard.json`).then(r => r.json()),
           ]).then(arr => arr.flat()),
 
           Promise.all([
-            fetch("/data/asus_danawa_price.json").then(r=>r.json()),
-            fetch("/data/msi_danawa_price.json").then(r=>r.json()),
-            fetch("/data/gigabyte_danawa_price.json").then(r=>r.json()),
+            fetch(`${base}/asus_danawa_price.json`).then(r=>r.json()),
+            fetch(`${base}/msi_danawa_price.json`).then(r=>r.json()),
+            fetch(`${base}/gigabyte_danawa_price.json`).then(r=>r.json()),
           ]).then(arr => arr.flat()),
           Promise.all([
-            fetch("/data/asus_danawa_best.json").then(r=>r.json()),
-            fetch("/data/msi_danawa_best.json").then(r=>r.json()),
-            fetch("/data/gigabyte_danawa_best.json").then(r=>r.json()),
+            fetch(`${base}/asus_danawa_best.json`).then(r=>r.json()),
+            fetch(`${base}/msi_danawa_best.json`).then(r=>r.json()),
+            fetch(`${base}/gigabyte_danawa_best.json`).then(r=>r.json()),
           ]).then(arr => arr.flat()),
           Promise.all([
-            fetch("/data/asus_naver_price.json").then(r=>r.json()),
-            fetch("/data/msi_naver_price.json").then(r=>r.json()),
-            fetch("/data/gigabyte_naver_price.json").then(r=>r.json()),
+            fetch(`${base}/asus_naver_price.json`).then(r=>r.json()),
+            fetch(`${base}/msi_naver_price.json`).then(r=>r.json()),
+            fetch(`${base}/gigabyte_naver_price.json`).then(r=>r.json()),
           ]).then(arr => arr.flat()),
 
-          fetch("/data/ramList.json").then(r=>r.json()),
-          fetch("/data/ram_danawa_price.json").then(r=>r.json()),
-          fetch("/data/ram_danawa_best.json").then(r=>r.json()),
-          fetch("/data/ram_naver_price.json").then(r=>r.json()),
+          fetch(`${base}/ramList.json`).then(r=>r.json()),
+          fetch(`${base}/ram_danawa_price.json`).then(r=>r.json()),
+          fetch(`${base}/ram_danawa_best.json`).then(r=>r.json()),
+          fetch(`${base}/ram_naver_price.json`).then(r=>r.json()),
         ]);
 
         setCpuDB(Array.isArray(cpuRes) ? cpuRes : cpuRes.cpu || []);

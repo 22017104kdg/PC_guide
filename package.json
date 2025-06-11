@@ -1,8 +1,13 @@
 {
-  "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.7"
+  "name": "pc_guide",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://22017104kdg.github.io/PC_guide",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^12.12.1",
@@ -10,5 +15,12 @@
     "node-fetch": "^3.3.2",
     "puppeteer": "^24.9.0",
     "react-router-dom": "^7.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.7",
+    "vite": "^6.3.5"
   }
 }

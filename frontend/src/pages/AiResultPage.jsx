@@ -8,6 +8,7 @@ function getLinks({ model, type, capacity }, danawaArr, bestArr, naverArr) {
   const normalized = s => s?.replace(/\s+/g, "").toLowerCase();
 
   function findByAll(arr) {
+    if (!arr) return null;
     let found = arr.find(i => normalized(i.model) === normalized(model));
     if (found) return found;
     return arr.find(
@@ -25,18 +26,6 @@ function getLinks({ model, type, capacity }, danawaArr, bestArr, naverArr) {
     best && best.url && { label: "리뷰 많은순", url: best.url, price: Number(best.price) },
     naver && naver.url && { label: "네이버 인기순", url: naver.url, price: Number(naver.price) }
   ].filter(Boolean);
-}
-
-// 합리적 가격 필터
-function filterValidPrices(arr, field = "price") {
-  const nums = arr.map(x => Number(x[field])).filter(x => x > 0).sort((a, b) => a - b);
-  if (nums.length === 0) return [];
-  const base = nums[0];
-  return arr.filter(x =>
-    !!x[field] &&
-    !isNaN(Number(x[field])) &&
-    Number(x[field]) <= base * 2.5
-  );
 }
 
 export default function AiResultPage() {
@@ -57,59 +46,62 @@ export default function AiResultPage() {
     setLoading(true);
     setError(false);
 
+    async function fetchJson(path) {
+      try {
+        const res = await fetch(process.env.PUBLIC_URL + path);
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status} for ${path}`);
+        return await res.json();
+      } catch (e) {
+        console.error(`fetch 실패: ${path}`, e);
+        throw e;
+      }
+    }
+
     async function fetchAndRecommend() {
       try {
-        // 부품 DB 실제 경로: /data/json/파일명.json
+        // 메인보드 파일은 따로 Promise.all 분리
+        const [asusMB, msiMB, gigabyteMB] = await Promise.all([
+          fetchJson("/data/json/asus_mainboard.json"),
+          fetchJson("/data/json/msi_mainboard.json"),
+          fetchJson("/data/json/gigabyte_mainboard.json"),
+        ]);
+
         const [
-          cpuRaw, gpuRaw, ramRaw, mbRaw, ssdRaw,
+          cpuRaw, gpuRaw, ramRaw, ssdRaw,
           cpuDanawa, cpuBest, cpuNaver,
           gpuDanawa, gpuBest, gpuNaver,
           ramDanawa, ramBest, ramNaver,
           mbDanawa, mbBest, mbNaver,
           ssdDanawa, ssdBest, ssdNaver
         ] = await Promise.all([
-          fetch("/data/json/cpuDB.json").then(r => r.json()),
-          fetch("/data/json/gpuDB.json").then(r => r.json()),
-          fetch("/data/json/ramList.json").then(r => r.json()),
-          Promise.all([
-            fetch("/data/json/asus_mainboard.json").then(r => r.json()),
-            fetch("/data/json/msi_mainboard.json").then(r => r.json()),
-            fetch("/data/json/gigabyte_mainboard.json").then(r => r.json())
-          ]).then(arr => arr.flat()),
-          fetch("/data/json/ssd_type_list.json").then(r => r.json()),
+          fetchJson("/data/json/cpuDB.json"),
+          fetchJson("/data/json/gpuDB.json"),
+          fetchJson("/data/json/ramList.json"),
+          fetchJson("/data/json/ssd_type_list.json"),
 
-          fetch("/data/json/cpu_danawa_price.json").then(r => r.json()),
-          fetch("/data/json/cpu_danawa_best.json").then(r => r.json()),
-          fetch("/data/json/cpu_naver_price.json").then(r => r.json()),
+          fetchJson("/data/json/cpu_danawa_price.json"),
+          fetchJson("/data/json/cpu_danawa_best.json"),
+          fetchJson("/data/json/cpu_naver_price.json"),
 
-          fetch("/data/json/gpu_danawa_price.json").then(r => r.json()),
-          fetch("/data/json/gpu_danawa_best.json").then(r => r.json()),
-          fetch("/data/json/gpu_naver_price.json").then(r => r.json()),
+          fetchJson("/data/json/gpu_danawa_price.json"),
+          fetchJson("/data/json/gpu_danawa_best.json"),
+          fetchJson("/data/json/gpu_naver_price.json"),
 
-          fetch("/data/json/ram_danawa_price.json").then(r => r.json()),
-          fetch("/data/json/ram_danawa_best.json").then(r => r.json()),
-          fetch("/data/json/ram_naver_price.json").then(r => r.json()),
+          fetchJson("/data/json/ram_danawa_price.json"),
+          fetchJson("/data/json/ram_danawa_best.json"),
+          fetchJson("/data/json/ram_naver_price.json"),
 
-          Promise.all([
-            fetch("/data/json/asus_danawa_price.json").then(r => r.json()),
-            fetch("/data/json/msi_danawa_price.json").then(r => r.json()),
-            fetch("/data/json/gigabyte_danawa_price.json").then(r => r.json())
-          ]).then(arr => arr.flat()),
-          Promise.all([
-            fetch("/data/json/asus_danawa_best.json").then(r => r.json()),
-            fetch("/data/json/msi_danawa_best.json").then(r => r.json()),
-            fetch("/data/json/gigabyte_danawa_best.json").then(r => r.json())
-          ]).then(arr => arr.flat()),
-          Promise.all([
-            fetch("/data/json/asus_naver_price.json").then(r => r.json()),
-            fetch("/data/json/msi_naver_price.json").then(r => r.json()),
-            fetch("/data/json/gigabyte_naver_price.json").then(r => r.json())
-          ]).then(arr => arr.flat()),
+          fetchJson("/data/json/asus_danawa_price.json").then(arr => arr),
+          fetchJson("/data/json/asus_danawa_best.json").then(arr => arr),
+          fetchJson("/data/json/asus_naver_price.json").then(arr => arr),
 
-          fetch("/data/json/ssd_danawa_price.json").then(r => r.json()),
-          fetch("/data/json/ssd_danawa_best.json").then(r => r.json()),
-          fetch("/data/json/ssd_naver_price.json").then(r => r.json())
+          fetchJson("/data/json/ssd_danawa_price.json"),
+          fetchJson("/data/json/ssd_danawa_best.json"),
+          fetchJson("/data/json/ssd_naver_price.json")
         ]);
+
+        const mbRaw = [...asusMB, ...msiMB, ...gigabyteMB];
+        const mbDanawaArr = [...mbDanawa, ...mbBest, ...mbNaver];
 
         // 배열화
         const cpuArr = Array.isArray(cpuRaw) ? cpuRaw : cpuRaw.cpu || [];
@@ -118,13 +110,19 @@ export default function AiResultPage() {
         const mbArr = Array.isArray(mbRaw) ? mbRaw : mbRaw.mainboard || mbRaw.mb || [];
         const ssdArr = Array.isArray(ssdRaw) ? ssdRaw : ssdRaw.ssd || [];
 
-        // 추천 로직 (더 정교하게 바꿀 수 있음)
+        // 추천 로직 (간단히 첫번째 아이템 선택, 필요하면 로직 강화 가능)
         const cpu = cpuArr[0] || null;
         const gpu = gpuArr[0] || null;
         const ramModels = ramArr.slice(0, 3);
-        const mbModels = mbArr.filter(
-          mb => cpu && mb.socket && cpu.socket && mb.socket.toUpperCase() === cpu.socket.toUpperCase()
-        ).slice(0, 3);
+        const mbModels = mbArr
+          .filter(
+            mb =>
+              cpu &&
+              mb.socket &&
+              cpu.socket &&
+              mb.socket.toUpperCase() === cpu.socket.toUpperCase()
+          )
+          .slice(0, 3);
         const ssd = ssdArr[0] || null;
 
         // 링크 생성
@@ -155,7 +153,7 @@ export default function AiResultPage() {
           mbLinksArr,
           ssd,
           ssdLinks,
-          totalPrice
+          totalPrice,
         });
         setLoading(false);
       } catch (err) {
@@ -173,10 +171,9 @@ export default function AiResultPage() {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center justify-center p-6">
         <h2 className="text-2xl font-bold mb-4">추천 결과</h2>
         <p className="text-red-400 text-lg font-bold text-center">
-          추천 데이터가 전달되지 않았습니다.<br />
-          <span className="text-sm text-gray-400">
-            이전 페이지에서 옵션을 선택 후 다시 시도해주세요.
-          </span>
+          추천 데이터가 전달되지 않았습니다.
+          <br />
+          <span className="text-sm text-gray-400">이전 페이지에서 옵션을 선택 후 다시 시도해주세요.</span>
         </p>
         <button
           onClick={() => navigate(-1)}
@@ -192,10 +189,7 @@ export default function AiResultPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center p-6">
       {/* 상단 */}
       <div className="flex items-center w-full max-w-xl mb-8">
-        <button
-          onClick={() => navigate(-1)}
-          className="mr-4 p-2 hover:opacity-80 transition z-10"
-        >
+        <button onClick={() => navigate(-1)} className="mr-4 p-2 hover:opacity-80 transition z-10">
           <img src={BackIcon} alt="뒤로가기" className="w-6 h-6 invert" />
         </button>
         <h2 className="text-2xl font-bold flex items-center gap-2">
@@ -207,22 +201,16 @@ export default function AiResultPage() {
       {loading ? (
         <p className="text-gray-400">로딩 중...</p>
       ) : error ? (
-        <div className="text-red-400 font-bold text-center">
-          추천 데이터/부품 정보 로드 실패! 데이터 경로/형식을 확인하세요.
-        </div>
+        <div className="text-red-400 font-bold text-center">추천 데이터/부품 정보 로드 실패! 데이터 경로/형식을 확인하세요.</div>
       ) : !result ? (
-        <div className="text-red-400 font-bold text-center">
-          선택한 옵션에 맞는 추천 데이터가 없습니다.
-        </div>
+        <div className="text-red-400 font-bold text-center">선택한 옵션에 맞는 추천 데이터가 없습니다.</div>
       ) : (
         <>
           {/* 총합 견적 */}
           <div className="w-full max-w-xl bg-gray-900/70 rounded-xl p-6 mb-5 flex items-center justify-between border border-white/10">
             <span className="text-lg font-bold">총합 견적</span>
             <span className="text-2xl font-bold text-green-400">
-              {result.totalPrice > 0
-                ? result.totalPrice.toLocaleString() + " 원"
-                : "계산 불가"}
+              {result.totalPrice > 0 ? result.totalPrice.toLocaleString() + " 원" : "계산 불가"}
             </span>
           </div>
 
@@ -235,11 +223,7 @@ export default function AiResultPage() {
                 <>
                   <p>
                     {result.cpu.model}
-                    {result.cpu.generation && (
-                      <span className="ml-2 text-xs text-gray-400">
-                        ({result.cpu.generation}세대)
-                      </span>
-                    )}
+                    {result.cpu.generation && <span className="ml-2 text-xs text-gray-400">({result.cpu.generation}세대)</span>}
                   </p>
                   <ul className="mt-2 space-y-1">
                     {result.cpuLinks.map((l, i) => (
@@ -248,9 +232,7 @@ export default function AiResultPage() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순"
-                            ? "text-green-500"
-                            : "text-blue-400"} underline`}
+                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
@@ -270,11 +252,7 @@ export default function AiResultPage() {
                 <>
                   <p>
                     {result.gpu.model}
-                    {result.gpu.generation && (
-                      <span className="ml-2 text-xs text-gray-400">
-                        ({result.gpu.generation}세대)
-                      </span>
-                    )}
+                    {result.gpu.generation && <span className="ml-2 text-xs text-gray-400">({result.gpu.generation}세대)</span>}
                   </p>
                   <ul className="mt-2 space-y-1">
                     {result.gpuLinks.map((l, i) => (
@@ -283,9 +261,7 @@ export default function AiResultPage() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순"
-                            ? "text-green-500"
-                            : "text-blue-400"} underline`}
+                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
@@ -307,11 +283,7 @@ export default function AiResultPage() {
                 <div key={b.model} className="mb-4">
                   <p className="font-bold">
                     {b.model}
-                    {b.chipset && (
-                      <span className="ml-2 text-xs text-gray-400">
-                        [{b.chipset}]
-                      </span>
-                    )}
+                    {b.chipset && <span className="ml-2 text-xs text-gray-400">[{b.chipset}]</span>}
                   </p>
                   <ul className="mt-2 space-y-1">
                     {result.mbLinksArr[i].map((l, j) => (
@@ -320,9 +292,7 @@ export default function AiResultPage() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순"
-                            ? "text-green-500"
-                            : "text-blue-400"} underline`}
+                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
@@ -355,9 +325,7 @@ export default function AiResultPage() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순"
-                            ? "text-green-500"
-                            : "text-blue-400"} underline`}
+                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
@@ -387,18 +355,14 @@ export default function AiResultPage() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순"
-                            ? "text-green-500"
-                            : "text-blue-400"} underline`}
+                          className={`${l.label === "네이버 인기순" ? "text-green-500" : "text-blue-400"} underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
                       </li>
                     ))
                   ) : (
-                    <li className="text-gray-400 text-xs">
-                      ※ SSD는 가격 정보가 포함되어 있지 않습니다.
-                    </li>
+                    <li className="text-gray-400 text-xs">※ SSD는 가격 정보가 포함되어 있지 않습니다.</li>
                   )}
                 </ul>
               </>

@@ -185,6 +185,7 @@ export default function GameOptionSelect() {
       }
     }
     loadAll();
+    // eslint-disable-next-line
   }, []);
 
   // ---- 추천 결과 계산 ----

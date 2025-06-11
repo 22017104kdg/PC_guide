@@ -46,7 +46,7 @@ export default function AiResultPage() {
 
     async function fetchAndRecommend() {
       try {
-        // 병렬 fetch + mainboard는 flat으로 합침
+        // fetch 경로 모두 상대경로로 변경 (public 폴더 제외)
         const [
           cpuRaw, gpuRaw, ramRaw, mbRaw, ssdRaw,
           cpuDanawa, cpuBest, cpuNaver,
@@ -98,14 +98,14 @@ export default function AiResultPage() {
           fetch("./data/ssd_naver_price.json").then(r => r.json())
         ]);
 
-        // 배열화 안전처리
+        // 배열 안전 처리
         const cpuArr = Array.isArray(cpuRaw) ? cpuRaw : cpuRaw.cpu || [];
         const gpuArr = Array.isArray(gpuRaw) ? gpuRaw : gpuRaw.gpu || [];
         const ramArr = Array.isArray(ramRaw) ? ramRaw : ramRaw.ram || ramRaw.list || [];
         const mbArr = Array.isArray(mbRaw) ? mbRaw : mbRaw.mainboard || mbRaw.mb || [];
         const ssdArr = Array.isArray(ssdRaw) ? ssdRaw : ssdRaw.ssd || [];
 
-        // 추천 후보 (첫 항목 기본)
+        // 추천 후보 선정
         const cpu = cpuArr[0] || null;
         const gpu = gpuArr[0] || null;
         const ramModels = ramArr.slice(0, 3);
@@ -121,7 +121,6 @@ export default function AiResultPage() {
         const mbLinksArr = mbModels.map(mb => getLinks(mb, mbDanawa, mbBest, mbNaver));
         const ssdLinks = ssd ? getLinks(ssd, ssdDanawa, ssdBest, ssdNaver) : [];
 
-        // 총합 계산 (첫 valid 가격 합산)
         function getFirstValidPrice(links) {
           return links && links[0] && links[0].price ? Number(links[0].price) : 0;
         }
@@ -176,7 +175,6 @@ export default function AiResultPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center p-6">
-      {/* 상단 */}
       <div className="flex items-center w-full max-w-xl mb-8">
         <button
           onClick={() => navigate(-1)}
@@ -202,7 +200,6 @@ export default function AiResultPage() {
         </div>
       ) : (
         <>
-          {/* 총합 견적 */}
           <div className="w-full max-w-xl bg-gray-900/70 rounded-xl p-6 mb-5 flex items-center justify-between border border-white/10">
             <span className="text-lg font-bold">총합 견적</span>
             <span className="text-2xl font-bold text-green-400">
@@ -212,9 +209,7 @@ export default function AiResultPage() {
             </span>
           </div>
 
-          {/* 부품별 추천 UI */}
           <div className="flex flex-col md:flex-row gap-6 mb-8 w-full max-w-xl">
-            {/* CPU */}
             <div className="flex-1 bg-gray-800/80 rounded-xl p-6">
               <h3 className="font-semibold mb-2">CPU 추천</h3>
               {result.cpu ? (
@@ -251,7 +246,6 @@ export default function AiResultPage() {
               )}
             </div>
 
-            {/* GPU */}
             <div className="flex-1 bg-gray-800/80 rounded-xl p-6">
               <h3 className="font-semibold mb-2">그래픽카드 추천</h3>
               {result.gpu ? (
@@ -289,7 +283,6 @@ export default function AiResultPage() {
             </div>
           </div>
 
-          {/* 메인보드 추천 */}
           <div className="w-full max-w-xl bg-gray-800/80 rounded-xl p-6 mb-8">
             <h3 className="font-semibold mb-2">메인보드 추천</h3>
             {result.mbModels && result.mbModels.length > 0 ? (
@@ -328,7 +321,6 @@ export default function AiResultPage() {
             )}
           </div>
 
-          {/* 램 추천 */}
           <div className="w-full max-w-xl bg-gray-800/80 rounded-xl p-6 mb-8">
             <h3 className="font-semibold mb-2">램 추천</h3>
             {result.ramModels && result.ramModels.length > 0 ? (
@@ -366,7 +358,6 @@ export default function AiResultPage() {
             )}
           </div>
 
-          {/* SSD 추천 */}
           <div className="w-full max-w-xl bg-gray-800/80 rounded-xl p-6 mb-2">
             <h3 className="font-semibold mb-2">SSD 추천</h3>
             {result.ssd ? (

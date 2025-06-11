@@ -34,6 +34,8 @@ export default function AiResultPage() {
   const [error, setError] = useState(false);
   const [result, setResult] = useState(null);
 
+  const BASE_URL = import.meta.env.BASE_URL || "/";
+
   useEffect(() => {
     if (!state) {
       setError(true);
@@ -46,7 +48,6 @@ export default function AiResultPage() {
 
     async function fetchAndRecommend() {
       try {
-        // fetch 경로 모두 상대경로로 변경 (public 폴더 제외)
         const [
           cpuRaw, gpuRaw, ramRaw, mbRaw, ssdRaw,
           cpuDanawa, cpuBest, cpuNaver,
@@ -55,57 +56,55 @@ export default function AiResultPage() {
           mbDanawa, mbBest, mbNaver,
           ssdDanawa, ssdBest, ssdNaver
         ] = await Promise.all([
-          fetch("./data/cpuDB.json").then(r => r.json()),
-          fetch("./data/gpuDB.json").then(r => r.json()),
-          fetch("./data/ramList.json").then(r => r.json()),
+          fetch(`${BASE_URL}data/cpuDB.json`).then(r => r.json()),
+          fetch(`${BASE_URL}data/gpuDB.json`).then(r => r.json()),
+          fetch(`${BASE_URL}data/ramList.json`).then(r => r.json()),
           Promise.all([
-            fetch("./data/asus_mainboard.json").then(r => r.json()),
-            fetch("./data/msi_mainboard.json").then(r => r.json()),
-            fetch("./data/gigabyte_mainboard.json").then(r => r.json())
+            fetch(`${BASE_URL}data/asus_mainboard.json`).then(r => r.json()),
+            fetch(`${BASE_URL}data/msi_mainboard.json`).then(r => r.json()),
+            fetch(`${BASE_URL}data/gigabyte_mainboard.json`).then(r => r.json())
           ]).then(arr => arr.flat()),
-          fetch("./data/ssd_type_list.json").then(r => r.json()),
+          fetch(`${BASE_URL}data/ssd_type_list.json`).then(r => r.json()),
 
-          fetch("./data/cpu_danawa_price.json").then(r => r.json()),
-          fetch("./data/cpu_danawa_best.json").then(r => r.json()),
-          fetch("./data/cpu_naver_price.json").then(r => r.json()),
+          fetch(`${BASE_URL}data/cpu_danawa_price.json`).then(r => r.json()),
+          fetch(`${BASE_URL}data/cpu_danawa_best.json`).then(r => r.json()),
+          fetch(`${BASE_URL}data/cpu_naver_price.json`).then(r => r.json()),
 
-          fetch("./data/gpu_danawa_price.json").then(r => r.json()),
-          fetch("./data/gpu_danawa_best.json").then(r => r.json()),
-          fetch("./data/gpu_naver_price.json").then(r => r.json()),
+          fetch(`${BASE_URL}data/gpu_danawa_price.json`).then(r => r.json()),
+          fetch(`${BASE_URL}data/gpu_danawa_best.json`).then(r => r.json()),
+          fetch(`${BASE_URL}data/gpu_naver_price.json`).then(r => r.json()),
 
-          fetch("./data/ram_danawa_price.json").then(r => r.json()),
-          fetch("./data/ram_danawa_best.json").then(r => r.json()),
-          fetch("./data/ram_naver_price.json").then(r => r.json()),
+          fetch(`${BASE_URL}data/ram_danawa_price.json`).then(r => r.json()),
+          fetch(`${BASE_URL}data/ram_danawa_best.json`).then(r => r.json()),
+          fetch(`${BASE_URL}data/ram_naver_price.json`).then(r => r.json()),
 
           Promise.all([
-            fetch("./data/asus_danawa_price.json").then(r => r.json()),
-            fetch("./data/msi_danawa_price.json").then(r => r.json()),
-            fetch("./data/gigabyte_danawa_price.json").then(r => r.json())
-          ]).then(arr => arr.flat()),
-          Promise.all([
-            fetch("./data/asus_danawa_best.json").then(r => r.json()),
-            fetch("./data/msi_danawa_best.json").then(r => r.json()),
-            fetch("./data/gigabyte_danawa_best.json").then(r => r.json())
+            fetch(`${BASE_URL}data/asus_danawa_price.json`).then(r => r.json()),
+            fetch(`${BASE_URL}data/msi_danawa_price.json`).then(r => r.json()),
+            fetch(`${BASE_URL}data/gigabyte_danawa_price.json`).then(r => r.json())
           ]).then(arr => arr.flat()),
           Promise.all([
-            fetch("./data/asus_naver_price.json").then(r => r.json()),
-            fetch("./data/msi_naver_price.json").then(r => r.json()),
-            fetch("./data/gigabyte_naver_price.json").then(r => r.json())
+            fetch(`${BASE_URL}data/asus_danawa_best.json`).then(r => r.json()),
+            fetch(`${BASE_URL}data/msi_danawa_best.json`).then(r => r.json()),
+            fetch(`${BASE_URL}data/gigabyte_danawa_best.json`).then(r => r.json())
+          ]).then(arr => arr.flat()),
+          Promise.all([
+            fetch(`${BASE_URL}data/asus_naver_price.json`).then(r => r.json()),
+            fetch(`${BASE_URL}data/msi_naver_price.json`).then(r => r.json()),
+            fetch(`${BASE_URL}data/gigabyte_naver_price.json`).then(r => r.json())
           ]).then(arr => arr.flat()),
 
-          fetch("./data/ssd_danawa_price.json").then(r => r.json()),
-          fetch("./data/ssd_danawa_best.json").then(r => r.json()),
-          fetch("./data/ssd_naver_price.json").then(r => r.json())
+          fetch(`${BASE_URL}data/ssd_danawa_price.json`).then(r => r.json()),
+          fetch(`${BASE_URL}data/ssd_danawa_best.json`).then(r => r.json()),
+          fetch(`${BASE_URL}data/ssd_naver_price.json`).then(r => r.json())
         ]);
 
-        // 배열 안전 처리
         const cpuArr = Array.isArray(cpuRaw) ? cpuRaw : cpuRaw.cpu || [];
         const gpuArr = Array.isArray(gpuRaw) ? gpuRaw : gpuRaw.gpu || [];
         const ramArr = Array.isArray(ramRaw) ? ramRaw : ramRaw.ram || ramRaw.list || [];
         const mbArr = Array.isArray(mbRaw) ? mbRaw : mbRaw.mainboard || mbRaw.mb || [];
         const ssdArr = Array.isArray(ssdRaw) ? ssdRaw : ssdRaw.ssd || [];
 
-        // 추천 후보 선정
         const cpu = cpuArr[0] || null;
         const gpu = gpuArr[0] || null;
         const ramModels = ramArr.slice(0, 3);
@@ -114,7 +113,6 @@ export default function AiResultPage() {
           .slice(0, 3);
         const ssd = ssdArr[0] || null;
 
-        // 링크 생성
         const cpuLinks = cpu ? getLinks(cpu, cpuDanawa, cpuBest, cpuNaver) : [];
         const gpuLinks = gpu ? getLinks(gpu, gpuDanawa, gpuBest, gpuNaver) : [];
         const ramLinksArr = ramModels.map(r => getLinks(r, ramDanawa, ramBest, ramNaver));

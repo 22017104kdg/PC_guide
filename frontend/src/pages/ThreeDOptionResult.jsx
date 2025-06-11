@@ -126,7 +126,8 @@ export default function ThreeDOptionResult() {
 
     async function fetchAndRecommend() {
       try {
-        const BASE = "/PC_guide/frontend/public/data";
+        // *** fetch 경로만 아래처럼 수정 ***
+        const BASE = "/PC_guide/data";
         const [
           benchRaw,
           cpuRaw, gpuRaw, ramRaw, mbRaw, ssdRaw,

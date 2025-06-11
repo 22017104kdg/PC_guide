@@ -45,8 +45,8 @@ export default function AiResultPage() {
     setLoading(true);
     setError(false);
 
-    // fetch 유틸: 경로 문제를 확실히 잡아줌
-    const getUrl = (path) => `${process.env.PUBLIC_URL}/data/json/${path}`;
+    // 수정된 경로 함수: window.location.origin 사용
+    const getUrl = (path) => `${window.location.origin}/data/json/${path}`;
     const fetchJson = async (url) => {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`파일 로드 실패: ${url}`);
@@ -106,14 +106,12 @@ export default function AiResultPage() {
           fetchJson(getUrl("ssd_naver_price.json"))
         ]);
 
-        // 배열화
         const cpuArr = Array.isArray(cpuRaw) ? cpuRaw : cpuRaw.cpu || [];
         const gpuArr = Array.isArray(gpuRaw) ? gpuRaw : gpuRaw.gpu || [];
         const ramArr = Array.isArray(ramRaw) ? ramRaw : ramRaw.ram || ramRaw.list || [];
         const mbArr = Array.isArray(mbRaw) ? mbRaw : mbRaw.mainboard || mbRaw.mb || [];
         const ssdArr = Array.isArray(ssdRaw) ? ssdRaw : ssdRaw.ssd || [];
 
-        // 추천 로직 (더 정교하게 바꿀 수 있음)
         const cpu = cpuArr[0] || null;
         const gpu = gpuArr[0] || null;
         const ramModels = ramArr.slice(0, 3);
@@ -122,7 +120,6 @@ export default function AiResultPage() {
         ).slice(0, 3);
         const ssd = ssdArr[0] || null;
 
-        // 링크 생성
         const cpuLinks = cpu ? getLinks(cpu, cpuDanawa, cpuBest, cpuNaver) : [];
         const gpuLinks = gpu ? getLinks(gpu, gpuDanawa, gpuBest, gpuNaver) : [];
         const ramLinksArr = ramModels.map(r => getLinks(r, ramDanawa, ramBest, ramNaver));
@@ -186,7 +183,6 @@ export default function AiResultPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center p-6">
-      {/* 상단 */}
       <div className="flex items-center w-full max-w-xl mb-8">
         <button
           onClick={() => navigate(-1)}
@@ -212,7 +208,6 @@ export default function AiResultPage() {
         </div>
       ) : (
         <>
-          {/* 총합 견적 */}
           <div className="w-full max-w-xl bg-gray-900/70 rounded-xl p-6 mb-5 flex items-center justify-between border border-white/10">
             <span className="text-lg font-bold">총합 견적</span>
             <span className="text-2xl font-bold text-green-400">
@@ -222,9 +217,7 @@ export default function AiResultPage() {
             </span>
           </div>
 
-          {/* 부품별 추천 UI */}
           <div className="flex flex-col md:flex-row gap-6 mb-8 w-full max-w-xl">
-            {/* CPU */}
             <div className="flex-1 bg-gray-800/80 rounded-xl p-6">
               <h3 className="font-semibold mb-2">CPU 추천</h3>
               {result.cpu ? (
@@ -244,9 +237,11 @@ export default function AiResultPage() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순"
-                            ? "text-green-500"
-                            : "text-blue-400"} underline`}
+                          className={`${
+                            l.label === "네이버 인기순"
+                              ? "text-green-500"
+                              : "text-blue-400"
+                          } underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
@@ -259,7 +254,6 @@ export default function AiResultPage() {
               )}
             </div>
 
-            {/* GPU */}
             <div className="flex-1 bg-gray-800/80 rounded-xl p-6">
               <h3 className="font-semibold mb-2">그래픽카드 추천</h3>
               {result.gpu ? (
@@ -279,9 +273,11 @@ export default function AiResultPage() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순"
-                            ? "text-green-500"
-                            : "text-blue-400"} underline`}
+                          className={`${
+                            l.label === "네이버 인기순"
+                              ? "text-green-500"
+                              : "text-blue-400"
+                          } underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
@@ -295,7 +291,6 @@ export default function AiResultPage() {
             </div>
           </div>
 
-          {/* 메인보드 추천 */}
           <div className="w-full max-w-xl bg-gray-800/80 rounded-xl p-6 mb-8">
             <h3 className="font-semibold mb-2">메인보드 추천</h3>
             {result.mbModels && result.mbModels.length > 0 ? (
@@ -304,9 +299,7 @@ export default function AiResultPage() {
                   <p className="font-bold">
                     {b.model}
                     {b.chipset && (
-                      <span className="ml-2 text-xs text-gray-400">
-                        [{b.chipset}]
-                      </span>
+                      <span className="ml-2 text-xs text-gray-400">[{b.chipset}]</span>
                     )}
                   </p>
                   <ul className="mt-2 space-y-1">
@@ -316,9 +309,11 @@ export default function AiResultPage() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순"
-                            ? "text-green-500"
-                            : "text-blue-400"} underline`}
+                          className={`${
+                            l.label === "네이버 인기순"
+                              ? "text-green-500"
+                              : "text-blue-400"
+                          } underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
@@ -332,7 +327,6 @@ export default function AiResultPage() {
             )}
           </div>
 
-          {/* 램 추천 */}
           <div className="w-full max-w-xl bg-gray-800/80 rounded-xl p-6 mb-8">
             <h3 className="font-semibold mb-2">램 추천</h3>
             {result.ramModels && result.ramModels.length > 0 ? (
@@ -341,7 +335,8 @@ export default function AiResultPage() {
                   <p className="font-bold">
                     {r.model}
                     <span className="text-xs text-gray-400">
-                      {" "}[{r.type}, {r.size_gb}GB]
+                      {" "}
+                      [{r.type}, {r.size_gb}GB]
                     </span>
                   </p>
                   <ul className="mt-2 space-y-1">
@@ -351,9 +346,11 @@ export default function AiResultPage() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순"
-                            ? "text-green-500"
-                            : "text-blue-400"} underline`}
+                          className={`${
+                            l.label === "네이버 인기순"
+                              ? "text-green-500"
+                              : "text-blue-400"
+                          } underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>
@@ -367,7 +364,6 @@ export default function AiResultPage() {
             )}
           </div>
 
-          {/* SSD 추천 */}
           <div className="w-full max-w-xl bg-gray-800/80 rounded-xl p-6 mb-2">
             <h3 className="font-semibold mb-2">SSD 추천</h3>
             {result.ssd ? (
@@ -383,9 +379,11 @@ export default function AiResultPage() {
                           href={l.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`${l.label === "네이버 인기순"
-                            ? "text-green-500"
-                            : "text-blue-400"} underline`}
+                          className={`${
+                            l.label === "네이버 인기순"
+                              ? "text-green-500"
+                              : "text-blue-400"
+                          } underline`}
                         >
                           {l.label}: {Number(l.price).toLocaleString()}원
                         </a>

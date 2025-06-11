@@ -36,6 +36,18 @@ export default function AiResultPage() {
   const [error, setError] = useState(false);
   const [result, setResult] = useState(null);
 
+  // fetch 함수: process.env.PUBLIC_URL 기준으로 경로 처리
+  async function fetchJson(path) {
+    try {
+      const res = await fetch(process.env.PUBLIC_URL + path);
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status} for ${path}`);
+      return await res.json();
+    } catch (e) {
+      console.error(`fetch 실패: ${path}`, e);
+      throw e;
+    }
+  }
+
   useEffect(() => {
     if (!state) {
       setError(true);
@@ -46,20 +58,9 @@ export default function AiResultPage() {
     setLoading(true);
     setError(false);
 
-    async function fetchJson(path) {
-      try {
-        const res = await fetch(process.env.PUBLIC_URL + path);
-        if (!res.ok) throw new Error(`HTTP error! status: ${res.status} for ${path}`);
-        return await res.json();
-      } catch (e) {
-        console.error(`fetch 실패: ${path}`, e);
-        throw e;
-      }
-    }
-
     async function fetchAndRecommend() {
       try {
-        // 메인보드 파일은 따로 Promise.all 분리
+        // 메인보드 JSON은 따로 로드
         const [asusMB, msiMB, gigabyteMB] = await Promise.all([
           fetchJson("/data/json/asus_mainboard.json"),
           fetchJson("/data/json/msi_mainboard.json"),
@@ -91,38 +92,32 @@ export default function AiResultPage() {
           fetchJson("/data/json/ram_danawa_best.json"),
           fetchJson("/data/json/ram_naver_price.json"),
 
-          fetchJson("/data/json/asus_danawa_price.json").then(arr => arr),
-          fetchJson("/data/json/asus_danawa_best.json").then(arr => arr),
-          fetchJson("/data/json/asus_naver_price.json").then(arr => arr),
+          fetchJson("/data/json/asus_danawa_price.json"),
+          fetchJson("/data/json/asus_danawa_best.json"),
+          fetchJson("/data/json/asus_naver_price.json"),
 
           fetchJson("/data/json/ssd_danawa_price.json"),
           fetchJson("/data/json/ssd_danawa_best.json"),
           fetchJson("/data/json/ssd_naver_price.json")
         ]);
 
+        // 메인보드 합치기
         const mbRaw = [...asusMB, ...msiMB, ...gigabyteMB];
-        const mbDanawaArr = [...mbDanawa, ...mbBest, ...mbNaver];
 
-        // 배열화
+        // 배열화 처리
         const cpuArr = Array.isArray(cpuRaw) ? cpuRaw : cpuRaw.cpu || [];
         const gpuArr = Array.isArray(gpuRaw) ? gpuRaw : gpuRaw.gpu || [];
         const ramArr = Array.isArray(ramRaw) ? ramRaw : ramRaw.ram || ramRaw.list || [];
         const mbArr = Array.isArray(mbRaw) ? mbRaw : mbRaw.mainboard || mbRaw.mb || [];
         const ssdArr = Array.isArray(ssdRaw) ? ssdRaw : ssdRaw.ssd || [];
 
-        // 추천 로직 (간단히 첫번째 아이템 선택, 필요하면 로직 강화 가능)
+        // 추천 로직 (첫번째만 추천, 필요시 확장 가능)
         const cpu = cpuArr[0] || null;
         const gpu = gpuArr[0] || null;
         const ramModels = ramArr.slice(0, 3);
-        const mbModels = mbArr
-          .filter(
-            mb =>
-              cpu &&
-              mb.socket &&
-              cpu.socket &&
-              mb.socket.toUpperCase() === cpu.socket.toUpperCase()
-          )
-          .slice(0, 3);
+        const mbModels = mbArr.filter(mb =>
+          cpu && mb.socket && cpu.socket && mb.socket.toUpperCase() === cpu.socket.toUpperCase()
+        ).slice(0, 3);
         const ssd = ssdArr[0] || null;
 
         // 링크 생성
@@ -135,6 +130,7 @@ export default function AiResultPage() {
         function getFirstValidPrice(links) {
           return links && links[0] && links[0].price ? Number(links[0].price) : 0;
         }
+
         const totalPrice =
           getFirstValidPrice(cpuLinks) +
           getFirstValidPrice(gpuLinks) +

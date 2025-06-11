@@ -126,6 +126,7 @@ export default function ThreeDOptionResult() {
 
     async function fetchAndRecommend() {
       try {
+        const BASE = "/PC_guide/frontend/public/data";
         const [
           benchRaw,
           cpuRaw, gpuRaw, ramRaw, mbRaw, ssdRaw,
@@ -135,51 +136,51 @@ export default function ThreeDOptionResult() {
           mbDanawa, mbBest, mbNaver,
           ssdDanawa, ssdBest, ssdNaver
         ] = await Promise.all([
-          fetch("/data/threeD_benchmarks.json").then(r => r.json()),
-          fetch("/data/cpuDB.json").then(r => r.json()),
-          fetch("/data/gpuDB.json").then(r => r.json()),
-          fetch("/data/ramList.json").then(r => r.json()),
+          fetch(`${BASE}/threeD_benchmarks.json`).then(r => r.json()),
+          fetch(`${BASE}/cpuDB.json`).then(r => r.json()),
+          fetch(`${BASE}/gpuDB.json`).then(r => r.json()),
+          fetch(`${BASE}/ramList.json`).then(r => r.json()),
           Promise.all([
-            fetch("/data/asus_mainboard.json").then(r => r.json()),
-            fetch("/data/msi_mainboard.json").then(r => r.json()),
-            fetch("/data/gigabyte_mainboard.json").then(r => r.json())
+            fetch(`${BASE}/asus_mainboard.json`).then(r => r.json()),
+            fetch(`${BASE}/msi_mainboard.json`).then(r => r.json()),
+            fetch(`${BASE}/gigabyte_mainboard.json`).then(r => r.json())
           ]).then(arr => arr.flat()),
-          fetch("/data/ssd_type_list.json").then(r => r.json()),
+          fetch(`${BASE}/ssd_type_list.json`).then(r => r.json()),
 
-          fetch("/data/cpu_danawa_price.json").then(r => r.json()),
-          fetch("/data/cpu_danawa_best.json").then(r => r.json()),
-          fetch("/data/cpu_naver_price.json").then(r => r.json()),
+          fetch(`${BASE}/cpu_danawa_price.json`).then(r => r.json()),
+          fetch(`${BASE}/cpu_danawa_best.json`).then(r => r.json()),
+          fetch(`${BASE}/cpu_naver_price.json`).then(r => r.json()),
 
-          fetch("/data/gpu_danawa_price.json").then(r => r.json()),
-          fetch("/data/gpu_danawa_best.json").then(r => r.json()),
-          fetch("/data/gpu_naver_price.json").then(r => r.json()),
+          fetch(`${BASE}/gpu_danawa_price.json`).then(r => r.json()),
+          fetch(`${BASE}/gpu_danawa_best.json`).then(r => r.json()),
+          fetch(`${BASE}/gpu_naver_price.json`).then(r => r.json()),
 
-          fetch("/data/ram_danawa_price.json").then(r => r.json()),
-          fetch("/data/ram_danawa_best.json").then(r => r.json()),
-          fetch("/data/ram_naver_price.json").then(r => r.json()),
+          fetch(`${BASE}/ram_danawa_price.json`).then(r => r.json()),
+          fetch(`${BASE}/ram_danawa_best.json`).then(r => r.json()),
+          fetch(`${BASE}/ram_naver_price.json`).then(r => r.json()),
 
           Promise.all([
-            fetch("/data/asus_danawa_price.json").then(r => r.json()),
-            fetch("/data/msi_danawa_price.json").then(r => r.json()),
-            fetch("/data/gigabyte_danawa_price.json").then(r => r.json())
-          ]).then(arr => arr.flat()),
-          Promise.all([
-            fetch("/data/asus_danawa_best.json").then(r => r.json()),
-            fetch("/data/msi_danawa_best.json").then(r => r.json()),
-            fetch("/data/gigabyte_danawa_best.json").then(r => r.json())
+            fetch(`${BASE}/asus_danawa_price.json`).then(r => r.json()),
+            fetch(`${BASE}/msi_danawa_price.json`).then(r => r.json()),
+            fetch(`${BASE}/gigabyte_danawa_price.json`).then(r => r.json())
           ]).then(arr => arr.flat()),
           Promise.all([
-            fetch("/data/asus_naver_price.json").then(r => r.json()),
-            fetch("/data/msi_naver_price.json").then(r => r.json()),
-            fetch("/data/gigabyte_naver_price.json").then(r => r.json())
+            fetch(`${BASE}/asus_danawa_best.json`).then(r => r.json()),
+            fetch(`${BASE}/msi_danawa_best.json`).then(r => r.json()),
+            fetch(`${BASE}/gigabyte_danawa_best.json`).then(r => r.json())
+          ]).then(arr => arr.flat()),
+          Promise.all([
+            fetch(`${BASE}/asus_naver_price.json`).then(r => r.json()),
+            fetch(`${BASE}/msi_naver_price.json`).then(r => r.json()),
+            fetch(`${BASE}/gigabyte_naver_price.json`).then(r => r.json())
           ]).then(arr => arr.flat()),
 
-          fetch("/data/ssd_danawa_price.json").then(r => r.json()),
-          fetch("/data/ssd_danawa_best.json").then(r => r.json()),
-          fetch("/data/ssd_naver_price.json").then(r => r.json())
+          fetch(`${BASE}/ssd_danawa_price.json`).then(r => r.json()),
+          fetch(`${BASE}/ssd_danawa_best.json`).then(r => r.json()),
+          fetch(`${BASE}/ssd_naver_price.json`).then(r => r.json())
         ]);
 
-        // 배열화
+        // 배열화 이하 동일...
         const cpuArr = Array.isArray(cpuRaw) ? cpuRaw : cpuRaw.cpu || [];
         const gpuArr = Array.isArray(gpuRaw) ? gpuRaw : gpuRaw.gpu || [];
         const ramArr = Array.isArray(ramRaw) ? ramRaw : ramRaw.ram || ramRaw.list || [];
@@ -191,10 +192,6 @@ export default function ThreeDOptionResult() {
         const mappedRenderType =
           RENDER_TYPE_MAP[program]?.[render_type] || render_type;
 
-        // 디버깅용 콘솔 출력
-        console.log("넘어온 state:", state);
-        console.log("렌더링 매핑값:", mappedRenderType);
-
         const bench = benchRaw.find(
           b =>
             b.program === program &&
@@ -202,14 +199,12 @@ export default function ThreeDOptionResult() {
             b.complexity === complexity
         );
         if (!bench) {
-          console.log("benchRaw 샘플:", benchRaw.slice(0, 3));
           setResult(null);
           setLoading(false);
           return;
         }
 
         // 이하 부품 추천 로직 동일
-
         function findCpuModel(target, cpuArr) {
           const models = target.split("/").map(s => s.trim());
           let found = null;
